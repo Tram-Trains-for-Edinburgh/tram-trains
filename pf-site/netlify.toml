@@ -1,4 +1,4 @@
 [build]
   base    = "pf-site"
   command = "npx @11ty/eleventy"
-  publish = "pf-site/_site"
+  publish = "_site"
