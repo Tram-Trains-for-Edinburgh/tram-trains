@@ -23,7 +23,7 @@ Our campaign activities include:
 
 **We believe that Edinburgh's South Suburban Railway should be brought back to life — and that tram-trains are the best way to do it.**
 
-<img src="/assets/images/about-council-map.webp" alt="Edinburgh Council transport map" class="page-image" loading="lazy">
+<img src="/assets/images/proposal-map-2.webp" alt="Edinburgh Council transport map" class="page-image" loading="lazy">
 
 <p style="text-align:center; margin-top: 2rem;">
   <a href="/join/" class="cta-button">Join Us</a>

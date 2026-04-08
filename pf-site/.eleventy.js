@@ -9,7 +9,8 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("date", function (value, format) {
-    const d = new Date(value);
+    const d = value === "now" ? new Date() : new Date(value);
+    if (format === "yyyy") return String(d.getFullYear());
     const months = [
       "January", "February", "March", "April", "May", "June",
       "July", "August", "September", "October", "November", "December",
