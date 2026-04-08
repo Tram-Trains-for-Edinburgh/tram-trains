@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "proj4": "^2.20.2"
+  }
+}

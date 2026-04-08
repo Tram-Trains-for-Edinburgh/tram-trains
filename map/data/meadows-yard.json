@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"@id": "way/1092318165", "name": "Meadows Yard", "railway": "razed", "razed:railway": "rail", "service": "yard"}, "geometry": {"type": "LineString", "coordinates": [[-3.132935, 55.9652394], [-3.1325342, 55.9649794]]}, "id": "way/1092318165"}]}

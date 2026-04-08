@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>South Suburban Railway – Tram Trains for Edinburgh</title>
+  <meta name="description" content="Interactive map of the proposed tram-train corridor on Edinburgh's South Suburban Railway and surrounding rail infrastructure." />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta property="og:title" content="The South Suburban Railway – Tram Trains for Edinburgh" />
+  <meta property="og:description" content="Interactive map of the proposed tram-train corridor on Edinburgh's South Suburban Railway." />
+  <meta property="og:image" content="assets/og-card.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The South Suburban Railway – Tram Trains for Edinburgh" />
+  <meta name="twitter:description" content="Interactive map of the proposed tram-train corridor on Edinburgh's South Suburban Railway." />
+  <meta name="twitter:image" content="assets/og-card.png" />
+  <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #2a2a2a;
+      color: #f0ede8;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    header {
+      padding: 16px 24px 12px;
+      background: linear-gradient(180deg, #0d1117 0%, rgba(13,17,23,0.95) 100%);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      z-index: 10;
+      flex-shrink: 0;
+    }
+
+    .logo-pill {
+      background: #c8102e;
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      padding: 6px 14px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .header-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #f0ede8;
+      line-height: 1.2;
+    }
+
+    .header-text p {
+      font-size: 12px;
+      color: #8a8a8a;
+      margin-top: 2px;
+    }
+
+
+
+    #map {
+      flex: 1;
+      position: relative;
+    }
+
+    /* Station popup */
+    .maplibregl-popup-content {
+      background: #1a1f2e;
+      color: #f0ede8;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+      min-width: 160px;
+    }
+
+    .maplibregl-popup-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      margin-bottom: 4px;
+      color: #f0ede8;
+    }
+
+    .maplibregl-popup-content p {
+      color: #8a9aaa;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .maplibregl-popup-tip { border-top-color: #1a1f2e !important; }
+
+    .maplibregl-popup-close-button {
+      color: #666;
+      font-size: 16px;
+    }
+
+    .footer-bar {
+      background: #0d1117;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 8px 24px;
+      font-size: 11px;
+      color: #555;
+      display: flex;
+      gap: 24px;
+      flex-shrink: 0;
+    }
+
+    .stat {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .stat-val {
+      color: #3B9ED8;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+
+    .style-switcher {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 5;
+      display: flex;
+      gap: 0;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    .style-btn {
+      background: rgba(13,17,23,0.85);
+      color: #aaa;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-right: none;
+      padding: 6px 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .style-btn:last-child { border-right: 1px solid rgba(255,255,255,0.1); }
+
+    .style-btn:hover { background: rgba(30,36,48,0.9); color: #ddd; }
+
+    .style-btn.active {
+      background: rgba(200,16,46,0.7);
+      color: #fff;
+      border-color: rgba(200,16,46,0.5);
+    }
+
+    .layer-toggles {
+      position: absolute;
+      top: 10px;
+      right: 50px;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    .layer-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(13,17,23,0.85);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 5px 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      color: #ccc;
+      cursor: pointer;
+      transition: background 0.2s, opacity 0.2s;
+      white-space: nowrap;
+    }
+
+    .layer-toggle:hover { background: rgba(30,36,48,0.9); }
+
+    .layer-toggle.off {
+      opacity: 0.4;
+    }
+
+    .layer-toggle .swatch {
+      width: 20px;
+      height: 4px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .layer-toggle .swatch.dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    .toggle-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+      margin: 2px 0;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    /* Layers menu button — hidden on desktop */
+    .layers-menu-btn {
+      display: none;
+      margin-left: auto;
+      background: none;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #ccc;
+      font-size: 20px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .layers-menu-btn:hover { color: #fff; background: rgba(255,255,255,0.08); }
+
+    /* Backdrop — hidden by default */
+    .layer-toggles-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 19;
+    }
+    .layer-toggles-backdrop.open { display: block; }
+
+    /* Tram-train animation element */
+    .tram-train {
+      position: fixed;
+      width: 150px;
+      height: auto;
+      pointer-events: none;
+      z-index: 50;
+      display: none;
+      will-change: transform;
+    }
+
+    /* ---- Mobile overrides ---- */
+    @media (max-width: 768px) {
+      header { padding: 10px 14px 8px; gap: 12px; }
+      .header-text h1 { font-size: 16px; }
+      .header-text p { display: none; }
+      .layers-menu-btn { display: flex; }
+
+      .layer-toggles {
+        display: none !important;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 220px;
+        padding-top: 56px;
+        background: rgba(13,17,23,0.95);
+        border-left: 1px solid rgba(255,255,255,0.1);
+        box-shadow: -4px 0 24px rgba(0,0,0,0.5);
+        z-index: 20;
+        overflow-y: auto;
+      }
+      .layer-toggles.open { display: flex !important; }
+
+      .style-btn { padding: 4px 8px; font-size: 10px; }
+      .footer-bar { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-pill">TTfE</div>
+  <div class="header-text">
+    <h1>The South Suburban Railway</h1>
+    <p>Proposed tram-train corridor — Edinburgh</p>
+  </div>
+  <button class="layers-menu-btn" aria-label="Toggle layers">&#9776;</button>
+</header>
+
+<div id="map">
+  <div class="layer-toggles-backdrop"></div>
+  <div class="style-switcher">
+    <button class="style-btn active" data-style="dark">Dark</button>
+    <button class="style-btn" data-style="standard">Standard</button>
+    <button class="style-btn" data-style="buildings">Buildings</button>
+    <button class="style-btn" data-style="satellite">Satellite</button>
+  </div>
+  <div class="layer-toggles">
+    <button class="layer-toggle" data-layers="south-sub-glow-outer,south-sub-glow-inner,south-sub-track-1,south-sub-track-2,south-sub-dashes-1,south-sub-dashes-2">
+      <span class="swatch" style="background:#3B9ED8;"></span>South Sub
+    </button>
+    <button class="layer-toggle" data-layers="tram-glow,tram-line,tram-dashes">
+      <span class="swatch" style="background:#FF8C00;"></span>Tram
+    </button>
+    <button class="layer-toggle" data-layers="borders-glow,borders-line,borders-dashes">
+      <span class="swatch" style="background:#A855F7;"></span>Borders Railway
+    </button>
+    <button class="layer-toggle" data-layers="ecml-glow,ecml-line,ecml-dashes">
+      <span class="swatch" style="background:#EF4444;"></span>East Coast Main Line
+    </button>
+    <button class="layer-toggle" data-layers="egml-glow,egml-line,egml-dashes">
+      <span class="swatch" style="background:#22C55E;"></span>Edinburgh & Glasgow
+    </button>
+    <button class="layer-toggle" data-layers="carstairs-glow,carstairs-line,carstairs-dashes">
+      <span class="swatch" style="background:#EAB308;"></span>Edinburgh & Carstairs
+    </button>
+    <button class="layer-toggle" data-layers="leith-docks-glow,leith-docks-line,leith-docks-dashes">
+      <span class="swatch" style="background:#14B8A6;"></span>Leith Docks Branch
+    </button>
+    <button class="layer-toggle" data-layers="millerhill-glow,millerhill-line,millerhill-dashes">
+      <span class="swatch" style="background:#EC4899;"></span>Millerhill Branch
+    </button>
+    <button class="layer-toggle" data-layers="tram-se-proposed-glow,tram-se-proposed-line,tram-se-proposed-dashes">
+      <span class="swatch" style="background:#EAE72B;"></span>SE Tram (Proposed)
+    </button>
+    <button class="layer-toggle" data-layers="orchard-brae-glow,orchard-brae-line,orchard-brae-dashes">
+      <span class="swatch" style="background:#84CC16;"></span>Orchard Brae (Proposed)
+    </button>
+    <button class="layer-toggle" data-layers="roseburn-glow,roseburn-line,roseburn-dashes">
+      <span class="swatch" style="background:#F97316;"></span>Roseburn Path (Proposed)
+    </button>
+    <div class="toggle-divider"></div>
+    <button class="layer-toggle" id="train-anim-toggle">
+      <span class="swatch" style="background:#c8102e;"></span>Release the tram trains
+    </button>
+  </div>
+</div>
+
+<div class="footer-bar">
+  <div class="stat"><span class="stat-val">tramtrainsedi@gmail.com</span></div>
+</div>
+
+<script>
+  // ---------------------------------------------------------------------------
+  // Stitch an array of LineString features into one continuous coordinate array.
+  // Matches segment endpoints by exact coordinate key, walks the chain from one
+  // dangling end to the other, reversing segments as needed.
+  // ---------------------------------------------------------------------------
+  function stitchSegments(features) {
+    const segments = features
+      .filter(f => f.geometry.type === 'LineString')
+      .map(f => f.geometry.coordinates);
+
+    if (segments.length === 0) return [];
+    if (segments.length === 1) return segments[0];
+
+    const key = (c) => c[0].toFixed(7) + ',' + c[1].toFixed(7);
+
+    // Build adjacency: coordKey → [{ idx, end }]
+    const adj = {};
+    segments.forEach((coords, i) => {
+      const sk = key(coords[0]);
+      const ek = key(coords[coords.length - 1]);
+      (adj[sk] = adj[sk] || []).push({ idx: i, end: 'start' });
+      (adj[ek] = adj[ek] || []).push({ idx: i, end: 'end' });
+    });
+
+    // Find a dangling endpoint (appears only once) — that's one end of the chain
+    let cursor = null;
+    for (const [k, entries] of Object.entries(adj)) {
+      if (entries.length === 1) { cursor = k; break; }
+    }
+    if (!cursor) cursor = key(segments[0][0]); // fallback: start of first segment
+
+    // Walk the chain
+    const used = new Set();
+    const result = [];
+
+    while (cursor && adj[cursor]) {
+      const next = adj[cursor].find(e => !used.has(e.idx));
+      if (!next) break;
+
+      used.add(next.idx);
+      const coords = segments[next.idx];
+
+      if (next.end === 'start') {
+        // Entered from start → traverse forward
+        result.push(...(result.length ? coords.slice(1) : coords));
+        cursor = key(coords[coords.length - 1]);
+      } else {
+        // Entered from end → traverse backward
+        const reversed = [...coords].reverse();
+        result.push(...(result.length ? reversed.slice(1) : reversed));
+        cursor = key(coords[0]);
+      }
+    }
+
+    return result;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Map setup
+  // ---------------------------------------------------------------------------
+  const map = new maplibregl.Map({
+    container: 'map',
+    style: {
+      version: 8,
+      sources: {
+        'osm': {
+          type: 'raster',
+          tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+          tileSize: 256,
+          attribution: '© OpenStreetMap contributors'
+        }
+      },
+      layers: [{
+        id: 'osm',
+        type: 'raster',
+        source: 'osm',
+        paint: {
+          'raster-opacity': 0.85,
+          'raster-saturation': -0.7,
+          'raster-brightness-min': 0.1,
+          'raster-brightness-max': 0.9
+        }
+      }]
+    },
+    center: [-3.2000, 55.9350],
+    zoom: 12.5,
+    attributionControl: false
+  });
+
+  map.addControl(new maplibregl.NavigationControl(), 'bottom-right');
+
+  // --- Basemap styles ---
+  const basemaps = {
+    dark: {
+      tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+      paint: {
+        'raster-opacity': 0.85,
+        'raster-saturation': -0.7,
+        'raster-brightness-min': 0.1,
+        'raster-brightness-max': 0.9
+      }
+    },
+    standard: {
+      tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+      paint: {
+        'raster-opacity': 1,
+        'raster-saturation': -0.15,
+        'raster-brightness-min': 0.0,
+        'raster-brightness-max': 1.0
+      }
+    },
+    buildings: {
+      tiles: ['https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png'],
+      paint: {
+        'raster-opacity': 1,
+        'raster-saturation': -0.1,
+        'raster-brightness-min': 0.0,
+        'raster-brightness-max': 1.0
+      }
+    },
+    satellite: {
+      tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],
+      paint: {
+        'raster-opacity': 1,
+        'raster-saturation': 0,
+        'raster-brightness-min': 0.0,
+        'raster-brightness-max': 1.0
+      }
+    }
+  };
+
+  // Style switcher click handler
+  document.querySelectorAll('.style-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const styleName = btn.dataset.style;
+      const cfg = basemaps[styleName];
+      if (!cfg) return;
+
+      // Update active button
+      document.querySelectorAll('.style-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Swap tile source: remove old layer+source, add new ones before overlays
+      const firstOverlay = map.getStyle().layers.find(l => l.id !== 'osm');
+      if (map.getLayer('osm')) map.removeLayer('osm');
+      if (map.getSource('osm')) map.removeSource('osm');
+
+      map.addSource('osm', {
+        type: 'raster',
+        tiles: cfg.tiles,
+        tileSize: 256,
+        attribution: '© OpenStreetMap contributors'
+      });
+
+      map.addLayer({
+        id: 'osm',
+        type: 'raster',
+        source: 'osm',
+        paint: cfg.paint
+      }, firstOverlay ? firstOverlay.id : undefined);
+    });
+  });
+
+  // Layer toggle click handler
+  document.querySelectorAll('.layer-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const layerIds = btn.dataset.layers.split(',');
+      const isOff = btn.classList.toggle('off');
+      const visibility = isOff ? 'none' : 'visible';
+      layerIds.forEach(id => {
+        if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', visibility);
+      });
+    });
+  });
+
+  // Mobile layers drawer
+  const layersBtn = document.querySelector('.layers-menu-btn');
+  const layerTogglesEl = document.querySelector('.layer-toggles');
+  const backdrop = document.querySelector('.layer-toggles-backdrop');
+  function closeLayers() {
+    layerTogglesEl.classList.remove('open');
+    backdrop.classList.remove('open');
+  }
+  layersBtn.addEventListener('click', () => {
+    const isOpen = layerTogglesEl.classList.toggle('open');
+    backdrop.classList.toggle('open', isOpen);
+  });
+  backdrop.addEventListener('click', closeLayers);
+
+    const ecmlData = {"type":"Feature","properties":{},"geometry":{"type":"MultiLineString","coordinates":[[[-3.1499,55.9564],[-3.1442,55.9566],[-3.1377,55.9559]],[[-2.9751,55.9529],[-2.9533,55.9576]],[[-3.182,55.953],[-3.1754,55.9544]],[[-3.1832,55.9527],[-3.1828,55.9528]],[[-3.1754,55.9544],[-3.1734,55.9547]],[[-3.1502,55.9563],[-3.1499,55.9564]],[[-3.1822,55.9529],[-3.182,55.953]],[[-3.1824,55.9528],[-3.1833,55.9526]],[[-3.187,55.9523],[-3.1839,55.9526]],[[-3.1832,55.9527],[-3.1835,55.9527]],[[-3.0615,55.9296],[-3.0613,55.9296]],[[-3.0613,55.9296],[-3.0546,55.9289]],[[-3.1837,55.9525],[-3.1846,55.9524]],[[-3.1847,55.9523],[-3.1891,55.9516]],[[-3.1595,55.9553],[-3.1556,55.9554]],[[-3.1725,55.9549],[-3.1698,55.9555]],[[-3.1698,55.9555],[-3.168,55.9557]],[[-3.168,55.9557],[-3.1677,55.9557]],[[-3.1677,55.9557],[-3.1641,55.9556]],[[-3.0511,55.9291],[-3.0503,55.9292]],[[-3.0503,55.9292],[-3.0454,55.9304]],[[-3.0542,55.9289],[-3.054,55.9289]],[[-3.054,55.9289],[-3.0511,55.9291]],[[-3.1187,55.9503],[-3.1184,55.9501]],[[-3.1097,55.9476],[-3.1045,55.9471]],[[-3.1211,55.9513],[-3.1187,55.9503]],[[-3.1216,55.9515],[-3.1211,55.9513]],[[-3.1833,55.9526],[-3.1856,55.9522]],[[-3.1377,55.9559],[-3.1269,55.9534],[-3.1216,55.9515]],[[-3.1556,55.9554],[-3.1549,55.9555]],[[-3.1549,55.9555],[-3.154,55.9557]],[[-3.1596,55.9553],[-3.1595,55.9553]],[[-3.0898,55.9436],[-3.0825,55.9376],[-3.0637,55.9302]],[[-3.1045,55.9471],[-3.0973,55.9464],[-3.0923,55.9449],[-3.0899,55.9437]],[[-3.1888,55.9518],[-3.184,55.9526]],[[-3.184,55.9526],[-3.1888,55.9519]],[[-3.1833,55.9526],[-3.1826,55.9528]],[[-3.1756,55.9542],[-3.176,55.9541]],[[-3.176,55.9541],[-3.1815,55.953]],[[-3.0899,55.9436],[-3.096,55.9461],[-3.1044,55.9471]],[[-3.1184,55.9501],[-3.1188,55.9503]],[[-3.1677,55.9557],[-3.168,55.9557]],[[-3.1698,55.9555],[-3.1715,55.9551]],[[-3.1596,55.9553],[-3.1641,55.9556]],[[-3.1734,55.9547],[-3.1756,55.9542]],[[-3.1556,55.9554],[-3.1595,55.9553]],[[-3.1216,55.9515],[-3.1295,55.9541],[-3.1377,55.9559],[-3.1448,55.9566],[-3.1499,55.9563]],[[-3.1499,55.9563],[-3.1501,55.9563]],[[-3.1548,55.9555],[-3.1556,55.9554]],[[-3.1595,55.9553],[-3.1596,55.9553]],[[-3.1501,55.9563],[-3.1539,55.9557]],[[-2.9752,55.9528],[-2.9751,55.9529]],[[-3.0637,55.9302],[-3.0636,55.9301]],[[-3.0636,55.9301],[-3.0615,55.9296]],[[-2.8964,55.9729],[-2.9064,55.9683],[-2.9119,55.9664],[-2.9356,55.9629],[-2.9411,55.9615],[-2.9485,55.9587],[-2.9534,55.9576]],[[-3.0637,55.9301],[-3.0826,55.9376],[-3.0899,55.9436]],[[-2.975,55.9529],[-2.9752,55.9528]],[[-3.0636,55.9301],[-3.0637,55.9301]],[[-3.0542,55.9289],[-3.055,55.9289]],[[-3.1211,55.9512],[-3.1216,55.9515]],[[-3.0614,55.9295],[-3.0616,55.9296]],[[-3.054,55.9289],[-3.0542,55.9289]],[[-3.057,55.929],[-3.0558,55.9289]],[[-3.0503,55.9292],[-3.0511,55.9291]],[[-3.0546,55.9289],[-3.0542,55.9289]],[[-3.0511,55.9291],[-3.054,55.9289]],[[-3.0616,55.9296],[-3.0636,55.9301]],[[-3.1188,55.9503],[-3.1211,55.9512]],[[-2.9752,55.9528],[-2.9813,55.9511],[-2.9899,55.9478],[-3.001,55.945],[-3.0454,55.9304]],[[-3.055,55.9289],[-3.0614,55.9295]],[[-3.1835,55.9527],[-3.1839,55.9526]],[[-3.1834,55.9527],[-3.1832,55.9527]],[[-3.1824,55.9528],[-3.1833,55.9526]],[[-3.1828,55.9528],[-3.1822,55.9529]],[[-3.1827,55.9528],[-3.1822,55.9529]],[[-3.1826,55.9528],[-3.182,55.953]],[[-3.1815,55.953],[-3.1824,55.9528]],[[-3.1833,55.9526],[-3.1847,55.9523]],[[-3.1089,55.9474],[-3.1139,55.9484],[-3.1184,55.9501]],[[-3.1044,55.9471],[-3.1084,55.9474]],[[-2.9534,55.9576],[-2.975,55.9529]],[[-3.1641,55.9556],[-3.1596,55.9553]],[[-3.1641,55.9556],[-3.1677,55.9557]],[[-3.154,55.9557],[-3.1502,55.9563]],[[-3.1539,55.9557],[-3.1548,55.9555]],[[-3.0454,55.9304],[-3.0503,55.9292]],[[-3.1734,55.9547],[-3.1725,55.9549]],[[-3.1715,55.9551],[-3.1734,55.9547]],[[-3.1832,55.9527],[-3.1827,55.9528]],[[-3.1839,55.9526],[-3.1867,55.9525]],[[-3.1097,55.9476],[-3.1089,55.9474]],[[-3.0454,55.9304],[-3.0003,55.9453],[-2.9884,55.9483],[-2.9791,55.9519],[-2.9752,55.9528]],[[-2.9533,55.9576],[-2.9485,55.9587],[-2.9401,55.9619],[-2.9357,55.963],[-2.9132,55.9662],[-2.9095,55.9671],[-2.8965,55.9729]],[[-3.1872,55.9517],[-3.1891,55.9515]],[[-3.1864,55.9521],[-3.1891,55.9517]],[[-3.1846,55.9524],[-3.1856,55.9522]],[[-3.184,55.9526],[-3.1834,55.9527]],[[-3.1877,55.9522],[-3.187,55.9523]],[[-3.1881,55.9518],[-3.1864,55.9521]],[[-3.0899,55.9437],[-3.0898,55.9436]],[[-3.0899,55.9436],[-3.0899,55.9436]],[[-3.168,55.9557],[-3.1698,55.9555]],[[-3.1856,55.9522],[-3.1864,55.9521]],[[-3.1847,55.9523],[-3.1858,55.952]],[[-3.1084,55.9474],[-3.1089,55.9474]],[[-3.1184,55.9501],[-3.1146,55.9486],[-3.1097,55.9476]],[[-3.1867,55.9525],[-3.187,55.9525]],[[-3.1856,55.9522],[-3.1864,55.9521]],[[-3.1858,55.952],[-3.1872,55.9517]],[[-3.1891,55.9517],[-3.1881,55.9518]]]}};
+  const egmlData = {"type":"Feature","properties":{},"geometry":{"type":"MultiLineString","coordinates":[[[-3.1987,55.9504],[-3.1966,55.9507]],[[-3.2174,55.9455],[-3.204,55.949]],[[-3.2451,55.9395],[-3.2386,55.9409]],[[-3.3134,55.927],[-3.3061,55.9278]],[[-3.2455,55.9394],[-3.2451,55.9395]],[[-3.2705,55.9338],[-3.2504,55.9383]],[[-3.1966,55.9507],[-3.1949,55.951]],[[-3.2211,55.9448],[-3.2174,55.9455]],[[-3.2504,55.9383],[-3.2503,55.9383]],[[-3.3061,55.9278],[-3.3059,55.9278]],[[-3.2913,55.9294],[-3.286,55.9303]],[[-3.286,55.9303],[-3.2857,55.9304]],[[-3.3059,55.9278],[-3.2919,55.9293]],[[-3.2857,55.9304],[-3.2749,55.9328]],[[-3.2745,55.9329],[-3.2705,55.9338]],[[-3.2292,55.9431],[-3.2231,55.9444]],[[-3.2294,55.943],[-3.2292,55.9431]],[[-3.2384,55.941],[-3.2294,55.943]],[[-3.2386,55.9409],[-3.2384,55.941]],[[-3.2503,55.9383],[-3.2457,55.9394]],[[-3.1933,55.9512],[-3.1897,55.9517]],[[-3.2919,55.9293],[-3.2913,55.9294]],[[-3.3158,55.9267],[-3.3134,55.927]],[[-3.352,55.9296],[-3.3428,55.9273],[-3.3335,55.926],[-3.3266,55.9259],[-3.3158,55.9267]],[[-3.1949,55.951],[-3.1947,55.951]],[[-3.1922,55.9512],[-3.1901,55.9515]],[[-3.1902,55.9515],[-3.1928,55.9512]],[[-3.1914,55.9515],[-3.1937,55.9511]],[[-3.2457,55.9394],[-3.2455,55.9394]],[[-3.2504,55.9383],[-3.2705,55.9338]],[[-3.2503,55.9383],[-3.2504,55.9383]],[[-3.2456,55.9393],[-3.2503,55.9383]],[[-3.2856,55.9304],[-3.286,55.9303]],[[-3.2748,55.9328],[-3.2856,55.9304]],[[-3.2705,55.9338],[-3.2745,55.9329]],[[-3.3061,55.9277],[-3.3133,55.9269]],[[-3.3059,55.9277],[-3.3061,55.9277]],[[-3.2919,55.9293],[-3.3059,55.9277]],[[-3.2913,55.9294],[-3.2919,55.9293]],[[-3.286,55.9303],[-3.2913,55.9294]],[[-3.2174,55.9455],[-3.2214,55.9448]],[[-3.198,55.9505],[-3.2011,55.9499]],[[-3.1947,55.951],[-3.1937,55.9512]],[[-3.1937,55.9511],[-3.1947,55.951]],[[-3.1933,55.9512],[-3.194,55.9511]],[[-3.1933,55.9512],[-3.1937,55.9511]],[[-3.1947,55.951],[-3.1937,55.9511]],[[-3.1937,55.9512],[-3.1904,55.9518]],[[-3.1948,55.951],[-3.1966,55.9507]],[[-3.2745,55.9329],[-3.2748,55.9328]],[[-3.2749,55.9328],[-3.2745,55.9329]],[[-3.2455,55.9394],[-3.2451,55.9395]],[[-3.2291,55.943],[-3.2294,55.943]],[[-3.2384,55.941],[-3.2386,55.9409]],[[-3.245,55.9395],[-3.2456,55.9393]],[[-3.2237,55.9442],[-3.2291,55.943]],[[-3.2231,55.9444],[-3.2237,55.9442]],[[-3.2294,55.943],[-3.2384,55.941]],[[-3.2386,55.9409],[-3.245,55.9395]],[[-3.204,55.9489],[-3.2174,55.9455]],[[-3.3133,55.9269],[-3.3157,55.9267]],[[-3.319,55.9263],[-3.3247,55.9259],[-3.3354,55.9261],[-3.3407,55.9268],[-3.352,55.9296]],[[-3.3963,55.9344],[-3.3898,55.9349],[-3.3791,55.9347],[-3.3675,55.9331],[-3.3588,55.9313]],[[-3.3585,55.9312],[-3.3589,55.9313]],[[-3.3588,55.9313],[-3.3584,55.9312]],[[-3.2011,55.9499],[-3.204,55.9489]],[[-3.2231,55.9444],[-3.2211,55.9448]],[[-3.2214,55.9448],[-3.2231,55.9444]],[[-3.204,55.949],[-3.202,55.9498]],[[-3.1899,55.9513],[-3.1926,55.9512]],[[-3.1966,55.9507],[-3.198,55.9505]],[[-3.1993,55.9503],[-3.1987,55.9504]],[[-3.3589,55.9313],[-3.3764,55.9344],[-3.3856,55.9349],[-3.3954,55.9345]],[[-3.1947,55.951],[-3.1948,55.951]],[[-3.1947,55.951],[-3.1937,55.9512]],[[-3.1995,55.9502],[-3.1993,55.9503]],[[-3.1928,55.9512],[-3.1922,55.9512]],[[-3.2451,55.9395],[-3.2446,55.9396]],[[-3.1897,55.9515],[-3.1926,55.9512]],[[-3.3523,55.9296],[-3.3585,55.9312]],[[-3.352,55.9296],[-3.3523,55.9296]],[[-3.3584,55.9312],[-3.3522,55.9296]],[[-3.3522,55.9296],[-3.352,55.9296]],[[-3.3157,55.9267],[-3.3188,55.9263]],[[-3.3188,55.9263],[-3.319,55.9263]],[[-3.1904,55.9518],[-3.19,55.9519]],[[-3.1911,55.9515],[-3.1914,55.9515]],[[-3.194,55.9511],[-3.1947,55.951]],[[-3.1897,55.9517],[-3.1894,55.9518]],[[-3.1926,55.9512],[-3.1934,55.9511]],[[-3.1891,55.9517],[-3.1902,55.9515]],[[-3.1891,55.9516],[-3.1897,55.9515]],[[-3.1891,55.9515],[-3.1899,55.9513]],[[-3.1934,55.9511],[-3.194,55.9511]],[[-3.1901,55.9515],[-3.1891,55.9517]],[[-3.1934,55.9511],[-3.1922,55.9512]],[[-3.1928,55.9512],[-3.1933,55.9512]],[[-3.202,55.9498],[-3.1995,55.9502]]]}};
+  const carstairsData = {"type":"Feature","properties":{},"geometry":{"type":"MultiLineString","coordinates":[[[-3.2487,55.9242],[-3.2511,55.923]],[[-3.2511,55.923],[-3.2562,55.9209],[-3.2616,55.9196]],[[-3.2451,55.9259],[-3.2454,55.9258]],[[-3.2454,55.9258],[-3.2487,55.9242]],[[-3.2342,55.9317],[-3.2344,55.9316]],[[-3.2344,55.9316],[-3.2367,55.93]],[[-3.2294,55.9388],[-3.2295,55.9386]],[[-3.2295,55.9386],[-3.2342,55.9317]],[[-3.2281,55.9409],[-3.2281,55.9408]],[[-3.2281,55.9408],[-3.2294,55.9388]],[[-3.2257,55.9434],[-3.2281,55.9409]],[[-3.2281,55.9409],[-3.2258,55.9434]],[[-3.2231,55.9444],[-3.2257,55.9434]],[[-3.2451,55.926],[-3.2429,55.927]],[[-3.2342,55.9318],[-3.2296,55.9385]],[[-3.2282,55.9408],[-3.2281,55.9409]],[[-3.2454,55.9258],[-3.2451,55.926]],[[-3.2296,55.9385],[-3.2294,55.9388]],[[-3.2344,55.9316],[-3.2342,55.9318]],[[-3.2294,55.9388],[-3.2282,55.9408]],[[-3.2511,55.923],[-3.2487,55.9242]],[[-3.2487,55.9242],[-3.2454,55.9258]],[[-3.2617,55.9196],[-3.2562,55.9209],[-3.2511,55.923]],[[-3.2368,55.93],[-3.2344,55.9316]],[[-3.2429,55.927],[-3.2451,55.9259]],[[-3.2429,55.927],[-3.2368,55.93]],[[-3.2367,55.93],[-3.2429,55.927]],[[-3.2258,55.9434],[-3.2231,55.9444]]]}};
+  const leithDocksData = {"type":"Feature","properties":{},"geometry":{"type":"MultiLineString","coordinates":[[[-3.1187,55.9503],[-3.1213,55.9515]],[[-3.1183,55.9502],[-3.1115,55.948]],[[-3.1115,55.948],[-3.1183,55.9502]],[[-3.1213,55.9515],[-3.1216,55.9517]],[[-3.1216,55.9517],[-3.1235,55.9533],[-3.1235,55.9578],[-3.1264,55.9604],[-3.131,55.9628],[-3.1328,55.9651],[-3.1363,55.9677],[-3.1443,55.9695]],[[-3.1187,55.9503],[-3.1186,55.9503]],[[-3.1186,55.9503],[-3.1183,55.9502]],[[-3.1183,55.9502],[-3.1186,55.9503]],[[-3.1443,55.9695],[-3.1484,55.971],[-3.1511,55.9738],[-3.1537,55.9756]],[[-3.1102,55.9476],[-3.1115,55.948]]]}};
+  const millerhillData = {"type":"Feature","properties":{},"geometry":{"type":"MultiLineString","coordinates":[[[-3.066,55.9304],[-3.0662,55.9304]],[[-3.0662,55.9304],[-3.0702,55.9299],[-3.073,55.928],[-3.0734,55.9265],[-3.071,55.9212],[-3.0722,55.9196],[-3.0747,55.9188]],[[-3.0638,55.93],[-3.0638,55.93]],[[-3.0648,55.9302],[-3.066,55.9304]],[[-3.0613,55.9294],[-3.0617,55.9295]],[[-3.055,55.9289],[-3.0613,55.9294]],[[-3.0617,55.9295],[-3.0638,55.93]],[[-3.0613,55.9294],[-3.0584,55.9291]],[[-3.0662,55.9304],[-3.066,55.9304]],[[-3.0638,55.93],[-3.0637,55.93]],[[-3.0617,55.9295],[-3.0613,55.9294]],[[-3.0637,55.93],[-3.0617,55.9295]],[[-3.066,55.9304],[-3.0647,55.9302]],[[-3.0747,55.9189],[-3.0722,55.9196],[-3.071,55.9212],[-3.0734,55.9265],[-3.0731,55.928],[-3.0702,55.93],[-3.0662,55.9304]],[[-3.078,55.9191],[-3.0747,55.9189]],[[-3.0747,55.9188],[-3.0781,55.9191]],[[-3.0793,55.9199],[-3.078,55.9191]],[[-3.0781,55.9191],[-3.079,55.9196]],[[-3.0647,55.9302],[-3.0638,55.93]],[[-3.0638,55.93],[-3.0648,55.9302]],[[-3.0793,55.9199],[-3.0797,55.9202]],[[-3.0797,55.9202],[-3.0817,55.9215],[-3.0837,55.9248]],[[-3.0836,55.9249],[-3.0816,55.9215],[-3.0797,55.9202]],[[-3.079,55.9196],[-3.0793,55.9199]],[[-3.0837,55.9248],[-3.0852,55.9267]],[[-3.0852,55.9267],[-3.0836,55.9249]],[[-3.0854,55.9269],[-3.0852,55.9267]],[[-3.0864,55.9279],[-3.0854,55.9269]],[[-3.0854,55.9269],[-3.0865,55.9279]]]}};
+  const tramSEProposedData = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.19163,55.95287],[-3.18902,55.95319],[-3.18604,55.9471],[-3.18388,55.9448],[-3.18312,55.94311],[-3.1779,55.93732],[-3.16697,55.92661],[-3.16234,55.92868],[-3.15961,55.92838],[-3.15481,55.92695],[-3.14737,55.92181],[-3.13692,55.91926],[-3.13478,55.9196],[-3.13118,55.92139]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.19142,55.95313],[-3.19098,55.953]]}}]};
+  const orchardBraeData = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.22928,55.96072],[-3.22663,55.95876]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.22595,55.95826],[-3.2222,55.95513],[-3.21625,55.95503],[-3.21355,55.95212],[-3.20765,55.95014]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23963,55.96971],[-3.23967,55.96913]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.2355,55.96757],[-3.23323,55.96458]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23323,55.96458],[-3.2332,55.96454]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.2332,55.96454],[-3.23309,55.96439]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23306,55.96435],[-3.23309,55.96439]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23306,55.96435],[-3.2326,55.96374]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23258,55.96372],[-3.2326,55.96374]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23258,55.96372],[-3.23185,55.96282]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23185,55.96282],[-3.23179,55.96276]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23179,55.96276],[-3.23043,55.96157]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23043,55.96157],[-3.22873,55.96031]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.22663,55.95876],[-3.22595,55.95826]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23963,55.96971],[-3.23989,55.97211],[-3.24084,55.9737],[-3.24243,55.97872],[-3.24073,55.97925]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24073,55.97925],[-3.23841,55.97983]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23841,55.97983],[-3.23717,55.98078],[-3.23089,55.98171]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23089,55.98171],[-3.22941,55.98224],[-3.22452,55.98118]]}}]};
+  const roseburnData = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.22992,55.94405],[-3.23154,55.9451],[-3.23316,55.94735]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23334,55.9479],[-3.23471,55.95006],[-3.23696,55.95175]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.22788,55.94361],[-3.22992,55.94405]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23809,55.9523],[-3.24137,55.95376],[-3.24373,55.95575]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23696,55.95175],[-3.23809,55.9523]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23963,55.96971],[-3.23967,55.96913]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23316,55.94735],[-3.23334,55.9479]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24404,55.96135],[-3.24187,55.96377]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24428,55.96098],[-3.24404,55.96135]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24428,55.96098],[-3.24475,55.95979]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24484,55.95824],[-3.24489,55.95921]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24489,55.95921],[-3.24475,55.95979]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24111,55.96493],[-3.24159,55.96415]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24111,55.96493],[-3.24006,55.96742]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23994,55.96798],[-3.24006,55.96742]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24484,55.95824],[-3.24473,55.95768]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23994,55.96798],[-3.23966,55.96919]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24423,55.95645],[-3.24432,55.9566]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24423,55.95645],[-3.24373,55.95575]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24432,55.9566],[-3.24473,55.95768]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24187,55.96377],[-3.24159,55.96415]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23963,55.96971],[-3.23989,55.97211],[-3.24084,55.9737],[-3.24243,55.97872],[-3.24073,55.97925]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24073,55.97925],[-3.23841,55.97983]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23841,55.97983],[-3.23717,55.98078],[-3.23089,55.98171]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23089,55.98171],[-3.22941,55.98224],[-3.22452,55.98118]]}}]};
+
+  map.on('load', async () => {
+    // Fetch real route data from split JSON files
+    const [subData, tramData, bordersData] = await Promise.all([
+      fetch('data/edinburgh-suburban-line.json').then(r => r.json()),
+      fetch('data/edinburgh-tram.json').then(r => r.json()),
+      fetch('data/borders-railway.json').then(r => r.json())
+    ]);
+
+    // Filter to "Up Suburban" track (one of the two parallel tracks)
+    // Includes Up Gorgie, Up Suburban, and unnamed connector segments
+    const upSuburban = subData.features.filter(f => {
+      const ref = (f.properties['railway:track_ref'] || '');
+      return ref.startsWith('Up') || ref === '';
+    });
+
+    const subCoords = stitchSegments(upSuburban);
+
+    const southSubRoute = {
+      type: "Feature",
+      properties: { name: "South Suburban Railway" },
+      geometry: { type: "LineString", coordinates: subCoords }
+    };
+
+    // Use tram FeatureCollection directly (parallel tracks + branches)
+    const tramRoute = tramData;
+
+        // --- Individual railway lines ---
+    map.addSource('ecml', { type: 'geojson', data: ecmlData });
+    map.addLayer({
+      id: 'ecml-glow', type: 'line', source: 'ecml',
+      paint: { 'line-color': '#EF4444', 'line-width': 8, 'line-opacity': 0.15, 'line-blur': 4 }
+    });
+    map.addLayer({
+      id: 'ecml-line', type: 'line', source: 'ecml',
+      paint: { 'line-color': '#EF4444', 'line-width': 2.5, 'line-opacity': 0.8 },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+    map.addLayer({
+      id: 'ecml-dashes', type: 'line', source: 'ecml',
+      paint: { 'line-color': '#FCA5A5', 'line-width': 1.5, 'line-opacity': 0.9, 'line-dasharray': [0, 4, 3] },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+    map.addSource('egml', { type: 'geojson', data: egmlData });
+    map.addLayer({
+      id: 'egml-glow', type: 'line', source: 'egml',
+      paint: { 'line-color': '#22C55E', 'line-width': 8, 'line-opacity': 0.15, 'line-blur': 4 }
+    });
+    map.addLayer({
+      id: 'egml-line', type: 'line', source: 'egml',
+      paint: { 'line-color': '#22C55E', 'line-width': 2.5, 'line-opacity': 0.8 },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+    map.addLayer({
+      id: 'egml-dashes', type: 'line', source: 'egml',
+      paint: { 'line-color': '#6EE7A0', 'line-width': 1.5, 'line-opacity': 0.9, 'line-dasharray': [0, 4, 3] },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+    map.addSource('carstairs', { type: 'geojson', data: carstairsData });
+    map.addLayer({
+      id: 'carstairs-glow', type: 'line', source: 'carstairs',
+      paint: { 'line-color': '#EAB308', 'line-width': 8, 'line-opacity': 0.15, 'line-blur': 4 }
+    });
+    map.addLayer({
+      id: 'carstairs-line', type: 'line', source: 'carstairs',
+      paint: { 'line-color': '#EAB308', 'line-width': 2.5, 'line-opacity': 0.8 },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+    map.addLayer({
+      id: 'carstairs-dashes', type: 'line', source: 'carstairs',
+      paint: { 'line-color': '#FDE047', 'line-width': 1.5, 'line-opacity': 0.9, 'line-dasharray': [0, 4, 3] },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+    map.addSource('leith-docks', { type: 'geojson', data: leithDocksData });
+    map.addLayer({
+      id: 'leith-docks-glow', type: 'line', source: 'leith-docks',
+      paint: { 'line-color': '#14B8A6', 'line-width': 8, 'line-opacity': 0.15, 'line-blur': 4 }
+    });
+    map.addLayer({
+      id: 'leith-docks-line', type: 'line', source: 'leith-docks',
+      paint: { 'line-color': '#14B8A6', 'line-width': 2.5, 'line-opacity': 0.8 },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+    map.addLayer({
+      id: 'leith-docks-dashes', type: 'line', source: 'leith-docks',
+      paint: { 'line-color': '#5EEAD4', 'line-width': 1.5, 'line-opacity': 0.9, 'line-dasharray': [0, 4, 3] },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+    // --- Millerhill Branch ---
+    map.addSource('millerhill', { type: 'geojson', data: millerhillData });
+    map.addLayer({
+      id: 'millerhill-glow', type: 'line', source: 'millerhill',
+      paint: { 'line-color': '#EC4899', 'line-width': 8, 'line-opacity': 0.15, 'line-blur': 4 }
+    });
+    map.addLayer({
+      id: 'millerhill-line', type: 'line', source: 'millerhill',
+      paint: { 'line-color': '#EC4899', 'line-width': 2.5, 'line-opacity': 0.8 },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+    map.addLayer({
+      id: 'millerhill-dashes', type: 'line', source: 'millerhill',
+      paint: { 'line-color': '#F9A8D4', 'line-width': 1.5, 'line-opacity': 0.9, 'line-dasharray': [0, 4, 3] },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+    // --- SE Tram Proposed ---
+    map.addSource('tram-se-proposed', { type: 'geojson', data: tramSEProposedData });
+    map.addLayer({
+      id: 'tram-se-proposed-glow', type: 'line', source: 'tram-se-proposed',
+      paint: { 'line-color': '#EAE72B', 'line-width': 10, 'line-opacity': 0.12, 'line-blur': 6 }
+    });
+    map.addLayer({
+      id: 'tram-se-proposed-line', type: 'line', source: 'tram-se-proposed',
+      paint: { 'line-color': '#EAE72B', 'line-width': 2, 'line-opacity': 0.9 },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+    map.addLayer({
+      id: 'tram-se-proposed-dashes', type: 'line', source: 'tram-se-proposed',
+      paint: { 'line-color': '#F5F38E', 'line-width': 1.5, 'line-opacity': 0.9, 'line-dasharray': [0, 4, 3] },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+
+    // --- Orchard Brae Proposed ---
+    map.addSource('orchard-brae', { type: 'geojson', data: orchardBraeData });
+    map.addLayer({
+      id: 'orchard-brae-glow', type: 'line', source: 'orchard-brae',
+      paint: { 'line-color': '#84CC16', 'line-width': 10, 'line-opacity': 0.12, 'line-blur': 6 }
+    });
+    map.addLayer({
+      id: 'orchard-brae-line', type: 'line', source: 'orchard-brae',
+      paint: { 'line-color': '#84CC16', 'line-width': 2, 'line-opacity': 0.9 },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+    map.addLayer({
+      id: 'orchard-brae-dashes', type: 'line', source: 'orchard-brae',
+      paint: { 'line-color': '#BEF264', 'line-width': 1.5, 'line-opacity': 0.9, 'line-dasharray': [0, 4, 3] },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+
+    // --- Roseburn Path Proposed ---
+    map.addSource('roseburn', { type: 'geojson', data: roseburnData });
+    map.addLayer({
+      id: 'roseburn-glow', type: 'line', source: 'roseburn',
+      paint: { 'line-color': '#F97316', 'line-width': 10, 'line-opacity': 0.12, 'line-blur': 6 }
+    });
+    map.addLayer({
+      id: 'roseburn-line', type: 'line', source: 'roseburn',
+      paint: { 'line-color': '#F97316', 'line-width': 2, 'line-opacity': 0.9 },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+    map.addLayer({
+      id: 'roseburn-dashes', type: 'line', source: 'roseburn',
+      paint: { 'line-color': '#FDBA74', 'line-width': 1.5, 'line-opacity': 0.9, 'line-dasharray': [0, 4, 3] },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+
+    // --- Tram route ---
+    map.addSource('tram', { type: 'geojson', data: tramRoute });
+
+    map.addLayer({
+      id: 'tram-glow',
+      type: 'line',
+      source: 'tram',
+      paint: {
+        'line-color': '#FF8C00',
+        'line-width': 10,
+        'line-opacity': 0.10,
+        'line-blur': 6
+      }
+    });
+
+    map.addLayer({
+      id: 'tram-line',
+      type: 'line',
+      source: 'tram',
+      paint: {
+        'line-color': '#FF8C00',
+        'line-width': 1.5,
+        'line-opacity': 0.9
+      },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+
+    // Animated dashes for tram
+    map.addLayer({
+      id: 'tram-dashes',
+      type: 'line',
+      source: 'tram',
+      paint: {
+        'line-color': '#FFB84D',
+        'line-width': 1.5,
+        'line-opacity': 0.9,
+        'line-dasharray': [0, 4, 3]
+      },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+
+    // --- Borders Railway ---
+    // Uses FeatureCollection directly (MultiLineString from OSM relation)
+    map.addSource('borders', { type: 'geojson', data: bordersData });
+
+    map.addLayer({
+      id: 'borders-glow',
+      type: 'line',
+      source: 'borders',
+      paint: {
+        'line-color': '#A855F7',
+        'line-width': 10,
+        'line-opacity': 0.10,
+        'line-blur': 6
+      }
+    });
+
+    map.addLayer({
+      id: 'borders-line',
+      type: 'line',
+      source: 'borders',
+      paint: {
+        'line-color': '#A855F7',
+        'line-width': 1.5,
+        'line-opacity': 0.9
+      },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+
+    map.addLayer({
+      id: 'borders-dashes',
+      type: 'line',
+      source: 'borders',
+      paint: {
+        'line-color': '#C084FC',
+        'line-width': 1.5,
+        'line-opacity': 0.9,
+        'line-dasharray': [0, 4, 3]
+      },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+
+    // --- South Sub route ---
+    map.addSource('south-sub', { type: 'geojson', data: southSubRoute });
+
+    // Outer glow - blue
+    map.addLayer({
+      id: 'south-sub-glow-outer',
+      type: 'line',
+      source: 'south-sub',
+      paint: {
+        'line-color': '#5BB8E8',
+        'line-width': 14,
+        'line-opacity': 0.10,
+        'line-blur': 8
+      }
+    });
+
+    // Inner glow - blue
+    map.addLayer({
+      id: 'south-sub-glow-inner',
+      type: 'line',
+      source: 'south-sub',
+      paint: {
+        'line-color': '#5BB8E8',
+        'line-width': 6,
+        'line-opacity': 0.20,
+        'line-blur': 3
+      }
+    });
+
+    // Double-track: two parallel lines offset left/right
+    // Track 1 (left)
+    map.addLayer({
+      id: 'south-sub-track-1',
+      type: 'line',
+      source: 'south-sub',
+      paint: {
+        'line-color': '#3B9ED8',
+        'line-width': 1.5,
+        'line-opacity': 0.9,
+        'line-offset': -1.5
+      },
+      layout: { 'line-cap': 'butt', 'line-join': 'round' }
+    });
+
+    // Track 2 (right)
+    map.addLayer({
+      id: 'south-sub-track-2',
+      type: 'line',
+      source: 'south-sub',
+      paint: {
+        'line-color': '#3B9ED8',
+        'line-width': 1.5,
+        'line-opacity': 0.9,
+        'line-offset': 1.5
+      },
+      layout: { 'line-cap': 'butt', 'line-join': 'round' }
+    });
+
+    // Animated dashes — Track 1 (moves forward)
+    map.addLayer({
+      id: 'south-sub-dashes-1',
+      type: 'line',
+      source: 'south-sub',
+      paint: {
+        'line-color': '#7CC4F0',
+        'line-width': 1.5,
+        'line-opacity': 0.95,
+        'line-dasharray': [0, 4, 3],
+        'line-offset': -1.5
+      },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+
+    // Animated dashes — Track 2 (moves backward)
+    map.addLayer({
+      id: 'south-sub-dashes-2',
+      type: 'line',
+      source: 'south-sub',
+      paint: {
+        'line-color': '#7CC4F0',
+        'line-width': 1.5,
+        'line-opacity': 0.95,
+        'line-dasharray': [0, 4, 3],
+        'line-offset': 1.5
+      },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    });
+
+    // Fit bounds to route
+    const bounds = subCoords.reduce(
+      (b, c) => b.extend(c),
+      new maplibregl.LngLatBounds(subCoords[0], subCoords[0])
+    );
+    map.fitBounds(bounds, { padding: { top: 80, bottom: 60, left: 60, right: 60 } });
+
+    // Animate dashes - cycle through offsets to create movement effect
+    const dashSeq = [
+      [0, 4, 3],
+      [0.5, 4, 2.5],
+      [1, 4, 2],
+      [1.5, 4, 1.5],
+      [2, 4, 1],
+      [2.5, 4, 0.5],
+      [3, 4, 0],
+      [0, 0.5, 3, 3.5],
+      [0, 1, 3, 3],
+      [0, 1.5, 3, 2.5],
+      [0, 2, 3, 2],
+      [0, 2.5, 3, 1.5],
+      [0, 3, 3, 1],
+      [0, 3.5, 3, 0.5],
+    ];
+    const seqLen = dashSeq.length;
+
+    let stepFwd = 0;
+    let stepRev = 0;
+    let frame = 0;
+    // All dash layers that animate forward
+    const fwdDashLayers = [
+      'south-sub-dashes-1', 'tram-dashes', 'borders-dashes',
+      'ecml-dashes', 'egml-dashes', 'carstairs-dashes',
+      'leith-docks-dashes', 'millerhill-dashes',
+      'tram-se-proposed-dashes', 'orchard-brae-dashes', 'roseburn-dashes'
+    ];
+    function animateDashes() {
+      if (++frame % 6 === 0) {
+        const fwdDash = dashSeq[stepFwd];
+        const revDash = dashSeq[stepRev];
+        fwdDashLayers.forEach(id => map.setPaintProperty(id, 'line-dasharray', fwdDash));
+        map.setPaintProperty('south-sub-dashes-2', 'line-dasharray', revDash);
+        stepFwd = (stepFwd + 1) % seqLen;
+        stepRev = (stepRev - 1 + seqLen) % seqLen;
+      }
+      requestAnimationFrame(animateDashes);
+    }
+    animateDashes();
+
+    // Pulse the outer glow
+    let glowOpacity = 0.10;
+    let glowDir = 1;
+    function pulseGlow() {
+      glowOpacity += glowDir * 0.001;
+      if (glowOpacity > 0.18) glowDir = -1;
+      if (glowOpacity < 0.05) glowDir = 1;
+      map.setPaintProperty('south-sub-glow-outer', 'line-opacity', glowOpacity);
+      requestAnimationFrame(pulseGlow);
+    }
+    pulseGlow();
+
+  });
+
+  // ---- Tram-train edge animations ----
+  // Up to 6 trains, each travelling along a single random edge.
+  // Image: nose LEFT, wheels BOTTOM.  scaleX:-1 flips to nose RIGHT.
+  // Rotation then sets direction:
+  //   0°   → bottom edge L→R   (nose RIGHT, wheels DOWN)
+  //  -90°  → right edge  B→T   (nose UP,    wheels RIGHT)
+  //  -180° → top edge    R→L   (nose LEFT,  wheels UP)
+  //  -270° → left edge   T→B   (nose DOWN,  wheels LEFT)
+  (function () {
+    const MAX_TRAINS = 6;
+    const TRAIN_W = 150;
+    const TRAIN_H = 26;
+    const SPEED = 300; // px per second
+    let active = 0;
+    let enabled = true;
+
+    // Toggle button
+    const toggleBtn = document.getElementById('train-anim-toggle');
+    toggleBtn.addEventListener('click', () => {
+      enabled = !toggleBtn.classList.toggle('off');
+      if (!enabled) {
+        // Remove all on-screen trains immediately
+        document.querySelectorAll('.tram-train').forEach(el => {
+          gsap.killTweensOf(el);
+          el.remove();
+        });
+        active = 0;
+      }
+    });
+
+    function createTrainEl() {
+      const img = document.createElement('img');
+      img.className = 'tram-train';
+      img.src = 'assets/tram-train-small.png';
+      img.alt = '';
+      document.body.appendChild(img);
+      return img;
+    }
+
+    function launchOne() {
+      if (!enabled || active >= MAX_TRAINS) return;
+      active++;
+
+      const el = createTrainEl();
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+      const inset = TRAIN_H / 2;
+
+      // Pick a completely random edge + direction.
+      // Image base: nose LEFT, wheels DOWN.
+      // GSAP applies: scale first, then rotate.
+      //
+      // scaleX:-1, rot:0   → nose RIGHT, wheels DOWN
+      // scaleX:-1, rot:90  → nose UP,    wheels RIGHT
+      // scaleX:-1, rot:180 → nose LEFT,  wheels UP
+      // scaleX:-1, rot:-90 → nose DOWN,  wheels LEFT
+      // scaleX: 1, rot:0   → nose LEFT,  wheels DOWN
+      // scaleX: 1, rot:90  → nose DOWN,  wheels RIGHT
+      // scaleX: 1, rot:180 → nose RIGHT, wheels UP
+      // scaleX: 1, rot:-90 → nose UP,    wheels LEFT
+
+      const edge = Math.floor(Math.random() * 4); // 0=bottom,1=right,2=top,3=left
+      const fwd = Math.random() < 0.5;
+
+      let startX, startY, endX, endY, rot, sx, dist;
+
+      switch (edge) {
+        case 0: // bottom — wheels DOWN
+          startY = vh - inset; endY = vh - inset;
+          dist = vw + TRAIN_W * 2;
+          if (fwd) { // L→R  nose RIGHT
+            rot = 0; sx = -1;
+            startX = -TRAIN_W; endX = vw + TRAIN_W;
+          } else {   // R→L  nose LEFT
+            rot = 0; sx = 1;
+            startX = vw + TRAIN_W; endX = -TRAIN_W;
+          }
+          break;
+        case 1: // right — wheels RIGHT
+          startX = vw - inset; endX = vw - inset;
+          dist = vh + TRAIN_W * 2;
+          if (fwd) { // B→T  nose UP
+            rot = 90; sx = -1;
+            startY = vh + TRAIN_W; endY = -TRAIN_W;
+          } else {   // T→B  nose DOWN
+            rot = 90; sx = 1;
+            startY = -TRAIN_W; endY = vh + TRAIN_W;
+          }
+          break;
+        case 2: // top — wheels UP
+          startY = inset; endY = inset;
+          dist = vw + TRAIN_W * 2;
+          if (fwd) { // L→R  nose RIGHT
+            rot = 180; sx = 1;
+            startX = -TRAIN_W; endX = vw + TRAIN_W;
+          } else {   // R→L  nose LEFT
+            rot = 180; sx = -1;
+            startX = vw + TRAIN_W; endX = -TRAIN_W;
+          }
+          break;
+        case 3: // left — wheels LEFT
+          startX = inset; endX = inset;
+          dist = vh + TRAIN_W * 2;
+          if (fwd) { // B→T  nose UP
+            rot = -90; sx = 1;
+            startY = vh + TRAIN_W; endY = -TRAIN_W;
+          } else {   // T→B  nose DOWN
+            rot = -90; sx = -1;
+            startY = -TRAIN_W; endY = vh + TRAIN_W;
+          }
+          break;
+      }
+
+      el.style.display = 'block';
+
+      gsap.set(el, {
+        x: startX, y: startY,
+        rotation: rot, scaleX: sx, scaleY: 1,
+        xPercent: -50, yPercent: -50
+      });
+
+      gsap.to(el, {
+        x: endX, y: endY,
+        duration: dist / SPEED,
+        ease: 'none',
+        onComplete: () => {
+          el.remove();
+          active--;
+        }
+      });
+    }
+
+    // Continuous scheduler — tries to launch a train every 5–15s,
+    // respecting the cap of 6 on screen at any time.
+    // First train appears within 0–30s of page load.
+    function tick() {
+      launchOne();
+      const next = 5000 + Math.random() * 10000; // 5–15s between attempts
+      setTimeout(tick, next);
+    }
+
+    // Initial delay: random 0–30s
+    setTimeout(tick, Math.random() * 30000);
+  })();
+</script>
+</body>
+</html>

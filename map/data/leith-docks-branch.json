@@ -1,0 +1,787 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-02-27T14:55:57Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4074520",
+        "electrified": "no",
+        "gauge": "1435",
+        "maxspeed": "15 mph",
+        "name": "Leith Docks Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:bidirectional": "regular",
+        "railway:preferred_direction": "both",
+        "railway:traffic_mode": "freight",
+        "ref": "LHS1",
+        "source": "Yahoo Tracing",
+        "usage": "branch"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1186564,
+            55.9503316
+          ],
+          [
+            -3.1190257,
+            55.9505009
+          ],
+          [
+            -3.1191847,
+            55.9505724
+          ],
+          [
+            -3.1212519,
+            55.9515021
+          ]
+        ]
+      },
+      "id": "way/4074520"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4905497",
+        "electrified": "no",
+        "gauge": "1435",
+        "maxspeed": "15 mph",
+        "name": "Leith Docks Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:preferred_direction": "forward",
+        "railway:traffic_mode": "freight",
+        "ref": "LHS1",
+        "source": "bing",
+        "usage": "branch"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1182971,
+            55.950203
+          ],
+          [
+            -3.1177446,
+            55.9500218
+          ],
+          [
+            -3.1171704,
+            55.9498497
+          ],
+          [
+            -3.1165825,
+            55.9496752
+          ],
+          [
+            -3.1148942,
+            55.9491254
+          ],
+          [
+            -3.1126782,
+            55.9484104
+          ],
+          [
+            -3.1121595,
+            55.9482407
+          ],
+          [
+            -3.1120048,
+            55.9481901
+          ],
+          [
+            -3.1115089,
+            55.9479948
+          ]
+        ]
+      },
+      "id": "way/4905497"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/49874354",
+        "electrified": "no",
+        "gauge": "1435",
+        "maxspeed": "15 mph",
+        "name": "Leith Docks Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:preferred_direction": "forward",
+        "railway:traffic_mode": "freight",
+        "ref": "LHS1",
+        "source": "bing",
+        "usage": "branch"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1115089,
+            55.9479948
+          ],
+          [
+            -3.1121403,
+            55.9481988
+          ],
+          [
+            -3.1128132,
+            55.9484163
+          ],
+          [
+            -3.1137304,
+            55.9487112
+          ],
+          [
+            -3.114885,
+            55.9490831
+          ],
+          [
+            -3.1160886,
+            55.9494762
+          ],
+          [
+            -3.1165476,
+            55.949618
+          ],
+          [
+            -3.1172351,
+            55.9498116
+          ],
+          [
+            -3.1172824,
+            55.9498262
+          ],
+          [
+            -3.1177788,
+            55.9499798
+          ],
+          [
+            -3.1183131,
+            55.9501902
+          ]
+        ]
+      },
+      "id": "way/49874354"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/49874682",
+        "bridge": "yes",
+        "bridge:ref": "LHS1/001",
+        "electrified": "no",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "15 mph",
+        "name": "Leith Docks Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:bidirectional": "regular",
+        "railway:preferred_direction": "both",
+        "railway:traffic_mode": "freight",
+        "ref": "LHS1",
+        "source": "survey",
+        "usage": "branch"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1212519,
+            55.9515021
+          ],
+          [
+            -3.1216377,
+            55.9516707
+          ]
+        ]
+      },
+      "id": "way/49874682"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/49874683",
+        "electrified": "no",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Leith Docks Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:bidirectional": "regular",
+        "railway:preferred_direction": "both",
+        "railway:traffic_mode": "freight",
+        "ref": "LHS1",
+        "source": "Bing",
+        "usage": "branch"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1216377,
+            55.9516707
+          ],
+          [
+            -3.1222627,
+            55.9519692
+          ],
+          [
+            -3.1227806,
+            55.9522761
+          ],
+          [
+            -3.1230238,
+            55.9524991
+          ],
+          [
+            -3.1231901,
+            55.9526989
+          ],
+          [
+            -3.1233777,
+            55.9530018
+          ],
+          [
+            -3.1235,
+            55.9532931
+          ],
+          [
+            -3.1235395,
+            55.9534643
+          ],
+          [
+            -3.1235466,
+            55.9538263
+          ],
+          [
+            -3.1235678,
+            55.9541886
+          ],
+          [
+            -3.1236793,
+            55.9547988
+          ],
+          [
+            -3.1237,
+            55.9549489
+          ],
+          [
+            -3.123724,
+            55.9551418
+          ],
+          [
+            -3.1237107,
+            55.9553513
+          ],
+          [
+            -3.1236615,
+            55.9555561
+          ],
+          [
+            -3.1234867,
+            55.9562752
+          ],
+          [
+            -3.1233344,
+            55.956858
+          ],
+          [
+            -3.1233125,
+            55.956975
+          ],
+          [
+            -3.123304,
+            55.9571492
+          ],
+          [
+            -3.1233315,
+            55.957338
+          ],
+          [
+            -3.1234559,
+            55.9577021
+          ],
+          [
+            -3.123512,
+            55.9578077
+          ],
+          [
+            -3.123625,
+            55.9579806
+          ],
+          [
+            -3.1239422,
+            55.9582811
+          ],
+          [
+            -3.1246649,
+            55.95889
+          ],
+          [
+            -3.1257007,
+            55.9597563
+          ],
+          [
+            -3.1264259,
+            55.9603581
+          ],
+          [
+            -3.1270292,
+            55.9608046
+          ],
+          [
+            -3.1276786,
+            55.961172
+          ],
+          [
+            -3.1287109,
+            55.9616085
+          ],
+          [
+            -3.1295292,
+            55.9619476
+          ],
+          [
+            -3.1298036,
+            55.9620714
+          ],
+          [
+            -3.1301999,
+            55.9622756
+          ],
+          [
+            -3.130509,
+            55.9624671
+          ],
+          [
+            -3.1307484,
+            55.9626267
+          ],
+          [
+            -3.1309799,
+            55.9627982
+          ],
+          [
+            -3.1313807,
+            55.9631507
+          ],
+          [
+            -3.1316357,
+            55.9633644
+          ],
+          [
+            -3.131814,
+            55.963547
+          ],
+          [
+            -3.1319392,
+            55.9637274
+          ],
+          [
+            -3.1320491,
+            55.9638787
+          ],
+          [
+            -3.1320927,
+            55.9639549
+          ],
+          [
+            -3.1321304,
+            55.9640182
+          ],
+          [
+            -3.1322043,
+            55.9641706
+          ],
+          [
+            -3.1322984,
+            55.9643756
+          ],
+          [
+            -3.1325016,
+            55.9647402
+          ],
+          [
+            -3.1325789,
+            55.9648668
+          ],
+          [
+            -3.1327002,
+            55.9650152
+          ],
+          [
+            -3.1327815,
+            55.9651067
+          ],
+          [
+            -3.132935,
+            55.9652394
+          ],
+          [
+            -3.1332169,
+            55.9654591
+          ],
+          [
+            -3.1337687,
+            55.9657994
+          ],
+          [
+            -3.1342447,
+            55.9660816
+          ],
+          [
+            -3.1346837,
+            55.9663715
+          ],
+          [
+            -3.1350438,
+            55.9666512
+          ],
+          [
+            -3.1354124,
+            55.9670021
+          ],
+          [
+            -3.1359188,
+            55.9674441
+          ],
+          [
+            -3.1362963,
+            55.9676788
+          ],
+          [
+            -3.1366244,
+            55.9678416
+          ],
+          [
+            -3.1370682,
+            55.9680023
+          ],
+          [
+            -3.137937,
+            55.9682653
+          ],
+          [
+            -3.1391207,
+            55.9685799
+          ],
+          [
+            -3.1394622,
+            55.9686576
+          ],
+          [
+            -3.1401443,
+            55.9687644
+          ],
+          [
+            -3.1414087,
+            55.968935
+          ],
+          [
+            -3.1426163,
+            55.9691294
+          ],
+          [
+            -3.1432142,
+            55.9692437
+          ],
+          [
+            -3.1437681,
+            55.9693685
+          ],
+          [
+            -3.1443099,
+            55.9695008
+          ]
+        ]
+      },
+      "id": "way/49874683"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/219246482",
+        "bridge": "yes",
+        "electrified": "no",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "15 mph",
+        "name": "Leith Docks Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:bidirectional": "regular",
+        "railway:preferred_direction": "both",
+        "railway:traffic_mode": "freight",
+        "ref": "LHS1",
+        "source": "Yahoo Tracing",
+        "usage": "branch"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1186564,
+            55.9503316
+          ],
+          [
+            -3.1185563,
+            55.9502912
+          ]
+        ]
+      },
+      "id": "way/219246482"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1252946113",
+        "bridge": "yes",
+        "electrified": "no",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "15 mph",
+        "name": "Leith Docks Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:preferred_direction": "forward",
+        "railway:traffic_mode": "freight",
+        "ref": "LHS1",
+        "source": "bing",
+        "usage": "branch"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1185563,
+            55.9502912
+          ],
+          [
+            -3.1182971,
+            55.950203
+          ]
+        ]
+      },
+      "id": "way/1252946113"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1252946114",
+        "bridge": "yes",
+        "electrified": "no",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "15 mph",
+        "name": "Leith Docks Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:preferred_direction": "forward",
+        "railway:traffic_mode": "freight",
+        "ref": "LHS1",
+        "source": "bing",
+        "usage": "branch"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1183131,
+            55.9501902
+          ],
+          [
+            -3.1185563,
+            55.9502912
+          ]
+        ]
+      },
+      "id": "way/1252946114"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1447359100",
+        "electrified": "no",
+        "gauge": "1435",
+        "maxspeed": "5 mph",
+        "name": "Leith Docks Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:bidirectional": "regular",
+        "railway:preferred_direction": "both",
+        "railway:traffic_mode": "freight",
+        "ref": "LHS1",
+        "source": "Bing",
+        "usage": "branch"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1443099,
+            55.9695008
+          ],
+          [
+            -3.1449793,
+            55.969674
+          ],
+          [
+            -3.1451767,
+            55.9697321
+          ],
+          [
+            -3.1452519,
+            55.9697542
+          ],
+          [
+            -3.1453171,
+            55.9697736
+          ],
+          [
+            -3.1459325,
+            55.9699484
+          ],
+          [
+            -3.146215,
+            55.9700409
+          ],
+          [
+            -3.146712,
+            55.9702274
+          ],
+          [
+            -3.147594,
+            55.9705619
+          ],
+          [
+            -3.1480261,
+            55.9707542
+          ],
+          [
+            -3.1484174,
+            55.9710036
+          ],
+          [
+            -3.1486072,
+            55.9711454
+          ],
+          [
+            -3.148795,
+            55.9713122
+          ],
+          [
+            -3.1489723,
+            55.9714953
+          ],
+          [
+            -3.1491313,
+            55.9717217
+          ],
+          [
+            -3.1493449,
+            55.9720574
+          ],
+          [
+            -3.1494722,
+            55.9722176
+          ],
+          [
+            -3.1511174,
+            55.9737792
+          ],
+          [
+            -3.1514265,
+            55.974003
+          ],
+          [
+            -3.1516855,
+            55.9741759
+          ],
+          [
+            -3.152313,
+            55.9745648
+          ],
+          [
+            -3.1528591,
+            55.9748913
+          ],
+          [
+            -3.1533337,
+            55.9751874
+          ],
+          [
+            -3.153577,
+            55.9753949
+          ],
+          [
+            -3.1537214,
+            55.9756093
+          ]
+        ]
+      },
+      "id": "way/1447359100"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1447359101",
+        "electrified": "no",
+        "gauge": "1435",
+        "maxspeed": "15 mph",
+        "name": "Leith Docks Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:bidirectional": "regular",
+        "railway:preferred_direction": "both",
+        "railway:traffic_mode": "freight",
+        "ref": "LHS1",
+        "source": "bing",
+        "usage": "branch"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1102343,
+            55.9476378
+          ],
+          [
+            -3.1105562,
+            55.9477074
+          ],
+          [
+            -3.1108217,
+            55.9477788
+          ],
+          [
+            -3.111406,
+            55.9479604
+          ],
+          [
+            -3.1115089,
+            55.9479948
+          ]
+        ]
+      },
+      "id": "way/1447359101"
+    }
+  ]
+}

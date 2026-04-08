@@ -1,0 +1,1217 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/27157841",
+        "bridge": "yes",
+        "bridge:ref": "3",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "30 mph",
+        "name": "Millerhill Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:track_ref": "Down Goods",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL2",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0660292,
+            55.9303765
+          ],
+          [
+            -3.0662291,
+            55.9303883
+          ]
+        ]
+      },
+      "id": "way/27157841"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/27157843",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "30 mph",
+        "name": "Millerhill Branch",
+        "note": "freight only, but through line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:track_ref": "Down Goods",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL2",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0662291,
+            55.9303883
+          ],
+          [
+            -3.0664265,
+            55.930395
+          ],
+          [
+            -3.0668935,
+            55.9304107
+          ],
+          [
+            -3.0676771,
+            55.9303832
+          ],
+          [
+            -3.0681748,
+            55.9303449
+          ],
+          [
+            -3.0688856,
+            55.9302532
+          ],
+          [
+            -3.0695535,
+            55.9301225
+          ],
+          [
+            -3.0701865,
+            55.9299287
+          ],
+          [
+            -3.0706934,
+            55.9297303
+          ],
+          [
+            -3.0711467,
+            55.9295365
+          ],
+          [
+            -3.0716993,
+            55.929251
+          ],
+          [
+            -3.0719916,
+            55.9290541
+          ],
+          [
+            -3.0724369,
+            55.9287146
+          ],
+          [
+            -3.0727614,
+            55.9283674
+          ],
+          [
+            -3.0730162,
+            55.9280339
+          ],
+          [
+            -3.0732067,
+            55.9276341
+          ],
+          [
+            -3.0733059,
+            55.927275
+          ],
+          [
+            -3.0733427,
+            55.9270143
+          ],
+          [
+            -3.0733596,
+            55.9268948
+          ],
+          [
+            -3.0733515,
+            55.9264771
+          ],
+          [
+            -3.0732415,
+            55.9261254
+          ],
+          [
+            -3.0730404,
+            55.9257122
+          ],
+          [
+            -3.0724288,
+            55.9245535
+          ],
+          [
+            -3.0715182,
+            55.922838
+          ],
+          [
+            -3.0711944,
+            55.9222613
+          ],
+          [
+            -3.0711252,
+            55.9221116
+          ],
+          [
+            -3.0710388,
+            55.9218991
+          ],
+          [
+            -3.0709884,
+            55.9216849
+          ],
+          [
+            -3.0709583,
+            55.9214542
+          ],
+          [
+            -3.0709617,
+            55.9212157
+          ],
+          [
+            -3.07101,
+            55.920977
+          ],
+          [
+            -3.0711005,
+            55.9207343
+          ],
+          [
+            -3.071307,
+            55.9203823
+          ],
+          [
+            -3.0715068,
+            55.9201504
+          ],
+          [
+            -3.0717523,
+            55.9199216
+          ],
+          [
+            -3.0721559,
+            55.9196263
+          ],
+          [
+            -3.0724181,
+            55.9194733
+          ],
+          [
+            -3.0727065,
+            55.9193321
+          ],
+          [
+            -3.0730908,
+            55.9191649
+          ],
+          [
+            -3.0734684,
+            55.9190521
+          ],
+          [
+            -3.0737029,
+            55.918995
+          ],
+          [
+            -3.0740234,
+            55.9189364
+          ],
+          [
+            -3.0743533,
+            55.9188845
+          ],
+          [
+            -3.0746725,
+            55.9188387
+          ]
+        ]
+      },
+      "id": "way/27157843"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/27157856",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "20 mph",
+        "name": "Millerhill Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:track_ref": "Down Goods",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL1",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0637648,
+            55.9299582
+          ],
+          [
+            -3.0638225,
+            55.9299732
+          ]
+        ]
+      },
+      "id": "way/27157856"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/27157857",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "30 mph",
+        "name": "Millerhill Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:track_ref": "Down Goods",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL2",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0647568,
+            55.9302056
+          ],
+          [
+            -3.0654888,
+            55.9303258
+          ],
+          [
+            -3.0660292,
+            55.9303765
+          ]
+        ]
+      },
+      "id": "way/27157857"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/95212158",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "20 mph",
+        "name": "Millerhill Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:track_ref": "Down Goods",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL1",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0613476,
+            55.9293999
+          ],
+          [
+            -3.0617291,
+            55.9294761
+          ]
+        ]
+      },
+      "id": "way/95212158"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/95212160",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Millerhill Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:track_ref": "Down Goods",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL1",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0550481,
+            55.9288711
+          ],
+          [
+            -3.0556605,
+            55.9288661
+          ],
+          [
+            -3.056858,
+            55.9288839
+          ],
+          [
+            -3.0580588,
+            55.9289544
+          ],
+          [
+            -3.0599362,
+            55.9291618
+          ],
+          [
+            -3.0607141,
+            55.9292801
+          ],
+          [
+            -3.0612078,
+            55.9293735
+          ],
+          [
+            -3.0613476,
+            55.9293999
+          ]
+        ]
+      },
+      "id": "way/95212160"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/95212161",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Millerhill Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:track_ref": "Down Goods",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL1",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0617291,
+            55.9294761
+          ],
+          [
+            -3.0627952,
+            55.9297039
+          ],
+          [
+            -3.0637648,
+            55.9299582
+          ]
+        ]
+      },
+      "id": "way/95212161"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/95215489",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Millerhill Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:track_ref": "Up Goods",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL1",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0613252,
+            55.9294343
+          ],
+          [
+            -3.0606432,
+            55.9293133
+          ],
+          [
+            -3.0594971,
+            55.9291885
+          ],
+          [
+            -3.0583818,
+            55.9290823
+          ]
+        ]
+      },
+      "id": "way/95215489"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/418061440",
+        "bridge": "yes",
+        "bridge:ref": "3",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "30 mph",
+        "name": "Millerhill Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:track_ref": "Up Goods",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL2",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0662248,
+            55.9304287
+          ],
+          [
+            -3.0661608,
+            55.9304249
+          ],
+          [
+            -3.0660195,
+            55.9304166
+          ]
+        ]
+      },
+      "id": "way/418061440"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/418061487",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "20 mph",
+        "name": "Millerhill Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:track_ref": "Up Goods",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL1",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0637978,
+            55.9300027
+          ],
+          [
+            -3.0637396,
+            55.9299884
+          ]
+        ]
+      },
+      "id": "way/418061487"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/418061490",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "20 mph",
+        "name": "Millerhill Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:track_ref": "Up Goods",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL1",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.061709,
+            55.929507
+          ],
+          [
+            -3.0613252,
+            55.9294343
+          ]
+        ]
+      },
+      "id": "way/418061490"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/418061509",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Millerhill Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:track_ref": "Up Goods",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL1",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0637396,
+            55.9299884
+          ],
+          [
+            -3.0627671,
+            55.9297411
+          ],
+          [
+            -3.061709,
+            55.929507
+          ]
+        ]
+      },
+      "id": "way/418061509"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/418061512",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "30 mph",
+        "name": "Millerhill Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:track_ref": "Up Goods",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL2",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0660195,
+            55.9304166
+          ],
+          [
+            -3.0658764,
+            55.9304032
+          ],
+          [
+            -3.0654726,
+            55.9303653
+          ],
+          [
+            -3.0647316,
+            55.9302436
+          ]
+        ]
+      },
+      "id": "way/418061512"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/418061525",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "30 mph",
+        "name": "Millerhill Branch",
+        "note": "freight only, but through line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:track_ref": "Up Goods",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL2",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0746866,
+            55.9188784
+          ],
+          [
+            -3.07437,
+            55.9189154
+          ],
+          [
+            -3.0740335,
+            55.9189655
+          ],
+          [
+            -3.0737267,
+            55.9190228
+          ],
+          [
+            -3.0734843,
+            55.9190822
+          ],
+          [
+            -3.0731174,
+            55.9191937
+          ],
+          [
+            -3.0727439,
+            55.9193582
+          ],
+          [
+            -3.0724651,
+            55.9194959
+          ],
+          [
+            -3.0722023,
+            55.9196459
+          ],
+          [
+            -3.0718021,
+            55.9199366
+          ],
+          [
+            -3.0715618,
+            55.9201617
+          ],
+          [
+            -3.0713608,
+            55.9203937
+          ],
+          [
+            -3.0711521,
+            55.9207443
+          ],
+          [
+            -3.0710663,
+            55.9209831
+          ],
+          [
+            -3.0710213,
+            55.9212195
+          ],
+          [
+            -3.0710187,
+            55.9214565
+          ],
+          [
+            -3.071051,
+            55.9216837
+          ],
+          [
+            -3.0711045,
+            55.9218968
+          ],
+          [
+            -3.0711794,
+            55.9220981
+          ],
+          [
+            -3.071248,
+            55.9222507
+          ],
+          [
+            -3.0715874,
+            55.9228266
+          ],
+          [
+            -3.072498,
+            55.924542
+          ],
+          [
+            -3.0731098,
+            55.9257011
+          ],
+          [
+            -3.073312,
+            55.9261166
+          ],
+          [
+            -3.0734236,
+            55.9264733
+          ],
+          [
+            -3.0734317,
+            55.9268962
+          ],
+          [
+            -3.0733776,
+            55.9272797
+          ],
+          [
+            -3.0732774,
+            55.9276425
+          ],
+          [
+            -3.0730846,
+            55.9280471
+          ],
+          [
+            -3.0728267,
+            55.9283848
+          ],
+          [
+            -3.0724983,
+            55.928736
+          ],
+          [
+            -3.0720485,
+            55.9290791
+          ],
+          [
+            -3.0717517,
+            55.9292789
+          ],
+          [
+            -3.0711932,
+            55.9295675
+          ],
+          [
+            -3.070736,
+            55.929763
+          ],
+          [
+            -3.0704221,
+            55.9298858
+          ],
+          [
+            -3.0702246,
+            55.9299631
+          ],
+          [
+            -3.0695829,
+            55.9301596
+          ],
+          [
+            -3.0689057,
+            55.9302921
+          ],
+          [
+            -3.0681879,
+            55.9303847
+          ],
+          [
+            -3.0676843,
+            55.9304235
+          ],
+          [
+            -3.0668936,
+            55.9304512
+          ],
+          [
+            -3.0662248,
+            55.9304287
+          ]
+        ]
+      },
+      "id": "way/418061525"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1092327074",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "15 mph",
+        "name": "Millerhill Branch",
+        "note": "freight only, but through line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL3",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0780431,
+            55.919141
+          ],
+          [
+            -3.0777051,
+            55.9189977
+          ],
+          [
+            -3.0772664,
+            55.9188857
+          ],
+          [
+            -3.0766325,
+            55.918812
+          ],
+          [
+            -3.0760762,
+            55.9188127
+          ],
+          [
+            -3.0755531,
+            55.9188178
+          ],
+          [
+            -3.0752909,
+            55.918831
+          ],
+          [
+            -3.0746866,
+            55.9188784
+          ]
+        ]
+      },
+      "id": "way/1092327074"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1092327075",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "15 mph",
+        "name": "Millerhill Branch",
+        "note": "freight only, but through line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL3",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0746725,
+            55.9188387
+          ],
+          [
+            -3.0752807,
+            55.9187825
+          ],
+          [
+            -3.0755456,
+            55.9187699
+          ],
+          [
+            -3.0760826,
+            55.918765
+          ],
+          [
+            -3.0766426,
+            55.9187718
+          ],
+          [
+            -3.077289,
+            55.918847
+          ],
+          [
+            -3.0777423,
+            55.9189627
+          ],
+          [
+            -3.0780745,
+            55.9191035
+          ]
+        ]
+      },
+      "id": "way/1092327075"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1413353114",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "5 mph",
+        "name": "Millerhill Branch",
+        "note": "freight only, but through line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:preferred_direction": "forward",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL3",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0792807,
+            55.9199257
+          ],
+          [
+            -3.0787745,
+            55.9195581
+          ],
+          [
+            -3.0784022,
+            55.9193147
+          ],
+          [
+            -3.0781919,
+            55.9192041
+          ],
+          [
+            -3.0780431,
+            55.919141
+          ]
+        ]
+      },
+      "id": "way/1413353114"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1413353115",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "5 mph",
+        "name": "Millerhill Branch",
+        "note": "freight only, but through line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:preferred_direction": "forward",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL3",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0780745,
+            55.9191035
+          ],
+          [
+            -3.0782385,
+            55.9191731
+          ],
+          [
+            -3.0784558,
+            55.9192874
+          ],
+          [
+            -3.0789516,
+            55.9196452
+          ]
+        ]
+      },
+      "id": "way/1413353115"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1413353116",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Millerhill Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:track_ref": "Up Goods",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL2",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0647316,
+            55.9302436
+          ],
+          [
+            -3.0637978,
+            55.9300027
+          ]
+        ]
+      },
+      "id": "way/1413353116"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1413353117",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Millerhill Branch",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:track_ref": "Down Goods",
+        "railway:traffic_mode": "freight",
+        "ref": "MHL2",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.0638225,
+            55.9299732
+          ],
+          [
+            -3.0647568,
+            55.9302056
+          ]
+        ]
+      },
+      "id": "way/1413353117"
+    }
+  ]
+}

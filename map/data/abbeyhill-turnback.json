@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"@id": "way/239305629", "abandoned:railway": "rail", "name": "Abbeyhill Turnback", "railway": "abandoned"}, "geometry": {"type": "LineString", "coordinates": [[-3.1695457, 55.9556353], [-3.1701703, 55.9554736], [-3.1733694, 55.9548054], [-3.1745157, 55.9545348]]}, "id": "way/239305629"}]}

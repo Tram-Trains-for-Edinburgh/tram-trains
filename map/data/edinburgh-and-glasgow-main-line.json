@@ -1,0 +1,4712 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-02-27T14:34:30Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4064140",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:bidirectional": "regular",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "X",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "source": "bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1986573,
+            55.9503759
+          ],
+          [
+            -3.1982295,
+            55.9504454
+          ],
+          [
+            -3.1972951,
+            55.9506012
+          ],
+          [
+            -3.1968647,
+            55.9506714
+          ],
+          [
+            -3.1965988,
+            55.9507148
+          ]
+        ]
+      },
+      "id": "way/4064140"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4064141",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "-1",
+        "maxspeed": "40 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "tunnel": "yes",
+        "tunnel:name": "Haymarket South Tunnel",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2173668,
+            55.9455331
+          ],
+          [
+            -3.2148753,
+            55.9461335
+          ],
+          [
+            -3.2135893,
+            55.9464313
+          ],
+          [
+            -3.212183,
+            55.946757
+          ],
+          [
+            -3.2085185,
+            55.9476283
+          ],
+          [
+            -3.2082073,
+            55.9477023
+          ],
+          [
+            -3.2076559,
+            55.947843
+          ],
+          [
+            -3.2068036,
+            55.9480605
+          ],
+          [
+            -3.2060975,
+            55.9482359
+          ],
+          [
+            -3.2049006,
+            55.9486424
+          ],
+          [
+            -3.2040234,
+            55.948976
+          ]
+        ]
+      },
+      "id": "way/4064141"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4073927",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "80 mph",
+        "maxspeed:freight": "70 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM2",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2450699,
+            55.939491
+          ],
+          [
+            -3.2439373,
+            55.9397474
+          ],
+          [
+            -3.2428941,
+            55.9399793
+          ],
+          [
+            -3.2418413,
+            55.9402162
+          ],
+          [
+            -3.2400854,
+            55.9406171
+          ],
+          [
+            -3.2386456,
+            55.9409312
+          ]
+        ]
+      },
+      "id": "way/4073927"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4073947",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Yahoo Tracing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3133605,
+            55.9269539
+          ],
+          [
+            -3.3068741,
+            55.9276721
+          ],
+          [
+            -3.306064,
+            55.9277618
+          ]
+        ]
+      },
+      "id": "way/4073947"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4074395",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "25 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "ref": "EGM2",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2454712,
+            55.9394001
+          ],
+          [
+            -3.2452028,
+            55.9394525
+          ],
+          [
+            -3.2450598,
+            55.9394762
+          ]
+        ]
+      },
+      "id": "way/4074395"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4074413",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "mixed",
+        "ref": "EGM1",
+        "source": "Bing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.270525,
+            55.9337859
+          ],
+          [
+            -3.2666564,
+            55.9346567
+          ],
+          [
+            -3.2648637,
+            55.9350573
+          ],
+          [
+            -3.2574047,
+            55.9367382
+          ],
+          [
+            -3.2539298,
+            55.9375065
+          ],
+          [
+            -3.2529446,
+            55.937727
+          ],
+          [
+            -3.2505735,
+            55.9382575
+          ],
+          [
+            -3.25044,
+            55.9382874
+          ]
+        ]
+      },
+      "id": "way/4074413"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4247058",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "-1",
+        "length": "130 yd",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:bidirectional": "regular",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "X",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "tunnel": "yes",
+        "tunnel:name": "Mound Tunnels",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1965988,
+            55.9507148
+          ],
+          [
+            -3.1961606,
+            55.9507924
+          ],
+          [
+            -3.1959877,
+            55.9508242
+          ],
+          [
+            -3.1959806,
+            55.9508254
+          ],
+          [
+            -3.1952856,
+            55.9509462
+          ],
+          [
+            -3.1949566,
+            55.9510007
+          ],
+          [
+            -3.1948652,
+            55.951016
+          ]
+        ]
+      },
+      "id": "way/4247058"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4489287",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "level": "-1",
+        "maxspeed": "40 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2211336,
+            55.944841
+          ],
+          [
+            -3.2205543,
+            55.9449416
+          ],
+          [
+            -3.2195329,
+            55.9451027
+          ],
+          [
+            -3.2189023,
+            55.9452103
+          ],
+          [
+            -3.2188329,
+            55.9452239
+          ],
+          [
+            -3.2183083,
+            55.9453266
+          ],
+          [
+            -3.2174168,
+            55.9455221
+          ],
+          [
+            -3.2173668,
+            55.9455331
+          ]
+        ]
+      },
+      "id": "way/4489287"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4640985",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "80 mph",
+        "maxspeed:freight": "70 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "mixed",
+        "ref": "EGM1",
+        "source": "Yahoo Tracing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.25044,
+            55.9382874
+          ],
+          [
+            -3.2502965,
+            55.9383239
+          ]
+        ]
+      },
+      "id": "way/4640985"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4802939",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "4",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Yahoo Tracing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.306064,
+            55.9277618
+          ],
+          [
+            -3.3058734,
+            55.9277819
+          ]
+        ]
+      },
+      "id": "way/4802939"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4941912",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Yahoo Tracing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2913277,
+            55.9294136
+          ],
+          [
+            -3.2893143,
+            55.9297054
+          ],
+          [
+            -3.2877077,
+            55.9299829
+          ],
+          [
+            -3.2860301,
+            55.9303189
+          ]
+        ]
+      },
+      "id": "way/4941912"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4941913",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Yahoo Tracing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2860301,
+            55.9303189
+          ],
+          [
+            -3.2856586,
+            55.9303959
+          ]
+        ]
+      },
+      "id": "way/4941913"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4941993",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Yahoo Tracing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3058734,
+            55.9277819
+          ],
+          [
+            -3.2951263,
+            55.9289268
+          ],
+          [
+            -3.2943613,
+            55.9290083
+          ],
+          [
+            -3.2918865,
+            55.9293319
+          ]
+        ]
+      },
+      "id": "way/4941993"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4941997",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Bing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2856586,
+            55.9303959
+          ],
+          [
+            -3.2748572,
+            55.9328178
+          ]
+        ]
+      },
+      "id": "way/4941997"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4941998",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "ref": "EGM1",
+        "source": "Bing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2745335,
+            55.9328924
+          ],
+          [
+            -3.2736235,
+            55.933101
+          ],
+          [
+            -3.2735585,
+            55.9331154
+          ],
+          [
+            -3.270525,
+            55.9337859
+          ]
+        ]
+      },
+      "id": "way/4941998"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4943041",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "80 mph",
+        "maxspeed:freight": "70 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM2",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2291755,
+            55.9430537
+          ],
+          [
+            -3.2290439,
+            55.9430832
+          ],
+          [
+            -3.2269993,
+            55.9435408
+          ],
+          [
+            -3.2239242,
+            55.9442291
+          ],
+          [
+            -3.2230806,
+            55.9444154
+          ]
+        ]
+      },
+      "id": "way/4943041"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/4943345",
+        "bridge": "yes",
+        "bridge:ref": "EGM3/004",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "80 mph",
+        "maxspeed:freight": "70 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM2",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2293913,
+            55.9430037
+          ],
+          [
+            -3.2291755,
+            55.9430537
+          ]
+        ]
+      },
+      "id": "way/4943345"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/5001405",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "80 mph",
+        "maxspeed:freight": "70 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM2",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2384049,
+            55.9409848
+          ],
+          [
+            -3.2367141,
+            55.9413637
+          ],
+          [
+            -3.2364903,
+            55.9414143
+          ],
+          [
+            -3.2353086,
+            55.9416815
+          ],
+          [
+            -3.2329272,
+            55.9422121
+          ],
+          [
+            -3.2327494,
+            55.9422544
+          ],
+          [
+            -3.2315773,
+            55.942518
+          ],
+          [
+            -3.2314703,
+            55.942542
+          ],
+          [
+            -3.2293913,
+            55.9430037
+          ]
+        ]
+      },
+      "id": "way/5001405"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/5001406",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "80 mph",
+        "maxspeed:freight": "70 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM2",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2386456,
+            55.9409312
+          ],
+          [
+            -3.2384049,
+            55.9409848
+          ]
+        ]
+      },
+      "id": "way/5001406"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/5043490",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "80 mph",
+        "maxspeed:freight": "70 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "mixed",
+        "ref": "EGM1",
+        "source": "Bing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2502965,
+            55.9383239
+          ],
+          [
+            -3.2495121,
+            55.9384953
+          ],
+          [
+            -3.2479128,
+            55.9388616
+          ],
+          [
+            -3.2473311,
+            55.9389868
+          ],
+          [
+            -3.2460049,
+            55.9392907
+          ],
+          [
+            -3.2456769,
+            55.9393583
+          ]
+        ]
+      },
+      "id": "way/5043490"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/5208850",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1933305,
+            55.9511803
+          ],
+          [
+            -3.1927788,
+            55.9512729
+          ],
+          [
+            -3.1925883,
+            55.9512983
+          ],
+          [
+            -3.19175,
+            55.9514102
+          ],
+          [
+            -3.1913734,
+            55.9514624
+          ],
+          [
+            -3.190798,
+            55.9515522
+          ],
+          [
+            -3.1896985,
+            55.9517227
+          ]
+        ]
+      },
+      "id": "way/5208850"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23430276",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Yahoo Tracing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2918865,
+            55.9293319
+          ],
+          [
+            -3.2913277,
+            55.9294136
+          ]
+        ]
+      },
+      "id": "way/23430276"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/30612704",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "-1",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Yahoo Tracing",
+        "tunnel": "yes",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3157626,
+            55.9266959
+          ],
+          [
+            -3.3133605,
+            55.9269539
+          ]
+        ]
+      },
+      "id": "way/30612704"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/30612706",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Yahoo Tracing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3520213,
+            55.9295888
+          ],
+          [
+            -3.3437895,
+            55.927521
+          ],
+          [
+            -3.342764,
+            55.9272894
+          ],
+          [
+            -3.3406342,
+            55.9268753
+          ],
+          [
+            -3.3400662,
+            55.9267815
+          ],
+          [
+            -3.3390009,
+            55.9266056
+          ],
+          [
+            -3.3370481,
+            55.9263447
+          ],
+          [
+            -3.3353411,
+            55.926173
+          ],
+          [
+            -3.3335364,
+            55.9260235
+          ],
+          [
+            -3.331662,
+            55.9259275
+          ],
+          [
+            -3.3294693,
+            55.9258922
+          ],
+          [
+            -3.3266323,
+            55.9259189
+          ],
+          [
+            -3.3246865,
+            55.9259756
+          ],
+          [
+            -3.322854,
+            55.926059
+          ],
+          [
+            -3.3190732,
+            55.9263488
+          ],
+          [
+            -3.3176331,
+            55.9264998
+          ],
+          [
+            -3.3157626,
+            55.9266959
+          ]
+        ]
+      },
+      "id": "way/30612706"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/38873109",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:bidirectional": "regular",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "X",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1948652,
+            55.951016
+          ],
+          [
+            -3.1946854,
+            55.9510467
+          ]
+        ]
+      },
+      "id": "way/38873109"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/69932394",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1922178,
+            55.9512469
+          ],
+          [
+            -3.1918369,
+            55.9512831
+          ],
+          [
+            -3.1917217,
+            55.9512941
+          ],
+          [
+            -3.1913646,
+            55.9513385
+          ],
+          [
+            -3.1901476,
+            55.9515209
+          ]
+        ]
+      },
+      "id": "way/69932394"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/69932395",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1901649,
+            55.9515435
+          ],
+          [
+            -3.1913758,
+            55.9513656
+          ],
+          [
+            -3.1917346,
+            55.9513193
+          ],
+          [
+            -3.1918438,
+            55.9513097
+          ],
+          [
+            -3.1928297,
+            55.951227
+          ]
+        ]
+      },
+      "id": "way/69932395"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/69932398",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1914061,
+            55.9514816
+          ],
+          [
+            -3.1917603,
+            55.951433
+          ],
+          [
+            -3.1921536,
+            55.9513822
+          ],
+          [
+            -3.1927159,
+            55.951303
+          ],
+          [
+            -3.19307,
+            55.9512509
+          ],
+          [
+            -3.1931625,
+            55.9512373
+          ],
+          [
+            -3.1935084,
+            55.9511815
+          ],
+          [
+            -3.1937494,
+            55.9511419
+          ]
+        ]
+      },
+      "id": "way/69932398"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83098811",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "80 mph",
+        "maxspeed:freight": "70 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "mixed",
+        "ref": "EGM1",
+        "source": "Bing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2456769,
+            55.9393583
+          ],
+          [
+            -3.2455168,
+            55.9393908
+          ],
+          [
+            -3.2454712,
+            55.9394001
+          ]
+        ]
+      },
+      "id": "way/83098811"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83098838",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down South",
+        "railway:traffic_mode": "mixed",
+        "ref": "EGM1",
+        "source": "Bing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2504021,
+            55.9382642
+          ],
+          [
+            -3.2505496,
+            55.9382312
+          ],
+          [
+            -3.2538996,
+            55.9374814
+          ],
+          [
+            -3.2568113,
+            55.9368333
+          ],
+          [
+            -3.257384,
+            55.9367058
+          ],
+          [
+            -3.264843,
+            55.9350307
+          ],
+          [
+            -3.266642,
+            55.9346272
+          ],
+          [
+            -3.2705069,
+            55.9337577
+          ]
+        ]
+      },
+      "id": "way/83098838"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83098842",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "90 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down South",
+        "railway:traffic_mode": "mixed",
+        "ref": "EGM1",
+        "source": "Yahoo Tracing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2502666,
+            55.9382973
+          ],
+          [
+            -3.2504021,
+            55.9382642
+          ]
+        ]
+      },
+      "id": "way/83098842"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83098844",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "90 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down South",
+        "railway:traffic_mode": "mixed",
+        "ref": "EGM1",
+        "source": "Bing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2456417,
+            55.9393067
+          ],
+          [
+            -3.2456752,
+            55.9393002
+          ],
+          [
+            -3.2464487,
+            55.9391503
+          ],
+          [
+            -3.2475892,
+            55.9388944
+          ],
+          [
+            -3.2494925,
+            55.9384674
+          ],
+          [
+            -3.2502666,
+            55.9382973
+          ]
+        ]
+      },
+      "id": "way/83098844"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83098853",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2856354,
+            55.9303624
+          ],
+          [
+            -3.2860136,
+            55.930284
+          ]
+        ]
+      },
+      "id": "way/83098853"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83098856",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Bing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2748187,
+            55.9327941
+          ],
+          [
+            -3.2752469,
+            55.9326978
+          ],
+          [
+            -3.2757495,
+            55.9325848
+          ],
+          [
+            -3.2856354,
+            55.9303624
+          ]
+        ]
+      },
+      "id": "way/83098856"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83098858",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down South",
+        "ref": "EGM1",
+        "source": "Bing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2705069,
+            55.9337577
+          ],
+          [
+            -3.2736048,
+            55.933073
+          ],
+          [
+            -3.2745005,
+            55.9328621
+          ]
+        ]
+      },
+      "id": "way/83098858"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83098865",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3060578,
+            55.9277264
+          ],
+          [
+            -3.3075513,
+            55.9275618
+          ],
+          [
+            -3.3133121,
+            55.926925
+          ]
+        ]
+      },
+      "id": "way/83098865"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83098868",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "4",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Yahoo Tracing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3058671,
+            55.9277461
+          ],
+          [
+            -3.3060578,
+            55.9277264
+          ]
+        ]
+      },
+      "id": "way/83098868"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83098875",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Yahoo Tracing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.291868,
+            55.9292975
+          ],
+          [
+            -3.2943491,
+            55.928973
+          ],
+          [
+            -3.2975718,
+            55.9286297
+          ],
+          [
+            -3.3058671,
+            55.9277461
+          ]
+        ]
+      },
+      "id": "way/83098875"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83098879",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2913092,
+            55.9293792
+          ],
+          [
+            -3.291868,
+            55.9292975
+          ]
+        ]
+      },
+      "id": "way/83098879"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83098887",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2860136,
+            55.930284
+          ],
+          [
+            -3.2876946,
+            55.9299351
+          ],
+          [
+            -3.2892889,
+            55.9296599
+          ],
+          [
+            -3.2913092,
+            55.9293792
+          ]
+        ]
+      },
+      "id": "way/83098887"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/83099575",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "level": "-1",
+        "maxspeed": "50 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:bidirectional": "signals",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.217387,
+            55.9455006
+          ],
+          [
+            -3.217606,
+            55.9454518
+          ],
+          [
+            -3.2182675,
+            55.9453042
+          ],
+          [
+            -3.2188162,
+            55.9451976
+          ],
+          [
+            -3.2188798,
+            55.9451852
+          ],
+          [
+            -3.219527,
+            55.945074
+          ],
+          [
+            -3.2202228,
+            55.9449659
+          ],
+          [
+            -3.2210978,
+            55.9448125
+          ],
+          [
+            -3.2212574,
+            55.9447788
+          ],
+          [
+            -3.2213888,
+            55.944751
+          ]
+        ]
+      },
+      "id": "way/83099575"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/110682811",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "source": "bing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1979712,
+            55.9504543
+          ],
+          [
+            -3.1984959,
+            55.9503742
+          ],
+          [
+            -3.1991853,
+            55.9502615
+          ],
+          [
+            -3.1995885,
+            55.9501919
+          ],
+          [
+            -3.2004645,
+            55.9500335
+          ],
+          [
+            -3.2006809,
+            55.949995
+          ],
+          [
+            -3.2007465,
+            55.9499833
+          ],
+          [
+            -3.2011368,
+            55.9499134
+          ]
+        ]
+      },
+      "id": "way/110682811"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135175633",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1946508,
+            55.9509866
+          ],
+          [
+            -3.1943553,
+            55.9510566
+          ],
+          [
+            -3.1941919,
+            55.9510995
+          ],
+          [
+            -3.1939425,
+            55.9511586
+          ],
+          [
+            -3.1936537,
+            55.9512241
+          ]
+        ]
+      },
+      "id": "way/135175633"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135175637",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1937494,
+            55.9511419
+          ],
+          [
+            -3.1940285,
+            55.9510932
+          ],
+          [
+            -3.1942096,
+            55.9510616
+          ],
+          [
+            -3.1946508,
+            55.9509866
+          ]
+        ]
+      },
+      "id": "way/135175637"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135175642",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1933305,
+            55.9511803
+          ],
+          [
+            -3.1936327,
+            55.9511331
+          ],
+          [
+            -3.1939759,
+            55.9510724
+          ]
+        ]
+      },
+      "id": "way/135175642"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135175643",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1933305,
+            55.9511803
+          ],
+          [
+            -3.1937494,
+            55.9511419
+          ]
+        ]
+      },
+      "id": "way/135175643"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135175647",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1946854,
+            55.9510467
+          ],
+          [
+            -3.1941919,
+            55.9510995
+          ],
+          [
+            -3.1939127,
+            55.9511279
+          ],
+          [
+            -3.1937494,
+            55.9511419
+          ]
+        ]
+      },
+      "id": "way/135175647"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135177402",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1936537,
+            55.9512241
+          ],
+          [
+            -3.19331,
+            55.951284
+          ],
+          [
+            -3.1925909,
+            55.9514106
+          ],
+          [
+            -3.1922079,
+            55.9514758
+          ],
+          [
+            -3.1918272,
+            55.9515519
+          ],
+          [
+            -3.1914794,
+            55.9516209
+          ],
+          [
+            -3.1912109,
+            55.9516678
+          ],
+          [
+            -3.1903814,
+            55.9518021
+          ]
+        ]
+      },
+      "id": "way/135177402"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135177407",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "-1",
+        "length": "130 yd",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:bidirectional": "regular",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "W",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "tunnel": "yes",
+        "tunnel:name": "Mound Tunnels",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1948331,
+            55.9509556
+          ],
+          [
+            -3.1948877,
+            55.9509475
+          ],
+          [
+            -3.1959518,
+            55.9507595
+          ],
+          [
+            -3.1965638,
+            55.9506514
+          ]
+        ]
+      },
+      "id": "way/135177407"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135984515",
+        "bridge": "yes",
+        "bridge:ref": "ECN2/010",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "3",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Bing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2745005,
+            55.9328621
+          ],
+          [
+            -3.2748187,
+            55.9327941
+          ]
+        ]
+      },
+      "id": "way/135984515"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135984518",
+        "bridge": "yes",
+        "bridge:ref": "ECN2/010",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "3",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Bing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2748572,
+            55.9328178
+          ],
+          [
+            -3.2745335,
+            55.9328924
+          ]
+        ]
+      },
+      "id": "way/135984518"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135992091",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "80 mph",
+        "maxspeed:freight": "70 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM2",
+        "source": "Bing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2454712,
+            55.9394001
+          ],
+          [
+            -3.2450699,
+            55.939491
+          ]
+        ]
+      },
+      "id": "way/135992091"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135992095",
+        "bridge": "yes",
+        "bridge:ref": "EGM3/004",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "90 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM2",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2291495,
+            55.9430276
+          ],
+          [
+            -3.229364,
+            55.9429774
+          ]
+        ]
+      },
+      "id": "way/135992095"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135992096",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "90 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM2",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2383968,
+            55.9409522
+          ],
+          [
+            -3.2386377,
+            55.9408992
+          ]
+        ]
+      },
+      "id": "way/135992096"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135992100",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "90 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM2",
+        "source": "Bing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.245043,
+            55.9394515
+          ],
+          [
+            -3.2456417,
+            55.9393067
+          ]
+        ]
+      },
+      "id": "way/135992100"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135992101",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "90 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM2",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2237379,
+            55.9442353
+          ],
+          [
+            -3.2239,
+            55.9441996
+          ],
+          [
+            -3.2291495,
+            55.9430276
+          ]
+        ]
+      },
+      "id": "way/135992101"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135992105",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "90 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:bidirectional": "signals",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM2",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.223103,
+            55.9443751
+          ],
+          [
+            -3.2234019,
+            55.9443099
+          ],
+          [
+            -3.2237379,
+            55.9442353
+          ]
+        ]
+      },
+      "id": "way/135992105"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135992113",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "90 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM2",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.229364,
+            55.9429774
+          ],
+          [
+            -3.229556,
+            55.9429354
+          ],
+          [
+            -3.2314678,
+            55.9425043
+          ],
+          [
+            -3.2327469,
+            55.9422167
+          ],
+          [
+            -3.2338163,
+            55.9419803
+          ],
+          [
+            -3.2338575,
+            55.9419708
+          ],
+          [
+            -3.2339682,
+            55.9419453
+          ],
+          [
+            -3.2350977,
+            55.9416908
+          ],
+          [
+            -3.2353061,
+            55.9416438
+          ],
+          [
+            -3.2367116,
+            55.941326
+          ],
+          [
+            -3.2383968,
+            55.9409522
+          ]
+        ]
+      },
+      "id": "way/135992113"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/135992114",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "90 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM2",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2386377,
+            55.9408992
+          ],
+          [
+            -3.2400675,
+            55.9405862
+          ],
+          [
+            -3.2407259,
+            55.9404359
+          ],
+          [
+            -3.2418233,
+            55.9401853
+          ],
+          [
+            -3.2429059,
+            55.9399333
+          ],
+          [
+            -3.2439096,
+            55.9397164
+          ],
+          [
+            -3.244464,
+            55.9395939
+          ],
+          [
+            -3.2445502,
+            55.9395744
+          ],
+          [
+            -3.2446327,
+            55.9395558
+          ],
+          [
+            -3.245043,
+            55.9394515
+          ]
+        ]
+      },
+      "id": "way/135992114"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/140678855",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "-1",
+        "maxspeed": "50 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "tunnel": "yes",
+        "tunnel:name": "Haymarket South Tunnel",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2039866,
+            55.9489484
+          ],
+          [
+            -3.2048799,
+            55.9486019
+          ],
+          [
+            -3.2060786,
+            55.9482073
+          ],
+          [
+            -3.2067769,
+            55.9480349
+          ],
+          [
+            -3.2076363,
+            55.9478157
+          ],
+          [
+            -3.2081804,
+            55.947677
+          ],
+          [
+            -3.2121561,
+            55.9467193
+          ],
+          [
+            -3.2135655,
+            55.9463879
+          ],
+          [
+            -3.2148352,
+            55.9460894
+          ],
+          [
+            -3.2165484,
+            55.9456941
+          ],
+          [
+            -3.217387,
+            55.9455006
+          ]
+        ]
+      },
+      "id": "way/140678855"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/292211298",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "-1",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "tunnel": "yes",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3133121,
+            55.926925
+          ],
+          [
+            -3.3157432,
+            55.9266653
+          ]
+        ]
+      },
+      "id": "way/292211298"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/358600971",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3189635,
+            55.9263258
+          ],
+          [
+            -3.3190617,
+            55.9263154
+          ],
+          [
+            -3.3196356,
+            55.9262719
+          ],
+          [
+            -3.3228534,
+            55.9260277
+          ],
+          [
+            -3.3246772,
+            55.9259431
+          ],
+          [
+            -3.3266311,
+            55.9258871
+          ],
+          [
+            -3.3294633,
+            55.9258611
+          ],
+          [
+            -3.3316705,
+            55.9258949
+          ],
+          [
+            -3.3335454,
+            55.92599
+          ],
+          [
+            -3.3353576,
+            55.926137
+          ],
+          [
+            -3.3370653,
+            55.9263115
+          ],
+          [
+            -3.3390169,
+            55.9265744
+          ],
+          [
+            -3.3406572,
+            55.9268478
+          ],
+          [
+            -3.342797,
+            55.9272591
+          ],
+          [
+            -3.3432639,
+            55.9273651
+          ],
+          [
+            -3.3438123,
+            55.9274895
+          ],
+          [
+            -3.352014,
+            55.9295513
+          ]
+        ]
+      },
+      "id": "way/358600971"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/358600972",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Yahoo Tracing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3962757,
+            55.9344242
+          ],
+          [
+            -3.3962113,
+            55.9344292
+          ],
+          [
+            -3.3957438,
+            55.9344652
+          ],
+          [
+            -3.3929706,
+            55.9346788
+          ],
+          [
+            -3.3909177,
+            55.9348088
+          ],
+          [
+            -3.3897734,
+            55.9348599
+          ],
+          [
+            -3.3887603,
+            55.9348933
+          ],
+          [
+            -3.3871799,
+            55.9349224
+          ],
+          [
+            -3.3856116,
+            55.9349226
+          ],
+          [
+            -3.3830557,
+            55.9348742
+          ],
+          [
+            -3.3812485,
+            55.9347851
+          ],
+          [
+            -3.379137,
+            55.9346505
+          ],
+          [
+            -3.3784268,
+            55.9345907
+          ],
+          [
+            -3.3777831,
+            55.9345365
+          ],
+          [
+            -3.3763562,
+            55.9343905
+          ],
+          [
+            -3.3726621,
+            55.9339182
+          ],
+          [
+            -3.3674689,
+            55.933108
+          ],
+          [
+            -3.3641321,
+            55.9324933
+          ],
+          [
+            -3.3622063,
+            55.9320879
+          ],
+          [
+            -3.3608723,
+            55.9317812
+          ],
+          [
+            -3.3597685,
+            55.9315246
+          ],
+          [
+            -3.3588381,
+            55.9312921
+          ]
+        ]
+      },
+      "id": "way/358600972"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/358600973",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3584865,
+            55.9311668
+          ],
+          [
+            -3.3589466,
+            55.9312816
+          ]
+        ]
+      },
+      "id": "way/358600973"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/358600974",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Yahoo Tracing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3588381,
+            55.9312921
+          ],
+          [
+            -3.3584073,
+            55.9311845
+          ]
+        ]
+      },
+      "id": "way/358600974"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/367547733",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "50 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "source": "bing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2011368,
+            55.9499134
+          ],
+          [
+            -3.2016521,
+            55.9498022
+          ],
+          [
+            -3.2019378,
+            55.9497308
+          ],
+          [
+            -3.2020104,
+            55.9497127
+          ],
+          [
+            -3.2021434,
+            55.9496717
+          ],
+          [
+            -3.2023647,
+            55.9496036
+          ],
+          [
+            -3.2027637,
+            55.9494663
+          ],
+          [
+            -3.2039539,
+            55.9489631
+          ],
+          [
+            -3.2039866,
+            55.9489484
+          ]
+        ]
+      },
+      "id": "way/367547733"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/367550504",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "80 mph",
+        "maxspeed:freight": "70 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2230806,
+            55.9444154
+          ],
+          [
+            -3.2227174,
+            55.9444969
+          ],
+          [
+            -3.221781,
+            55.9447056
+          ],
+          [
+            -3.221258,
+            55.944815
+          ],
+          [
+            -3.2211941,
+            55.9448284
+          ],
+          [
+            -3.2211336,
+            55.944841
+          ]
+        ]
+      },
+      "id": "way/367550504"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/367550514",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "90 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:bidirectional": "signals",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "source": "NLS_OS_Edinburgh_map_1940s;Bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2213888,
+            55.944751
+          ],
+          [
+            -3.2218041,
+            55.9446632
+          ],
+          [
+            -3.2226974,
+            55.9444644
+          ],
+          [
+            -3.223103,
+            55.9443751
+          ]
+        ]
+      },
+      "id": "way/367550514"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/426264557",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "source": "bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2040234,
+            55.948976
+          ],
+          [
+            -3.2039826,
+            55.9489932
+          ],
+          [
+            -3.2027925,
+            55.9494949
+          ],
+          [
+            -3.2023904,
+            55.9496326
+          ],
+          [
+            -3.2021667,
+            55.9496996
+          ],
+          [
+            -3.2020423,
+            55.9497368
+          ],
+          [
+            -3.2019578,
+            55.9497576
+          ]
+        ]
+      },
+      "id": "way/426264557"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/426727085",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1898903,
+            55.951347
+          ],
+          [
+            -3.1901478,
+            55.9513143
+          ],
+          [
+            -3.1906335,
+            55.9512621
+          ],
+          [
+            -3.1907902,
+            55.9512451
+          ],
+          [
+            -3.1912758,
+            55.9511926
+          ],
+          [
+            -3.1915788,
+            55.9511715
+          ],
+          [
+            -3.1919101,
+            55.9511637
+          ],
+          [
+            -3.1925692,
+            55.9511679
+          ]
+        ]
+      },
+      "id": "way/426727085"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/429438115",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:bidirectional": "regular",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "W",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "source": "bing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1965638,
+            55.9506514
+          ],
+          [
+            -3.1969397,
+            55.9505931
+          ],
+          [
+            -3.1972646,
+            55.9505407
+          ],
+          [
+            -3.1979712,
+            55.9504543
+          ]
+        ]
+      },
+      "id": "way/429438115"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/429438116",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:bidirectional": "regular",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "source": "bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1992956,
+            55.9502704
+          ],
+          [
+            -3.1986573,
+            55.9503759
+          ]
+        ]
+      },
+      "id": "way/429438116"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/429786872",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3589466,
+            55.9312816
+          ],
+          [
+            -3.3597993,
+            55.9314944
+          ],
+          [
+            -3.3622365,
+            55.9320605
+          ],
+          [
+            -3.3641509,
+            55.9324627
+          ],
+          [
+            -3.364949,
+            55.9326087
+          ],
+          [
+            -3.3674872,
+            55.9330757
+          ],
+          [
+            -3.3726776,
+            55.9338852
+          ],
+          [
+            -3.3763717,
+            55.9343615
+          ],
+          [
+            -3.3777959,
+            55.9345047
+          ],
+          [
+            -3.3791412,
+            55.9346166
+          ],
+          [
+            -3.3812577,
+            55.9347532
+          ],
+          [
+            -3.383056,
+            55.9348391
+          ],
+          [
+            -3.385621,
+            55.9348912
+          ],
+          [
+            -3.3858349,
+            55.934891
+          ],
+          [
+            -3.387173,
+            55.9348899
+          ],
+          [
+            -3.387225,
+            55.9348889
+          ],
+          [
+            -3.3887645,
+            55.9348599
+          ],
+          [
+            -3.3909136,
+            55.9347767
+          ],
+          [
+            -3.3929535,
+            55.9346465
+          ],
+          [
+            -3.3953723,
+            55.9344638
+          ],
+          [
+            -3.3954344,
+            55.9344591
+          ]
+        ]
+      },
+      "id": "way/429786872"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/429819748",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:bidirectional": "regular",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "W",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1946508,
+            55.9509866
+          ],
+          [
+            -3.1948331,
+            55.9509556
+          ]
+        ]
+      },
+      "id": "way/429819748"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/429819749",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1946854,
+            55.9510467
+          ],
+          [
+            -3.1942993,
+            55.9511142
+          ],
+          [
+            -3.1939658,
+            55.9511721
+          ],
+          [
+            -3.1936537,
+            55.9512241
+          ]
+        ]
+      },
+      "id": "way/429819749"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/430487002",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:bidirectional": "regular",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "source": "bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1995093,
+            55.9502306
+          ],
+          [
+            -3.1992956,
+            55.9502704
+          ]
+        ]
+      },
+      "id": "way/430487002"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/577519822",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "service": "crossover",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1928297,
+            55.951227
+          ],
+          [
+            -3.1922178,
+            55.9512469
+          ]
+        ]
+      },
+      "id": "way/577519822"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/759593601",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "25 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "ref": "EGM2",
+        "source": "Bing",
+        "usage": "branch",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2450598,
+            55.9394762
+          ],
+          [
+            -3.2449477,
+            55.9394971
+          ],
+          [
+            -3.2446327,
+            55.9395558
+          ]
+        ]
+      },
+      "id": "way/759593601"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1092296340",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1897049,
+            55.9515002
+          ],
+          [
+            -3.1905612,
+            55.9513732
+          ],
+          [
+            -3.1908377,
+            55.9513302
+          ],
+          [
+            -3.191314,
+            55.951256
+          ],
+          [
+            -3.1914328,
+            55.9512416
+          ],
+          [
+            -3.1915984,
+            55.9512263
+          ],
+          [
+            -3.1918378,
+            55.9512118
+          ],
+          [
+            -3.1925692,
+            55.9511679
+          ]
+        ]
+      },
+      "id": "way/1092296340"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1101683960",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3522623,
+            55.9296137
+          ],
+          [
+            -3.3584865,
+            55.9311668
+          ]
+        ]
+      },
+      "id": "way/1101683960"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1101683961",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.352014,
+            55.9295513
+          ],
+          [
+            -3.3522623,
+            55.9296137
+          ]
+        ]
+      },
+      "id": "way/1101683961"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1101683962",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Yahoo Tracing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3584073,
+            55.9311845
+          ],
+          [
+            -3.3522325,
+            55.9296418
+          ]
+        ]
+      },
+      "id": "way/1101683962"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1101683963",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "source": "Yahoo Tracing",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3522325,
+            55.9296418
+          ],
+          [
+            -3.3520213,
+            55.9295888
+          ]
+        ]
+      },
+      "id": "way/1101683963"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1247755997",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3157432,
+            55.9266653
+          ],
+          [
+            -3.3188179,
+            55.9263411
+          ]
+        ]
+      },
+      "id": "way/1247755997"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1247755998",
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "100 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "2",
+        "railway": "rail",
+        "railway:aws": "yes",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Down Edinburgh & Glasgow",
+        "ref": "EGM1",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.3188179,
+            55.9263411
+          ],
+          [
+            -3.3189635,
+            55.9263258
+          ]
+        ]
+      },
+      "id": "way/1247755998"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1465128992",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1903814,
+            55.9518021
+          ],
+          [
+            -3.1899584,
+            55.9518706
+          ]
+        ]
+      },
+      "id": "way/1465128992"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1465635500",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1911483,
+            55.9515217
+          ],
+          [
+            -3.1914061,
+            55.9514816
+          ]
+        ]
+      },
+      "id": "way/1465635500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1471286281",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1939759,
+            55.9510724
+          ],
+          [
+            -3.1946508,
+            55.9509866
+          ]
+        ]
+      },
+      "id": "way/1471286281"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1471286282",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1896985,
+            55.9517227
+          ],
+          [
+            -3.1894035,
+            55.9517685
+          ]
+        ]
+      },
+      "id": "way/1471286282"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1471926842",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1925692,
+            55.9511679
+          ],
+          [
+            -3.192713,
+            55.9511611
+          ],
+          [
+            -3.1934041,
+            55.9511278
+          ]
+        ]
+      },
+      "id": "way/1471926842"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1471926843",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1891325,
+            55.9516951
+          ],
+          [
+            -3.1901649,
+            55.9515435
+          ]
+        ]
+      },
+      "id": "way/1471926843"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1471957560",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1890685,
+            55.9515807
+          ],
+          [
+            -3.1891747,
+            55.9515706
+          ],
+          [
+            -3.1894248,
+            55.9515417
+          ],
+          [
+            -3.1897049,
+            55.9515002
+          ]
+        ]
+      },
+      "id": "way/1471957560"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1472407614",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1890513,
+            55.9514534
+          ],
+          [
+            -3.1898903,
+            55.951347
+          ]
+        ]
+      },
+      "id": "way/1472407614"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1473669518",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1934041,
+            55.9511278
+          ],
+          [
+            -3.1937397,
+            55.9510951
+          ],
+          [
+            -3.1939759,
+            55.9510724
+          ]
+        ]
+      },
+      "id": "way/1473669518"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1473669522",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1901476,
+            55.9515209
+          ],
+          [
+            -3.1891216,
+            55.9516746
+          ]
+        ]
+      },
+      "id": "way/1473669522"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1473669523",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1934041,
+            55.9511278
+          ],
+          [
+            -3.1928809,
+            55.9511855
+          ],
+          [
+            -3.1925661,
+            55.9512193
+          ],
+          [
+            -3.1922178,
+            55.9512469
+          ]
+        ]
+      },
+      "id": "way/1473669523"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1473669524",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:tpws": "yes",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1928297,
+            55.951227
+          ],
+          [
+            -3.1930816,
+            55.9512041
+          ],
+          [
+            -3.1933305,
+            55.9511803
+          ]
+        ]
+      },
+      "id": "way/1473669524"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1473671310",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "maxspeed": "20 mph",
+        "name": "Edinburgh and Glasgow Main Line",
+        "operator": "Network Rail",
+        "operator:wikidata": "Q1501071",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:aws": "no",
+        "railway:preferred_direction": "forward",
+        "railway:tpws": "yes",
+        "railway:track_ref": "Up South",
+        "railway:traffic_mode": "passenger",
+        "ref": "EGM3",
+        "source": "bing;survey",
+        "usage": "main",
+        "voltage": "25000"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.2019578,
+            55.9497576
+          ],
+          [
+            -3.2016789,
+            55.9498322
+          ],
+          [
+            -3.2011666,
+            55.9499386
+          ],
+          [
+            -3.2007654,
+            55.9500124
+          ],
+          [
+            -3.199903,
+            55.9501626
+          ],
+          [
+            -3.1995093,
+            55.9502306
+          ]
+        ]
+      },
+      "id": "way/1473671310"
+    }
+  ]
+}
