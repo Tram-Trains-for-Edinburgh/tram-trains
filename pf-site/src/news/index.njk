@@ -1,0 +1,17 @@
+---
+title: News
+layout: base.njk
+permalink: /news/
+---
+
+<h1>News</h1>
+
+<ul class="news-list">
+{%- for post in collections.news %}
+  <li class="news-card">
+    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    <time datetime="{{ post.date | date('yyyy-MM-dd') }}">{{ post.date | date('dd LLLL yyyy') }}</time>
+    <p>{{ post.templateContent | striptags | truncate(150) }}</p>
+  </li>
+{%- endfor %}
+</ul>

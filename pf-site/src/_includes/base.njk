@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} — {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}",
+    "logo": "{{ site.url }}/assets/images/logo-ttfe.webp",
+    "description": "{{ site.description }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Edinburgh",
+      "addressCountry": "GB"
+    }
+  }
+  </script>
+  {% if layout == "post.njk" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ title }}",
+    "datePublished": "{{ date | date('yyyy-MM-dd') }}",
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}"
+    },
+    "mainEntityOfPage": "{{ site.url }}{{ page.url }}"
+  }
+  </script>
+  {% endif %}
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ title }} — {{ site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}/assets/images/og-card.png">
+  <meta property="og:site_name" content="{{ site.title }}">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }} — {{ site.title }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:image" content="{{ site.url }}/assets/images/og-card.png">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} News" href="/feed.xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  {% if permalink == "/" %}
+  <link rel="preload" as="image" href="/assets/images/home-cover.webp">
+  {% endif %}
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  {% include "header.njk" %}
+  <main id="main-content" class="content">
+    {{ content | safe }}
+  </main>
+  {% include "footer.njk" %}
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function () {
+      var nav = document.querySelector('.nav-links');
+      var isOpen = nav.classList.toggle('nav-open');
+      this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (isOpen) {
+        nav.querySelector('.nav-link').focus();
+      }
+    });
+
+    // Fade-in on scroll (only if user has no motion preference)
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.content h2, .content h3, .content p, .content ul, .content ol, .content img, .content .station-grid, .content .news-card, .content .form-placeholder, .content .contact-form, .hero').forEach(function (el) {
+        el.classList.add('fade-in');
+      });
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-in').forEach(function (el) {
+        observer.observe(el);
+      });
+    }
+  </script>
+</body>
+</html>

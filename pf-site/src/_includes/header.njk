@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/assets/images/logo-ttfe.webp" alt="{{ site.title }}" class="logo-img">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+    <nav class="nav-links">
+      {%- for item in site.nav %}
+      <a href="{{ item.url }}" class="nav-link{% if page.url == item.url %} nav-active{% endif %}">{{ item.text }}</a>
+      {%- endfor %}
+    </nav>
+  </div>
+</header>
