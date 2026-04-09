@@ -7,10 +7,6 @@ backend:
 
 media_folder: pf-site/src/assets/images
 public_folder: /assets/images
-media_library:
-  name: upload
-  config:
-    multiple: false
 
 collections:
   - name: news
