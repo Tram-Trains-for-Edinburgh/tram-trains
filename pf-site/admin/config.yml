@@ -5,13 +5,13 @@ backend:
   base_url: https://api.netlify.com
   auth_endpoint: auth
 
-media_folder: src/assets/images
+media_folder: pf-site/src/assets/images
 public_folder: /assets/images
 
 collections:
   - name: news
     label: News
-    folder: src/news
+    folder: pf-site/src/news
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
