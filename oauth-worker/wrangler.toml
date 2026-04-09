@@ -1,0 +1,7 @@
+name = "ttfe-oauth"
+main = "worker.js"
+compatibility_date = "2024-09-23"
+
+# After deploying, set secrets:
+#   npx wrangler secret put GITHUB_CLIENT_ID
+#   npx wrangler secret put GITHUB_CLIENT_SECRET
