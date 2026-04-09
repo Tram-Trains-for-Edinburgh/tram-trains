@@ -13,3 +13,5 @@ The campaign, which launched in late 2024, advocates for tram-train technology a
 TTfE will be presenting to the public at King's Buildings on 23 April. All are welcome.
 
 \[ENDS]
+
+![A train](/assets/images/about-murrayfield-tram.webp "Murrayfield")
