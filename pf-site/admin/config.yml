@@ -2,7 +2,7 @@ backend:
   name: github
   repo: dave-brookes-je/tram-trains
   branch: main
-  base_url: https://ttfe-oauth.<YOUR-CF-SUBDOMAIN>.workers.dev
+  base_url: https://ttfe-oauth.ttfe.workers.dev
   auth_endpoint: auth
 
 media_folder: pf-site/src/assets/images
