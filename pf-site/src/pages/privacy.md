@@ -89,7 +89,7 @@ We use the following third-party processors to operate the campaign: Google Work
 
 Our website (ttfe.org.uk) is hosted by Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA, who also provide content delivery, anti-bot verification (Turnstile) and security services. Cloudflare processes web traffic data (including IP addresses) as part of standard hosting and security operations. Cloudflare participates in the EU–US Data Privacy Framework and provides appropriate safeguards for international transfers of personal data.
 
-When you submit the contact or membership form on our website, the contents of your submission are delivered to us by email via Resend, Inc., 2261 Market Street #5039, San Francisco, CA 94114, USA, which acts as a data processor for the purposes of email transmission. Resend participates in the EU–US Data Privacy Framework.
+When you submit the contact or membership form on our website, the contents of your submission are delivered to us by email via Resend (operated by Plus Five Five, Inc., 2261 Market Street #5039, San Francisco, CA 94114, USA), which acts as a data processor for the purposes of email transmission. Plus Five Five, Inc. is certified under the EU–US Data Privacy Framework and its UK Extension, and uses the EU and UK Standard Contractual Clauses as an additional safeguard for international data transfers.
 
 We take reasonable precautions to protect data from unauthorised access, including restricting access to named volunteers only. We do not operate dedicated IT infrastructure and are not a commercial organisation.
 
