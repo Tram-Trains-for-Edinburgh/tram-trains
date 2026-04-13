@@ -49,4 +49,4 @@ Update the GitHub OAuth App callback URL and `config.yml` to match.
 ## CMS user requirements
 
 Anyone who needs to log into Decap CMS must have a GitHub account with **write
-access** to the `dave-brookes-je/tram-trains` repository.
+access** to the `Tram-Trains-for-Edinburgh/tram-trains` repository.

@@ -3,7 +3,7 @@
 ## Context
 
 You are building a static campaign website for **Tram Trains for Edinburgh** (ttfe.co.uk).
-This is a monorepo at https://github.com/dave-brookes-je/tram-trains.
+This is a monorepo at https://github.com/Tram-Trains-for-Edinburgh/tram-trains.
 The website root is at `/pf-site`. All paths, config files, and build commands
 are relative to `/pf-site` unless otherwise stated.
 

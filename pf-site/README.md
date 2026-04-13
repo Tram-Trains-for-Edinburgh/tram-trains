@@ -137,7 +137,7 @@ probably already have it.
 
 ```bash
 # Clone the repository
-git clone https://github.com/dave-brookes-je/tram-trains.git
+git clone https://github.com/Tram-Trains-for-Edinburgh/tram-trains.git
 cd tram-trains/pf-site
 
 # Install dependencies (only needed the first time, or after package.json changes)
@@ -318,7 +318,7 @@ It runs on Cloudflare's free tier (100,000 requests/day — we use a handful).
 ### Who can log in?
 
 Anyone with a GitHub account who has **write access** to the
-`dave-brookes-je/tram-trains` repository. To add a new editor:
+`Tram-Trains-for-Edinburgh/tram-trains` repository. To add a new editor:
 
 1. Go to the repository on GitHub
 2. Settings → Collaborators → Add people
@@ -374,7 +374,7 @@ automatically.
 ### 3. Create the Pages project
 
 1. In the Cloudflare dashboard, go to **Workers & Pages → Create → Pages**
-2. Connect your GitHub account and select the `dave-brookes-je/tram-trains` repo
+2. Connect your GitHub account and select the `Tram-Trains-for-Edinburgh/tram-trains` repo
 3. Set the build settings:
    - **Root directory**: `pf-site`
    - **Build command**: `npx @11ty/eleventy`
@@ -428,7 +428,7 @@ Edit `pf-site/admin/config.yml` and set `base_url` to the Worker URL from step 6
 ```yaml
 backend:
   name: github
-  repo: dave-brookes-je/tram-trains
+  repo: Tram-Trains-for-Edinburgh/tram-trains
   branch: main
   base_url: https://ttfe-oauth.<YOUR-CF-SUBDOMAIN>.workers.dev
   auth_endpoint: auth

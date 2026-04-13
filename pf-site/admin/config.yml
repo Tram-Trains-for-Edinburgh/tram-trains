@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: dave-brookes-je/tram-trains
+  repo: Tram-Trains-for-Edinburgh/tram-trains
   branch: main
   base_url: https://ttfe-oauth.ttfe.workers.dev
   auth_endpoint: auth
