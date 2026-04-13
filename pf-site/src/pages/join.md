@@ -33,18 +33,6 @@ The Group will not discriminate on the grounds of sex, race (including colour, e
 
 Please complete the form below to join.
 
-<!-- Hidden form for Netlify Forms detection at build time -->
-<form name="membership" data-netlify="true" netlify-honeypot="bot-field" hidden>
-  <input name="first-name">
-  <input name="last-name">
-  <input name="email">
-  <input name="address-line-1">
-  <input name="address-line-2">
-  <input name="city">
-  <input name="postcode">
-  <input name="agree-aims" type="checkbox">
-</form>
-
 <form id="membership-form" class="contact-form" novalidate>
   <div class="form-row">
     <div class="form-group form-group--half">
@@ -128,37 +116,26 @@ Please complete the form below to join.
     status.hidden = true;
 
     try {
-      var verifyResponse = await fetch('/.netlify/functions/contact', {
+      var response = await fetch('/join', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ turnstileToken: turnstileToken.value })
+        body: JSON.stringify({
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          addressLine1: form.querySelector('#join-address-1').value.trim(),
+          addressLine2: form.querySelector('#join-address-2').value.trim(),
+          city: form.querySelector('#join-city').value.trim(),
+          postcode: form.querySelector('#join-postcode').value.trim(),
+          agreeAims: agreeChecked,
+          turnstileToken: turnstileToken.value,
+        }),
       });
 
-      var verifyResult = await verifyResponse.json();
+      var result = await response.json();
 
-      if (!verifyResponse.ok || !verifyResult.success) {
-        throw new Error(verifyResult.error || 'Verification failed.');
-      }
-
-      var formData = new URLSearchParams();
-      formData.append('form-name', 'membership');
-      formData.append('first-name', firstName);
-      formData.append('last-name', lastName);
-      formData.append('email', email);
-      formData.append('address-line-1', form.querySelector('#join-address-1').value.trim());
-      formData.append('address-line-2', form.querySelector('#join-address-2').value.trim());
-      formData.append('city', form.querySelector('#join-city').value.trim());
-      formData.append('postcode', form.querySelector('#join-postcode').value.trim());
-      formData.append('agree-aims', 'yes');
-
-      var formResponse = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: formData.toString()
-      });
-
-      if (!formResponse.ok) {
-        throw new Error('Something went wrong. Please try again.');
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || 'Something went wrong. Please try again.');
       }
 
       form.reset();

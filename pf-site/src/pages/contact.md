@@ -8,13 +8,6 @@ permalink: /contact/
 
 Have a question about the campaign, or want to get involved? Drop us a message and we'll get back to you.
 
-<!-- Hidden form for Netlify Forms detection at build time -->
-<form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-  <input name="name">
-  <input name="email">
-  <textarea name="message"></textarea>
-</form>
-
 <form id="contact-form" class="contact-form" novalidate>
   <div class="form-group">
     <label for="name">Name</label>
@@ -64,34 +57,21 @@ Have a question about the campaign, or want to get involved? Drop us a message a
     status.hidden = true;
 
     try {
-      // Step 1: Verify Turnstile token server-side
-      var verifyResponse = await fetch('/.netlify/functions/contact', {
+      var response = await fetch('/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ turnstileToken: turnstileToken.value })
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message,
+          turnstileToken: turnstileToken.value,
+        }),
       });
 
-      var verifyResult = await verifyResponse.json();
+      var result = await response.json();
 
-      if (!verifyResponse.ok || !verifyResult.success) {
-        throw new Error(verifyResult.error || 'Verification failed.');
-      }
-
-      // Step 2: Submit to Netlify Forms
-      var formData = new URLSearchParams();
-      formData.append('form-name', 'contact');
-      formData.append('name', name);
-      formData.append('email', email);
-      formData.append('message', message);
-
-      var formResponse = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: formData.toString()
-      });
-
-      if (!formResponse.ok) {
-        throw new Error('Something went wrong. Please try again.');
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || 'Something went wrong. Please try again.');
       }
 
       form.reset();
