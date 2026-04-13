@@ -11,7 +11,7 @@ export const onRequestPost = (context) =>
       text: [
         `${d.firstName} ${d.lastName} has completed the membership form on ttfe.org.uk and would like to join Tram Trains for Edinburgh.`,
         ``,
-        `You can reply directly to this email to get in touch with them about membership and the £10 annual subscription.`,
+        `You can reply directly to this email to get in touch with them about membership and the annual subscription if they have not yet paid.`,
         ``,
         `---`,
         ``,

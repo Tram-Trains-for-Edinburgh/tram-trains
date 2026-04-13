@@ -1,7 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(git -C f:/git/tram-trains show 182019e --stat)",
+      "Bash(nslookup ttfe.org.uk)",
+      "Bash(nslookup www.ttfe.org.uk)",
+      "Bash(nslookup -type=NS ttfe.org.uk)",
+      "Bash(curl -sI https://www.ttfe.org.uk)",
+      "Bash(curl -sI https://ttfe.org.uk)",
+      "Bash(nslookup -type=MX ttfe.org.uk 8.8.8.8)",
+      "WebFetch(domain:resend.com)"
     ]
   }
 }
