@@ -9,6 +9,12 @@ export const onRequestPost = (context) =>
     buildEmail: (d) => ({
       subject: `[TTfE Membership] ${d.firstName} ${d.lastName}`,
       text: [
+        `${d.firstName} ${d.lastName} has completed the membership form on ttfe.org.uk and would like to join Tram Trains for Edinburgh.`,
+        ``,
+        `You can reply directly to this email to get in touch with them about membership and the £10 annual subscription.`,
+        ``,
+        `---`,
+        ``,
         `Name: ${d.firstName} ${d.lastName}`,
         `Email: ${d.email}`,
         `Address line 1: ${d.addressLine1 || ""}`,
