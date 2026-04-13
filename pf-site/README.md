@@ -92,7 +92,7 @@ tram-trains/
 │   │   └── config.yml          # CMS configuration
 │   ├── .eleventy.js            # Eleventy configuration
 │   ├── package.json            # Node.js dependencies
-│   ├── netlify.toml            # Legacy Netlify config (kept for reference)
+│   ├── functions/              # Cloudflare Pages Functions (form handlers)
 │   └── _site/                  # Build output (gitignored, don't edit)
 │
 ├── oauth-worker/               # Cloudflare Worker for CMS authentication

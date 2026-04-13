@@ -1,5 +1,0 @@
-[build]
-  base    = "pf-site"
-  command = "npx @11ty/eleventy"
-  publish = "_site"
-  functions = "netlify/functions"

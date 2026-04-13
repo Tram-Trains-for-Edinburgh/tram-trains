@@ -87,9 +87,9 @@ If you sign up as a supporter or volunteer, we use your contact details to co-or
 
 We use the following third-party processors to operate the campaign: Google Workspace (including Google Forms, Google Sheets, and Gmail) is used to collect and store survey responses, membership sign-ups, and campaign correspondence. Our processor is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, acting under Google's standard Data Processing Terms. Google Ireland Limited is the relevant entity for users in the UK and EEA.
 
-Our website (ttfe.org.uk) is hosted by Netlify, Inc., 44 Montgomery Street, Suite 300, San Francisco, CA 94104, USA. Netlify processes web traffic data (including IP addresses) as part of standard hosting operations. Netlify participates in the EU–US Data Privacy Framework and provides appropriate safeguards for international transfers of personal data.
+Our website (ttfe.org.uk) is hosted by Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA, who also provide content delivery, anti-bot verification (Turnstile) and security services. Cloudflare processes web traffic data (including IP addresses) as part of standard hosting and security operations. Cloudflare participates in the EU–US Data Privacy Framework and provides appropriate safeguards for international transfers of personal data.
 
-Our website also uses Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA, as a content delivery network and security provider. Cloudflare processes web traffic data (including IP addresses) to protect the site from malicious traffic and improve performance. Cloudflare participates in the EU–US Data Privacy Framework and provides appropriate safeguards for international data transfers.
+When you submit the contact or membership form on our website, the contents of your submission are delivered to us by email via Resend, Inc., 2261 Market Street #5039, San Francisco, CA 94114, USA, which acts as a data processor for the purposes of email transmission. Resend participates in the EU–US Data Privacy Framework.
 
 We take reasonable precautions to protect data from unauthorised access, including restricting access to named volunteers only. We do not operate dedicated IT infrastructure and are not a commercial organisation.
 

@@ -14,8 +14,9 @@ are relative to `/pf-site` unless otherwise stated.
 - **Static site generator**: Eleventy (11ty)
 - **Templating language**: Nunjucks
 - **CMS**: Decap CMS (news posts only)
-- **Authentication**: Netlify Identity
-- **Hosting**: Netlify
+- **Authentication**: GitHub OAuth via a Cloudflare Worker (`oauth-worker/`)
+- **Hosting**: Cloudflare Pages
+- **Forms**: Cloudflare Pages Functions + Resend (transactional email)
 
 ---
 
@@ -49,9 +50,9 @@ pf-site/
     config.yml          # Decap CMS configuration
   _site/                # Build output — gitignored
   .eleventy.js          # Eleventy config
-  netlify.toml          # Netlify build config
   .gitignore
   package.json
+  functions/            # Cloudflare Pages Functions (form handlers)
 ```
 
 ---
@@ -67,14 +68,17 @@ pf-site/
 
 ---
 
-## Netlify Config (netlify.toml)
+## Hosting (Cloudflare Pages)
 
-```toml
-[build]
-  base    = "pf-site"
-  command = "npx @11ty/eleventy"
-  publish = "pf-site/_site"
-```
+Build settings configured in the Cloudflare dashboard:
+
+- **Root directory**: `pf-site`
+- **Build command**: `npx @11ty/eleventy`
+- **Build output**: `_site`
+- **Environment**: `NODE_VERSION=20`
+
+Environment variables required by the Pages Functions:
+`RESEND_API_KEY`, `TURNSTILE_SECRET_KEY`, `FORM_RECIPIENT`, `FORM_FROM`.
 
 ---
 
