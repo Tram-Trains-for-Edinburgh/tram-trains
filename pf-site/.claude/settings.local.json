@@ -9,7 +9,8 @@
       "Bash(curl -sI https://www.ttfe.org.uk)",
       "Bash(curl -sI https://ttfe.org.uk)",
       "Bash(nslookup -type=MX ttfe.org.uk 8.8.8.8)",
-      "WebFetch(domain:resend.com)"
+      "WebFetch(domain:resend.com)",
+      "Bash(py -3 build_overview.py)"
     ]
   }
 }
