@@ -1,0 +1,127 @@
+{
+  "type": "FeatureCollection",
+  "name": "South Sub Railway - Proposed Stations",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gorgie",
+        "status": "original"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.237288077202253, 55.9362242332185]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Craiglockhart",
+        "status": "original"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.228605193418189, 55.92810721246246]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Morningside",
+        "status": "original"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.210472202914992, 55.92551476042114]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Blackford Hill",
+        "status": "original"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.187614691765522, 55.92710459184476]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Newington/Mayfield",
+        "status": "original"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.1721848596587097, 55.931102326094404]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cameron Toll",
+        "status": "new"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.15943464514168, 55.92851351171124]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Duddingston & Craigmillar",
+        "status": "original"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.141999917906135, 55.935415819885925]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bingham & Niddrie",
+        "status": "new"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.1242871544119857, 55.936689297794324]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fort Kinnaird",
+        "status": "new"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.105225889528507, 55.93739295467377]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brunstane",
+        "status": "new"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.1009647058202807, 55.942147291484574]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Portobello",
+        "status": "original"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.1137559940556283, 55.94888643177004]
+      }
+    }
+  ]
+}

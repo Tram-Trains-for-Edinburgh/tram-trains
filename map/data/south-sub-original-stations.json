@@ -1,0 +1,97 @@
+{
+  "type": "FeatureCollection",
+  "name": "South Sub Railway - Original Passenger Stations (Closed 1962)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gorgie Station",
+        "opened": "1884-12-01",
+        "closed": "1962-01-01",
+        "notes": "Closed 1962"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.237288077202253, 55.9362242332185]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Craiglockhart Station",
+        "opened": "1887-06-01",
+        "closed": "1962-01-01",
+        "notes": "Closed 1962"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.228605193418189, 55.92810721246246]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Morningside Station",
+        "opened": "1884-12-01",
+        "closed": "1962-01-01",
+        "notes": "Closed 1962"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.210472202914992, 55.92551476042114]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Blackford Hill Station",
+        "opened": "1884-12-01",
+        "closed": "1962-01-01",
+        "notes": "Closed 1962"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.187614691765522, 55.92710459184476]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Newington Station",
+        "opened": "1884-12-01",
+        "closed": "1962-01-01",
+        "notes": "Closed 1962"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.1721848596587097, 55.931102326094404]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Duddingston & Craigmillar Station",
+        "opened": "1884-12-01",
+        "closed": "1962-01-01",
+        "notes": "Closed 1962"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.141999917906135, 55.935415819885925]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Portobello Station",
+        "opened": "1846-06-22",
+        "closed": "1964-09-07",
+        "notes": "Closed 7 September 1964"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.1183397607582575, 55.9498194205383]
+      }
+    }
+  ]
+}

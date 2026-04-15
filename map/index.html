@@ -342,6 +342,12 @@
     <button class="layer-toggle" data-layers="roseburn-glow,roseburn-line,roseburn-dashes">
       <span class="swatch" style="background:#F97316;"></span>Roseburn Path (Proposed)
     </button>
+    <button class="layer-toggle" data-layers="old-stations">
+      <span class="swatch dot" style="background:#3B9ED8;border-color:#fff;"></span>Original Stations (closed 1962)
+    </button>
+    <button class="layer-toggle" data-layers="proposed-stations">
+      <span class="swatch dot" style="background:#c8102e;border-color:#fff;"></span>Proposed Stations
+    </button>
     <div class="toggle-divider"></div>
     <button class="layer-toggle" id="train-anim-toggle">
       <span class="swatch" style="background:#c8102e;"></span>Release the tram trains
@@ -554,10 +560,12 @@
 
   map.on('load', async () => {
     // Fetch real route data from split JSON files
-    const [subData, tramData, bordersData] = await Promise.all([
+    const [subData, tramData, bordersData, oldStationsData, proposedStationsData] = await Promise.all([
       fetch('data/edinburgh-suburban-line.json').then(r => r.json()),
       fetch('data/edinburgh-tram.json').then(r => r.json()),
-      fetch('data/borders-railway.json').then(r => r.json())
+      fetch('data/borders-railway.json').then(r => r.json()),
+      fetch('data/south-sub-original-stations.json').then(r => r.json()),
+      fetch('data/south-sub-proposed-stations.json').then(r => r.json())
     ]);
 
     // Filter to "Up Suburban" track (one of the two parallel tracks)
@@ -882,6 +890,84 @@
       new maplibregl.LngLatBounds(subCoords[0], subCoords[0])
     );
     map.fitBounds(bounds, { padding: { top: 80, bottom: 60, left: 60, right: 60 } });
+
+    // --- Original stations (closed 1962) ---
+    // Build a map-marker pin icon as an SVG data URL and register with the map
+    const pinSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="44" viewBox="0 0 32 44">
+      <path d="M16 1 C7.7 1 1 7.7 1 16 c0 11 15 27 15 27 s15-16 15-27 C31 7.7 24.3 1 16 1 z"
+            fill="#3B9ED8" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="16" cy="16" r="5" fill="#ffffff"/>
+    </svg>`;
+    const proposedPinSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="44" viewBox="0 0 32 44">
+      <path d="M16 1 C7.7 1 1 7.7 1 16 c0 11 15 27 15 27 s15-16 15-27 C31 7.7 24.3 1 16 1 z"
+            fill="#c8102e" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="16" cy="16" r="5" fill="#ffffff"/>
+    </svg>`;
+    const loadPin = (name, svg) => new Promise((resolve) => {
+      const img = new Image(32, 44);
+      img.onload = () => {
+        if (!map.hasImage(name)) map.addImage(name, img);
+        resolve();
+      };
+      img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+    });
+    await Promise.all([
+      loadPin('station-marker', pinSvg),
+      loadPin('station-marker-proposed', proposedPinSvg)
+    ]);
+
+    map.addSource('old-stations', { type: 'geojson', data: oldStationsData });
+    map.addLayer({
+      id: 'old-stations',
+      type: 'symbol',
+      source: 'old-stations',
+      layout: {
+        'icon-image': 'station-marker',
+        'icon-size': 0.7,
+        'icon-anchor': 'bottom',
+        'icon-allow-overlap': true
+      }
+    });
+
+    map.on('click', 'old-stations', (e) => {
+      const f = e.features[0];
+      const p = f.properties;
+      const opened = p.opened ? new Date(p.opened).getFullYear() : '';
+      const closed = p.closed ? new Date(p.closed).getFullYear() : '';
+      const html = `<h3>${p.name}</h3><p>Opened: ${opened}<br/>Closed: ${closed}</p>`;
+      new maplibregl.Popup({ offset: 28 })
+        .setLngLat(f.geometry.coordinates)
+        .setHTML(html)
+        .addTo(map);
+    });
+    map.on('mouseenter', 'old-stations', () => { map.getCanvas().style.cursor = 'pointer'; });
+    map.on('mouseleave', 'old-stations', () => { map.getCanvas().style.cursor = ''; });
+
+    map.addSource('proposed-stations', { type: 'geojson', data: proposedStationsData });
+    map.addLayer({
+      id: 'proposed-stations',
+      type: 'symbol',
+      source: 'proposed-stations',
+      layout: {
+        'icon-image': 'station-marker-proposed',
+        'icon-size': 0.7,
+        'icon-anchor': 'bottom',
+        'icon-allow-overlap': true
+      }
+    });
+
+    map.on('click', 'proposed-stations', (e) => {
+      const f = e.features[0];
+      const p = f.properties;
+      const label = p.status === 'new' ? 'New station' : 'Restored (original)';
+      const html = `<h3>${p.name}</h3><p>${label}</p>`;
+      new maplibregl.Popup({ offset: 28 })
+        .setLngLat(f.geometry.coordinates)
+        .setHTML(html)
+        .addTo(map);
+    });
+    map.on('mouseenter', 'proposed-stations', () => { map.getCanvas().style.cursor = 'pointer'; });
+    map.on('mouseleave', 'proposed-stations', () => { map.getCanvas().style.cursor = ''; });
 
     // Animate dashes - cycle through offsets to create movement effect
     const dashSeq = [
