@@ -7,6 +7,7 @@
     { "text": "Home", "url": "/" },
     { "text": "About Us", "url": "/about-us/" },
     { "text": "Our Proposal", "url": "/our-proposal/" },
+    { "text": "Map", "url": "https://map.ttfe.org.uk/" },
     { "text": "What is a Tram Train", "url": "/what-is-a-tram-train/" },
     { "text": "Join", "url": "/join/" },
     { "text": "News", "url": "/news/" },

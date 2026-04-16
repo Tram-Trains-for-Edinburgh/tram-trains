@@ -4,8 +4,9 @@ set -euo pipefail
 rm -rf dist
 mkdir -p dist/assets dist/data
 
-# HTML entrypoint
+# HTML entrypoint + Cloudflare Pages headers
 cp index.html dist/
+cp _headers   dist/
 
 # Assets actually referenced by index.html
 cp assets/favicon.ico            dist/assets/
