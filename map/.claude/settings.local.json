@@ -19,7 +19,8 @@
       "Bash(bash build.sh)",
       "Bash(\"/c/Program Files/Git/usr/bin/find.exe\" dist -type f)",
       "Bash(\"/c/Program Files/Git/usr/bin/sort.exe\")",
-      "Bash(\"/c/Program Files/Git/bin/bash.exe\" -c 'bash build.sh && echo \"--- dist tree ---\" && find dist -type f | sort')"
+      "Bash(\"/c/Program Files/Git/bin/bash.exe\" -c 'bash build.sh && echo \"--- dist tree ---\" && find dist -type f | sort')",
+      "Bash(\"/c/Program Files/Git/bin/bash.exe\" -c 'bash build.sh')"
     ]
   }
 }
