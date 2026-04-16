@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"/mingw64/bin/git\" -C f:/git/tram-trains add map/index.html map/data/south-sub-original-stations.json map/data/south-sub-proposed-stations.json)",
+      "Bash(\"/mingw64/bin/git\" -C f:/git/tram-trains status)",
+      "Bash(/mingw64/bin/git -C f:/git/tram-trains commit -m ' *)",
+      "Bash(\"/mingw64/bin/git\" -C f:/git/tram-trains commit -m \"Add original and proposed station markers to South Sub map\" -m \"Co-Authored-By: Claude Opus 4.6 \\(1M context\\) <noreply@anthropic.com>\")",
+      "Bash(\"/mingw64/bin/git\" -C f:/git/tram-trains push origin main)",
+      "Bash(dir /b)",
+      "Bash(cmd //c \"cd /d f:\\\\git\\\\tram-trains\\\\map && dir /b\")",
+      "Bash(\"/c/Program Files/Git/bin/git.exe\" -C f:/git/tram-trains log --all --diff-filter=D --name-only --pretty=format: -- map/)",
+      "Bash(\"/c/Program Files/Git/bin/git.exe\" -C f:/git/tram-trains log --all --oneline --diff-filter=D -- '*.toml')",
+      "Bash(\"/c/Program Files/Git/bin/git.exe\" -C f:/git/tram-trains show --stat 87b7b51)",
+      "Bash(\"/c/Program Files/Git/bin/git.exe\" -C f:/git/tram-trains log --all --oneline)",
+      "Bash(\"/c/Program Files/Git/bin/git.exe\" -C f:/git/tram-trains stash list)",
+      "Bash(\"/c/Program Files/Git/bin/git.exe\" -C f:/git/tram-trains log --all --source --remotes --oneline --follow -- map/wrangler.toml)",
+      "Bash(\"/c/Program Files/Git/bin/git.exe\" -C f:/git/tram-trains fsck --lost-found)",
+      "Bash(\"/c/Program Files/Git/bin/git.exe\" -C f:/git/tram-trains show b870acd --stat)",
+      "Bash(bash build.sh)",
+      "Bash(\"/c/Program Files/Git/usr/bin/find.exe\" dist -type f)",
+      "Bash(\"/c/Program Files/Git/usr/bin/sort.exe\")",
+      "Bash(\"/c/Program Files/Git/bin/bash.exe\" -c 'bash build.sh && echo \"--- dist tree ---\" && find dist -type f | sort')"
+    ]
+  }
+}
