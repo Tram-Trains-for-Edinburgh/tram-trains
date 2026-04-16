@@ -261,6 +261,71 @@
       will-change: transform;
     }
 
+    /* ---- Flyover control ---- */
+    .flyover-control {
+      background: rgba(13,17,23,0.92);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 6px;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 150px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .flyover-btn {
+      background: #c8102e;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 6px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.15s;
+      line-height: 1.2;
+    }
+
+    .flyover-btn:hover { background: #e01f3f; }
+
+    .flyover-start { width: 100%; }
+
+    .flyover-actions {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .flyover-actions .flyover-btn {
+      padding: 5px 8px;
+      font-size: 11px;
+      background: rgba(200,16,46,0.85);
+      flex: 1 1 auto;
+    }
+
+    .flyover-actions .flyover-speed {
+      flex: 0 0 auto;
+      min-width: 34px;
+    }
+
+    .flyover-progress {
+      height: 4px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .flyover-progress-bar {
+      height: 100%;
+      background: #e8c98e;
+      width: 0%;
+      transition: width 0.08s linear;
+    }
+
     /* ---- Mobile overrides ---- */
     @media (max-width: 768px) {
       header { padding: 10px 14px 8px; gap: 12px; }
@@ -356,7 +421,7 @@
 </div>
 
 <div class="footer-bar">
-  <div class="stat"><span class="stat-val">tramtrainsedi@gmail.com</span></div>
+  <div class="stat"><span class="stat-val">Tram Trains for Edinburgh (TTfE) 2026</span></div>
 </div>
 
 <script>
@@ -557,6 +622,402 @@
   const tramSEProposedData = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.19163,55.95287],[-3.18902,55.95319],[-3.18604,55.9471],[-3.18388,55.9448],[-3.18312,55.94311],[-3.1779,55.93732],[-3.16697,55.92661],[-3.16234,55.92868],[-3.15961,55.92838],[-3.15481,55.92695],[-3.14737,55.92181],[-3.13692,55.91926],[-3.13478,55.9196],[-3.13118,55.92139]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.19142,55.95313],[-3.19098,55.953]]}}]};
   const orchardBraeData = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.22928,55.96072],[-3.22663,55.95876]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.22595,55.95826],[-3.2222,55.95513],[-3.21625,55.95503],[-3.21355,55.95212],[-3.20765,55.95014]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23963,55.96971],[-3.23967,55.96913]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.2355,55.96757],[-3.23323,55.96458]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23323,55.96458],[-3.2332,55.96454]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.2332,55.96454],[-3.23309,55.96439]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23306,55.96435],[-3.23309,55.96439]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23306,55.96435],[-3.2326,55.96374]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23258,55.96372],[-3.2326,55.96374]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23258,55.96372],[-3.23185,55.96282]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23185,55.96282],[-3.23179,55.96276]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23179,55.96276],[-3.23043,55.96157]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23043,55.96157],[-3.22873,55.96031]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.22663,55.95876],[-3.22595,55.95826]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23963,55.96971],[-3.23989,55.97211],[-3.24084,55.9737],[-3.24243,55.97872],[-3.24073,55.97925]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24073,55.97925],[-3.23841,55.97983]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23841,55.97983],[-3.23717,55.98078],[-3.23089,55.98171]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23089,55.98171],[-3.22941,55.98224],[-3.22452,55.98118]]}}]};
   const roseburnData = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.22992,55.94405],[-3.23154,55.9451],[-3.23316,55.94735]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23334,55.9479],[-3.23471,55.95006],[-3.23696,55.95175]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.22788,55.94361],[-3.22992,55.94405]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23809,55.9523],[-3.24137,55.95376],[-3.24373,55.95575]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23696,55.95175],[-3.23809,55.9523]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23963,55.96971],[-3.23967,55.96913]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23316,55.94735],[-3.23334,55.9479]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24404,55.96135],[-3.24187,55.96377]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24428,55.96098],[-3.24404,55.96135]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24428,55.96098],[-3.24475,55.95979]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24484,55.95824],[-3.24489,55.95921]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24489,55.95921],[-3.24475,55.95979]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24111,55.96493],[-3.24159,55.96415]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24111,55.96493],[-3.24006,55.96742]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23994,55.96798],[-3.24006,55.96742]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24484,55.95824],[-3.24473,55.95768]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23994,55.96798],[-3.23966,55.96919]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24423,55.95645],[-3.24432,55.9566]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24423,55.95645],[-3.24373,55.95575]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24432,55.9566],[-3.24473,55.95768]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24187,55.96377],[-3.24159,55.96415]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23963,55.96971],[-3.23989,55.97211],[-3.24084,55.9737],[-3.24243,55.97872],[-3.24073,55.97925]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.24073,55.97925],[-3.23841,55.97983]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23841,55.97983],[-3.23717,55.98078],[-3.23089,55.98171]]}},{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[-3.23089,55.98171],[-3.22941,55.98224],[-3.22452,55.98118]]}}]};
+
+  // ---------------------------------------------------------------------------
+  // Flyover helpers — pure geometry functions (kept free of MapLibre state)
+  // ---------------------------------------------------------------------------
+  function planarDist(a, b) {
+    const dx = (a[0] - b[0]) * Math.cos(a[1] * Math.PI / 180);
+    const dy = a[1] - b[1];
+    return Math.sqrt(dx * dx + dy * dy);
+  }
+
+  function lerpAlongRoute(coords, cumDist, totalDist, t) {
+    const target = Math.max(0, Math.min(1, t)) * totalDist;
+    let lo = 0, hi = cumDist.length - 1;
+    while (lo < hi - 1) {
+      const mid = (lo + hi) >> 1;
+      if (cumDist[mid] <= target) lo = mid; else hi = mid;
+    }
+    const segLen = cumDist[hi] - cumDist[lo];
+    const f = segLen === 0 ? 0 : (target - cumDist[lo]) / segLen;
+    return [
+      coords[lo][0] + (coords[hi][0] - coords[lo][0]) * f,
+      coords[lo][1] + (coords[hi][1] - coords[lo][1]) * f
+    ];
+  }
+
+  function indexAtT(cumDist, totalDist, t) {
+    const target = t * totalDist;
+    for (let i = cumDist.length - 1; i >= 0; i--) {
+      if (cumDist[i] <= target) return i;
+    }
+    return 0;
+  }
+
+  function bearingBetween(from, to) {
+    const toRad = d => d * Math.PI / 180;
+    const phi1 = toRad(from[1]);
+    const phi2 = toRad(to[1]);
+    const dLambda = toRad(to[0] - from[0]);
+    const y = Math.sin(dLambda) * Math.cos(phi2);
+    const x = Math.cos(phi1) * Math.sin(phi2) - Math.sin(phi1) * Math.cos(phi2) * Math.cos(dLambda);
+    return (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
+  }
+
+  function angularDiff(a, b) {
+    let d = a - b;
+    while (d > 180) d -= 360;
+    while (d < -180) d += 360;
+    return d;
+  }
+
+  // ---------------------------------------------------------------------------
+  // FlyoverController — requestAnimationFrame driven free-camera animation
+  // ---------------------------------------------------------------------------
+  class FlyoverController {
+    constructor(map, options = {}) {
+      this.map = map;
+      this.opts = Object.assign({
+        pitch: 65,          // base camera tilt (0 = top-down, 85 = near horizon)
+        zoom: 14.8,         // fixed zoom during flight (~street level)
+        bendEase: 0,        // 0 = locked pitch; raise to flatten pitch on bends
+        bearingLookahead: 0.03,  // fraction of route used to smooth forward bearing (~330 m)
+        smoothing: 0.12,    // low-pass filter factor for bearing/pitch (0 = frozen, 1 = raw)
+        speed: 1.0,
+        duration: 50000,    // ms for a full run at speed 1.0
+        sourceId: 'south-sub',
+        progressSourceId: 'ssr-route-progress',
+        headSourceId: 'ssr-flyover-head',
+        onComplete: () => {},
+        onProgress: () => {},
+      }, options);
+
+      this.coords = null;
+      this.cumDist = null;
+      this.totalDist = 0;
+      this.t = 0;
+      this.running = false;
+      this.paused = false;
+
+      if (this.opts.coords && this.opts.coords.length >= 2) {
+        this._setCoords(this.opts.coords);
+      }
+      this.rafId = null;
+      this.lastTime = 0;
+      this._handlersDisabled = false;
+      this._prevCam = null;
+    }
+
+    _setCoords(rawCoords) {
+      let coords = rawCoords.slice();
+      // Ensure east → west (Brunstane is east of Gorgie → higher lng first)
+      if (coords[0][0] < coords[coords.length - 1][0]) coords.reverse();
+      this.coords = coords;
+      this.cumDist = [0];
+      for (let i = 1; i < coords.length; i++) {
+        this.cumDist.push(this.cumDist[i - 1] + planarDist(coords[i - 1], coords[i]));
+      }
+      this.totalDist = this.cumDist[this.cumDist.length - 1];
+    }
+
+    setCoords(rawCoords) {
+      if (rawCoords && rawCoords.length >= 2) this._setCoords(rawCoords);
+    }
+
+    _computeRouteFromSource() {
+      const src = this.map.getSource(this.opts.sourceId);
+      if (!src) return;
+      const d = src._data || (src.serialize && src.serialize().data);
+      if (!d) return;
+      const coords = d.features
+        ? d.features[0].geometry.coordinates
+        : d.geometry.coordinates;
+      if (coords && coords.length >= 2) this._setCoords(coords);
+    }
+
+    _disableInteraction() {
+      if (this._handlersDisabled) return;
+      ['dragPan','scrollZoom','boxZoom','dragRotate','keyboard','doubleClickZoom','touchZoomRotate']
+        .forEach(h => this.map[h] && this.map[h].disable());
+      this._handlersDisabled = true;
+    }
+
+    _enableInteraction() {
+      if (!this._handlersDisabled) return;
+      ['dragPan','scrollZoom','boxZoom','dragRotate','keyboard','doubleClickZoom','touchZoomRotate']
+        .forEach(h => this.map[h] && this.map[h].enable());
+      this._handlersDisabled = false;
+    }
+
+    start() {
+      if (this.rafId) cancelAnimationFrame(this.rafId);
+      this.rafId = null;
+      if (!this.coords) this._computeRouteFromSource();
+      if (!this.coords || this.coords.length < 2) {
+        console.warn('FlyoverController: no route coordinates — pass { coords: [...] } or ensure source "' + this.opts.sourceId + '" has LineString data');
+        return;
+      }
+      this.t = 0;
+      this.running = true;
+      this.paused = false;
+      this.lastTime = performance.now();
+      this._smBearing = null;
+      this._smPitch = null;
+      this._prevCam = {
+        center: this.map.getCenter(),
+        zoom: this.map.getZoom(),
+        bearing: this.map.getBearing(),
+        pitch: this.map.getPitch(),
+        maxPitch: this.map.getMaxPitch ? this.map.getMaxPitch() : 60
+      };
+      if (this.map.setMaxPitch) this.map.setMaxPitch(85);
+      this._disableInteraction();
+      this._tick();
+    }
+
+    pause() {
+      if (!this.running || this.paused) return;
+      this.paused = true;
+      if (this.rafId) cancelAnimationFrame(this.rafId);
+      this.rafId = null;
+    }
+
+    resume() {
+      if (!this.running || !this.paused) return;
+      this.paused = false;
+      this.lastTime = performance.now();
+      this._tick();
+    }
+
+    stop() {
+      this.running = false;
+      this.paused = false;
+      if (this.rafId) cancelAnimationFrame(this.rafId);
+      this.rafId = null;
+      this._enableInteraction();
+
+      const progress = this.map.getSource(this.opts.progressSourceId);
+      if (progress) {
+        progress.setData({ type: 'Feature', geometry: { type: 'LineString', coordinates: [] } });
+      }
+
+      const head = this.map.getSource(this.opts.headSourceId);
+      if (head) {
+        head.setData({ type: 'FeatureCollection', features: [] });
+      }
+
+      if (this._prevCam) {
+        try {
+          this.map.easeTo({
+            center: this._prevCam.center,
+            zoom: this._prevCam.zoom,
+            bearing: this._prevCam.bearing,
+            pitch: this._prevCam.pitch,
+            duration: 900
+          });
+          if (this.map.setMaxPitch && this._prevCam.maxPitch != null) {
+            this.map.setMaxPitch(this._prevCam.maxPitch);
+          }
+        } catch (e) { /* ignore */ }
+        this._prevCam = null;
+      }
+    }
+
+    setSpeed(multiplier) {
+      this.opts.speed = Math.max(0.1, Math.min(10, multiplier));
+    }
+
+    _tick() {
+      if (!this.running || this.paused) return;
+      const now = performance.now();
+      const dt = now - this.lastTime;
+      this.lastTime = now;
+      this.t += (dt / this.opts.duration) * this.opts.speed;
+
+      if (this.t >= 1) {
+        this.t = 1;
+        this._updateCamera(1);
+        this.opts.onProgress(1);
+        const cb = this.opts.onComplete;
+        this.stop();
+        cb && cb();
+        return;
+      }
+
+      this._updateCamera(this.t);
+      this.opts.onProgress(this.t);
+      this.rafId = requestAnimationFrame(() => this._tick());
+    }
+
+    _updateCamera(t) {
+      const look = this.opts.bearingLookahead;
+      const subject = lerpAlongRoute(this.coords, this.cumDist, this.totalDist, t);
+      const ahead   = lerpAlongRoute(this.coords, this.cumDist, this.totalDist, Math.min(1, t + look));
+      const past    = lerpAlongRoute(this.coords, this.cumDist, this.totalDist, Math.max(0, t - look));
+
+      // Target heading from a point behind us to a point ahead.
+      const targetBearing = bearingBetween(past, ahead);
+
+      // Bend sharpness → flatten the pitch for a banking drone feel.
+      const b1 = bearingBetween(past, subject);
+      const b2 = bearingBetween(subject, ahead);
+      const bend = Math.abs(angularDiff(b2, b1));           // 0–180°
+      const targetPitch = Math.max(35, this.opts.pitch - bend * this.opts.bendEase);
+
+      // Low-pass filter bearing (wrap-aware) and pitch to remove per-frame jitter.
+      const a = this.opts.smoothing;
+      if (this._smBearing == null) {
+        this._smBearing = targetBearing;
+        this._smPitch = targetPitch;
+      } else {
+        const d = angularDiff(targetBearing, this._smBearing);
+        this._smBearing = (this._smBearing + d * a + 360) % 360;
+        this._smPitch += (targetPitch - this._smPitch) * a;
+      }
+
+      try {
+        this.map.jumpTo({
+          center: subject,
+          bearing: this._smBearing,
+          pitch: this._smPitch,
+          zoom: this.opts.zoom
+        });
+      } catch (e) {
+        console.error('[Flyover] jumpTo failed', e);
+      }
+
+      const progress = this.map.getSource(this.opts.progressSourceId);
+      if (progress) {
+        const idx = indexAtT(this.cumDist, this.totalDist, t);
+        const traversed = this.coords.slice(0, idx + 1);
+        traversed.push(subject);
+        progress.setData({
+          type: 'Feature',
+          geometry: { type: 'LineString', coordinates: traversed }
+        });
+      }
+
+      const head = this.map.getSource(this.opts.headSourceId);
+      if (head) {
+        head.setData({
+          type: 'Feature',
+          geometry: { type: 'Point', coordinates: subject }
+        });
+      }
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // FlyoverControl — MapLibre IControl wrapper + compact UI
+  // ---------------------------------------------------------------------------
+  class FlyoverControl {
+    constructor(controller) {
+      this.controller = controller;
+      this.state = 'idle'; // idle | running | paused
+      this._origProgress = controller.opts.onProgress;
+      this._origComplete = controller.opts.onComplete;
+      controller.opts.onProgress = (t) => {
+        if (this.progressBar) this.progressBar.style.width = (t * 100) + '%';
+        this._origProgress && this._origProgress(t);
+      };
+      controller.opts.onComplete = () => {
+        this.state = 'idle';
+        this._render();
+        this._origComplete && this._origComplete();
+      };
+    }
+
+    onAdd(map) {
+      this.map = map;
+      this.container = document.createElement('div');
+      this.container.className = 'maplibregl-ctrl flyover-control';
+      this._render();
+      return this.container;
+    }
+
+    onRemove() {
+      if (this.container && this.container.parentNode) {
+        this.container.parentNode.removeChild(this.container);
+      }
+      this.map = undefined;
+    }
+
+    _render() {
+      this.container.innerHTML = '';
+      this.progressBar = null;
+
+      if (this.state === 'idle') {
+        const btn = document.createElement('button');
+        btn.className = 'flyover-btn flyover-start';
+        btn.type = 'button';
+        btn.textContent = 'FLY ROUTE';
+        btn.addEventListener('click', () => {
+          this.state = 'running';
+          this.controller.start();
+          this._render();
+        });
+        this.container.appendChild(btn);
+        return;
+      }
+
+      const actions = document.createElement('div');
+      actions.className = 'flyover-actions';
+
+      const pauseBtn = document.createElement('button');
+      pauseBtn.className = 'flyover-btn';
+      pauseBtn.type = 'button';
+      pauseBtn.textContent = this.state === 'paused' ? '\u25B6 Resume' : '\u23F8 Pause';
+      pauseBtn.addEventListener('click', () => {
+        if (this.state === 'paused') {
+          this.controller.resume();
+          this.state = 'running';
+        } else {
+          this.controller.pause();
+          this.state = 'paused';
+        }
+        this._render();
+      });
+
+      const stopBtn = document.createElement('button');
+      stopBtn.className = 'flyover-btn';
+      stopBtn.type = 'button';
+      stopBtn.textContent = '\u23F9 Stop';
+      stopBtn.addEventListener('click', () => {
+        this.controller.stop();
+        this.state = 'idle';
+        this._render();
+      });
+
+      const slower = document.createElement('button');
+      slower.className = 'flyover-btn flyover-speed';
+      slower.type = 'button';
+      slower.textContent = '\u23EA';
+      slower.title = 'Slower';
+      slower.addEventListener('click', () => {
+        this.controller.setSpeed(Math.max(0.25, this.controller.opts.speed / 1.5));
+      });
+
+      const faster = document.createElement('button');
+      faster.className = 'flyover-btn flyover-speed';
+      faster.type = 'button';
+      faster.textContent = '\u23E9';
+      faster.title = 'Faster';
+      faster.addEventListener('click', () => {
+        this.controller.setSpeed(Math.min(6, this.controller.opts.speed * 1.5));
+      });
+
+      actions.append(pauseBtn, stopBtn, slower, faster);
+
+      const progress = document.createElement('div');
+      progress.className = 'flyover-progress';
+      this.progressBar = document.createElement('div');
+      this.progressBar.className = 'flyover-progress-bar';
+      progress.appendChild(this.progressBar);
+
+      this.container.append(actions, progress);
+    }
+  }
 
   map.on('load', async () => {
     // Fetch real route data from split JSON files
@@ -1022,6 +1483,63 @@
       requestAnimationFrame(pulseGlow);
     }
     pulseGlow();
+
+    // --- Flyover progress trail (rendered below the South Sub line layers) ---
+    map.addSource('ssr-route-progress', {
+      type: 'geojson',
+      data: { type: 'Feature', geometry: { type: 'LineString', coordinates: [] } }
+    });
+    map.addLayer({
+      id: 'ssr-route-progress',
+      type: 'line',
+      source: 'ssr-route-progress',
+      paint: {
+        'line-color': '#e8c98e',
+        'line-width': 3,
+        'line-opacity': 0.9
+      },
+      layout: { 'line-cap': 'round', 'line-join': 'round' }
+    }, 'south-sub-glow-outer');
+
+    // --- Flyover head marker (prominent leading dot — always on top) ---
+    map.addSource('ssr-flyover-head', {
+      type: 'geojson',
+      data: { type: 'FeatureCollection', features: [] }
+    });
+    map.addLayer({
+      id: 'ssr-flyover-head-halo',
+      type: 'circle',
+      source: 'ssr-flyover-head',
+      paint: {
+        'circle-radius': 18,
+        'circle-color': '#c8102e',
+        'circle-opacity': 0.25,
+        'circle-pitch-alignment': 'viewport',
+        'circle-pitch-scale': 'viewport'
+      }
+    });
+    map.addLayer({
+      id: 'ssr-flyover-head',
+      type: 'circle',
+      source: 'ssr-flyover-head',
+      paint: {
+        'circle-radius': 8,
+        'circle-color': '#c8102e',
+        'circle-stroke-color': '#ffffff',
+        'circle-stroke-width': 2.5,
+        'circle-pitch-alignment': 'viewport',
+        'circle-pitch-scale': 'viewport'
+      }
+    });
+
+    const flyover = new FlyoverController(map, {
+      coords: subCoords,
+      pitch: 65,
+      zoom: 14.8,
+      speed: 1.0,
+      onComplete: () => console.log('Flyover complete')
+    });
+    map.addControl(new FlyoverControl(flyover), 'bottom-left');
 
   });
 

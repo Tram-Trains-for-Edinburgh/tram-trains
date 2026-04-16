@@ -20,7 +20,8 @@
       "Bash(\"/c/Program Files/Git/usr/bin/find.exe\" dist -type f)",
       "Bash(\"/c/Program Files/Git/usr/bin/sort.exe\")",
       "Bash(\"/c/Program Files/Git/bin/bash.exe\" -c 'bash build.sh && echo \"--- dist tree ---\" && find dist -type f | sort')",
-      "Bash(\"/c/Program Files/Git/bin/bash.exe\" -c 'bash build.sh')"
+      "Bash(\"/c/Program Files/Git/bin/bash.exe\" -c 'bash build.sh')",
+      "Bash(curl -s \"https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js\")"
     ]
   }
 }
