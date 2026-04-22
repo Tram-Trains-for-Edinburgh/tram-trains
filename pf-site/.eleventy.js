@@ -1,7 +1,17 @@
+const crypto = require("crypto");
+const fs = require("fs");
+const path = require("path");
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy({ "src/_headers": "_headers" });
+
+  eleventyConfig.addGlobalData("cssHash", () => {
+    const file = path.join(__dirname, "src/assets/css/style.css");
+    const contents = fs.readFileSync(file);
+    return crypto.createHash("md5").update(contents).digest("hex").slice(0, 10);
+  });
 
   eleventyConfig.addFilter("striptags", function (value) {
     if (!value) return "";
