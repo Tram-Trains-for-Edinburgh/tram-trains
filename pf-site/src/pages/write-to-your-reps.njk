@@ -1,0 +1,138 @@
+---
+title: Write to your elected representatives
+layout: base.njk
+permalink: /write-to-your-reps/
+---
+
+<div class="hero">
+  <h1>Write to your elected representatives</h1>
+  <p>One of the most effective things you can do to support the campaign is write to your elected representatives. Below are three template letters; one each for your MSP, your City of Edinburgh councillor, and your UK MP. Copy the one that applies, personalise it, and send. Letters written in your own words carry more weight than templates sent unchanged, so please edit freely before sending.</p>
+</div>
+
+<article class="letter-card">
+  <h2>Write to your MSP</h2>
+  <p class="find-rep"><strong>Find your MSP:</strong> <a href="https://www.parliament.scot/msps/current-and-previous-msps" target="_blank" rel="noopener">Current and previous Members of the Scottish Parliament (MSPs) — Scottish Parliament website</a></p>
+  <div class="letter-actions">
+    <button type="button" class="copy-button" data-copy-target="letter-msp" aria-label="Copy MSP letter to clipboard">Copy</button>
+  </div>
+  <pre id="letter-msp" class="letter-text">Dear [name]
+
+Recently I was excited to hear about a proposal (from Tram Trains for Edinburgh) to get public transport back on the South Suburban railway. This line has lain little used for many years and to use it for a tram service seems really useful for local residents, would provide fast journey connections to places outside the City, and it should be relatively easy to build given the line is already there. In particular:
+
+- The route serves various work and shopping destinations not well served by the bus network
+- These places are also hard to reach by car given the frequent congestion
+- Some of these areas aren't well off and many residents don't have access to a car — so they need public transport
+- Edinburgh and the Lothians are growing fast, and we need a better public transport system as an alternative to slow car or bus journeys
+- With the railway already there, disruption to build it will be minimal
+
+[feel free to add or delete bullet points]
+[add points that are important to you]
+
+In the light of the above please confirm that you will fully support the proposal when it is raised in the Scottish Parliament or in parliamentary committees. It really should be a priority to improve public transport across the south side.
+
+With thanks
+[name]</pre>
+</article>
+
+<article class="letter-card">
+  <h2>Write to your City Councillor</h2>
+  <p class="find-rep"><strong>Find your Edinburgh Councillor:</strong> <a href="https://democracy.edinburgh.gov.uk/mgFindMember.aspx" target="_blank" rel="noopener">Find Councillor at City of Edinburgh Council</a></p>
+  <div class="letter-actions">
+    <button type="button" class="copy-button" data-copy-target="letter-councillor" aria-label="Copy City Councillor letter to clipboard">Copy</button>
+  </div>
+  <pre id="letter-councillor" class="letter-text">Dear [name]
+
+Recently I was excited to hear about a proposal, from Tram Trains for Edinburgh, to get public transport back on the South Suburban railway. This line has been little used for many years and to use it for a tram service seems really useful for local residents and it should be relatively easy to build, given the line is there. In particular:
+
+- The route serves various work, shopping and entertainment destinations not well served by the bus network
+- These places are also hard to reach by car given the frequent congestion
+- Some of these areas aren't well off and many residents don't have access to a car — so they need public transport
+- Edinburgh is growing and we need a better public transport system as an alternative to slow car or bus journeys
+- With the railway already there, disruption to build it will be minimal
+
+[feel free to add or delete bullet points]
+[add points that are important to you]
+
+I know the Council is studying an extension of the tram network. Reopening the South Sub could create a tram interchange at Cameron Toll and offer many more journey options, so please consider the South Sub route together with your other plans. We also think Lothian Buses does a great job but the bus service cannot connect the destinations across the South side, as this proposal would.
+
+In the light of the above please confirm that you will fully support the proposal when it is raised in Council Meetings or at the Transport and Environment Committee.
+
+With thanks
+[name]</pre>
+</article>
+
+<article class="letter-card">
+  <h2>Write to your MP</h2>
+  <p class="find-rep"><strong>Find your MP:</strong> <a href="https://members.parliament.uk/FindYourMP" target="_blank" rel="noopener">Find your MP at UK Parliament</a></p>
+  <div class="letter-actions">
+    <button type="button" class="copy-button" data-copy-target="letter-mp" aria-label="Copy MP letter to clipboard">Copy</button>
+  </div>
+  <pre id="letter-mp" class="letter-text">Dear [name]
+
+Recently I was excited to hear about a proposal (from Tram Trains for Edinburgh) to get public transport back on Edinburgh's South Suburban railway. This line has been little used for many years and to use it for a tram service seems really useful for local residents, would provide fast journey connections to places outside the City, and it should be relatively easy to build given the line is already there. In particular:
+
+- The route serves various work and shopping destinations not well served by the bus network
+- These places are also hard to reach by car given the frequent congestion
+- Some of these areas aren't well off and many residents don't have access to a car and so need public transport
+- Edinburgh and the Lothians are growing fast, and we need a better public transport system as an alternative to slow car or bus journeys
+- With the railway already there, disruption to build it will be minimal
+
+[feel free to add or delete bullet points]
+[add points that are important to you]
+
+In the light of the above please confirm that you will fully support the proposal and urge the Scottish and UK governments to work together to get this important project built. It really should be a priority to improve public transport across the south side.
+
+With thanks
+[name]</pre>
+</article>
+
+<script>
+  document.querySelectorAll('.copy-button').forEach(function (btn) {
+    btn.addEventListener('click', async function () {
+      var targetId = btn.getAttribute('data-copy-target');
+      var target = document.getElementById(targetId);
+      if (!target) return;
+      var text = target.textContent;
+
+      var copied = false;
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+          copied = true;
+        }
+      } catch (err) {
+        copied = false;
+      }
+
+      if (!copied) {
+        try {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'absolute';
+          ta.style.left = '-9999px';
+          document.body.appendChild(ta);
+          ta.select();
+          ta.setSelectionRange(0, text.length);
+          copied = document.execCommand('copy');
+          document.body.removeChild(ta);
+        } catch (err) {
+          copied = false;
+        }
+      }
+
+      var originalLabel = btn.dataset.originalLabel || btn.textContent;
+      btn.dataset.originalLabel = originalLabel;
+      btn.textContent = copied ? 'Copied!' : 'Copy failed';
+      btn.classList.toggle('copy-button--copied', copied);
+      btn.classList.toggle('copy-button--error', !copied);
+
+      clearTimeout(btn._copyTimer);
+      btn._copyTimer = setTimeout(function () {
+        btn.textContent = originalLabel;
+        btn.classList.remove('copy-button--copied');
+        btn.classList.remove('copy-button--error');
+      }, 2000);
+    });
+  });
+</script>

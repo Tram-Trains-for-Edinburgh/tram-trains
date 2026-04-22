@@ -572,6 +572,93 @@ a:hover {
   margin-bottom: 1.25rem;
 }
 
+/* === Letter cards (write-to-your-reps) === */
+.letter-card {
+  background: var(--color-grey-light);
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid var(--color-crimson);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.letter-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--color-navy);
+}
+
+.letter-card .find-rep {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.letter-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.copy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 96px;
+  padding: 0.5rem 1.25rem;
+  background: var(--color-crimson);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.copy-button:hover {
+  background: #6e0a25;
+}
+
+.copy-button--copied {
+  background: #2e7d32;
+}
+
+.copy-button--copied:hover {
+  background: #2e7d32;
+}
+
+.copy-button--error {
+  background: #c62828;
+}
+
+.letter-text {
+  background: var(--color-white);
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 1.25rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-text);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .letter-card {
+    padding: 1rem;
+  }
+
+  .letter-text {
+    padding: 0.9rem;
+    font-size: 0.85rem;
+  }
+}
+
 /* === 404 page === */
 .error-page {
   text-align: center;
