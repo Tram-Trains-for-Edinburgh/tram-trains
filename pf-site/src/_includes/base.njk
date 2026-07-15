@@ -79,6 +79,18 @@
   {% include "footer.njk" %}
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script>
+    // Console note for curious developers
+    console.log([
+      '            \\ /',
+      '   __________V__________',
+      '  |  [] [] [] [] [] []  |',
+      '  |_____________________|',
+      '     (o)(o)     (o)(o)',
+      '  =======================',
+      '',
+      'If you\'re a talented and keen software developer and want to help the campaign, head over to our GitHub repo: https://github.com/Tram-Trains-for-Edinburgh/tram-trains'
+    ].join('\n'));
+
     document.querySelector('.nav-toggle').addEventListener('click', function () {
       var nav = document.querySelector('.nav-links');
       var isOpen = nav.classList.toggle('nav-open');

@@ -16,7 +16,7 @@ Tram Trains for Edinburgh (TTfE) is a volunteer campaign group (an unincorporate
 
 As an unincorporated association, TTfE does not have a separate legal personality. The campaign operates collectively, and any references in this policy to "we", "us", or "our" refer to the TTfE campaign group.
 
-Contact us at: **tramtrainsedi@gmail.com**
+Contact us at: **hello@ttfe.org.uk**
 
 Website: ttfe.org.uk
 
@@ -73,7 +73,7 @@ We collect travel pattern data and postcodes to build an evidence base about how
 
 #### 5.2 To keep you informed about the campaign
 
-If you provide your email address and indicate you would like to hear from us, we will contact you with campaign updates. Our legal basis is consent (UK GDPR Article 6(1)(a)). You may withdraw consent at any time by emailing tramtrainsedi@gmail.com or clicking the unsubscribe link in any email we send.
+If you provide your email address and indicate you would like to hear from us, we will contact you with campaign updates. Our legal basis is consent (UK GDPR Article 6(1)(a)). You may withdraw consent at any time by emailing hello@ttfe.org.uk or clicking the unsubscribe link in any email we send.
 
 #### 5.3 To present aggregated findings to decision-makers and the public
 
@@ -129,7 +129,7 @@ Under UK GDPR, you have the following rights:
 - Right to object: you can object to us processing your data on the basis of legitimate interests.
 - Right to withdraw consent: where we rely on consent, you can withdraw it at any time without affecting the lawfulness of processing before withdrawal.
 
-To exercise any of these rights, please contact us at tramtrainsedi@gmail.com. We will respond within one month.
+To exercise any of these rights, please contact us at hello@ttfe.org.uk. We will respond within one month.
 
 If you are unhappy with how we have handled your data, you have the right to complain to the Information Commissioner's Office (ICO) at ico.org.uk or by calling 0303 123 1113.
 
@@ -141,4 +141,4 @@ Our website (ttfe.org.uk) may use cookies and analytics tools. We will publish a
 
 We may update this policy from time to time. The current version and date are shown at the top of this document. Material changes will be communicated to members by email where we hold contact details.
 
-<p style="margin-top: 2rem; font-size: 0.9rem; color: #555;">Tram Trains for Edinburgh | tramtrainsedi@gmail.com | ttfe.org.uk</p>
+<p style="margin-top: 2rem; font-size: 0.9rem; color: #555;">Tram Trains for Edinburgh | hello@ttfe.org.uk | ttfe.org.uk</p>

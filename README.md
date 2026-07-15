@@ -124,6 +124,6 @@ Campaign content &mdash; page copy, images, maps, and other creative work &mdash
 <div align="center">
 
 **Tram Trains for Edinburgh**<br>
-<a href="https://ttfe.org.uk">ttfe.org.uk</a> &middot; <a href="mailto:tramtrainsedi@gmail.com">tramtrainsedi@gmail.com</a>
+<a href="https://ttfe.org.uk">ttfe.org.uk</a> &middot; <a href="mailto:hello@ttfe.org.uk">hello@ttfe.org.uk</a>
 
 </div>

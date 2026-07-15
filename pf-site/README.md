@@ -112,6 +112,7 @@ tram-trains/
 | `pf-site/src/assets/css/style.css` | All the site's styling |
 | `pf-site/src/_includes/base.njk` | The HTML wrapper around every page |
 | `pf-site/src/_data/site.json` | Site title, description, and navigation links |
+| `pf-site/src/_data/settings.js` | Feature switches (e.g. the donate feature) |
 | `pf-site/admin/config.yml` | Decap CMS configuration |
 | `pf-site/.eleventy.js` | Eleventy build configuration |
 
@@ -208,6 +209,21 @@ Put images in `pf-site/src/assets/images/`. Reference them in Markdown like this
 ### Navigation
 
 To add, remove, or reorder navigation links, edit `pf-site/src/_data/site.json`.
+
+### Feature switches
+
+Some site features can be switched on and off in `pf-site/src/_data/settings.js`.
+
+**Donate** — when `donate.enabled` is `true`, the site builds a `/donate/` page
+and shows Donate buttons in the sticky side bar and the footer. The button links
+to the PayPal donation URL set in `donate.paypalUrl`. When `false`, the page and
+buttons disappear entirely from the built site.
+
+Each setting can also be overridden per environment without a code change, by
+setting an environment variable in the Cloudflare Pages dashboard and
+redeploying: `DONATE_ENABLED` (`true`/`false`) and `DONATE_PAYPAL_URL`. For
+example, set `DONATE_ENABLED=true` on the Preview environment to test the
+feature on pull request previews while it stays off in Production.
 
 ---
 
