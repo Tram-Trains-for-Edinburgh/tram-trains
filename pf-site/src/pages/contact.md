@@ -6,7 +6,7 @@ permalink: /contact/
 
 ## Contact Us
 
-Have a question about the campaign, or want to get involved? Drop us a message and we'll get back to you.
+Have a question about the campaign, or want to be involved? Drop us a message and we'll get back to you.
 
 <form id="contact-form" class="contact-form" novalidate>
   <div class="form-group">

@@ -32,7 +32,7 @@ layout: base.njk
 
 ### Another way to support us
 
-If you'd like to get more involved, [becoming a member](/join/) costs just £10 a year and gives you a say in how the campaign is run.
+If you'd like to be more involved, [becoming a member](/join/) costs just £10 a year and gives you a say in how the campaign is run.
 
 **Thank you. Every contribution brings the South Sub closer to reopening.**
 

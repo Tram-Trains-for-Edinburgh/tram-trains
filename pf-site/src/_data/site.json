@@ -8,7 +8,7 @@
     { "text": "About", "url": "/about-us/" },
     { "text": "Proposal", "url": "/our-proposal/" },
     { "text": "Tram Trains", "url": "/what-is-a-tram-train/" },
-    { "text": "Get Involved", "url": "/get-involved/" },
+    { "text": "Be Involved", "url": "/be-involved/" },
     { "text": "Map", "url": "https://map.ttfe.org.uk/", "external": true }
   ]
 }

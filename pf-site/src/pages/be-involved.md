@@ -1,12 +1,12 @@
 ---
-title: Get Involved
+title: Be Involved
 layout: base.njk
-permalink: /get-involved/
+permalink: /be-involved/
 ---
 
-## Get involved
+## Be involved
 
-The campaign only moves when people like you push it. Here are the ways you can help reopen the South Sub, from a five-minute survey to becoming a member.
+The South Sub carried passengers until 1962. It can carry them again. Campaigns like this are won one small act at a time: a survey answered, a letter sent, a membership taken out. Here are the ways to be involved.
 
 <div class="involve-grid">
   <a href="/join/" class="involve-card">
