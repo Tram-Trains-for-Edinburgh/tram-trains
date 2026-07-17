@@ -26,8 +26,9 @@ layout: base.njk
 <div class="donate-panel">
   <h2>Make a donation</h2>
   <p>Every pound goes directly into campaign activity. Nobody at TTfE is paid.</p>
-  <a href="{{ settings.donate.paypalUrl }}" class="cta-button cta-button--donate" target="_blank" rel="noopener">Donate with PayPal</a>
-  <p class="donate-note">Donations are processed securely by PayPal. You don't need a PayPal account, and cards are accepted. We never see your card details.</p>
+  <a href="{{ settings.donate.url }}" class="cta-button cta-button--donate" target="_blank" rel="noopener">Donate</a>
+  <p class="donate-note">Donations are processed securely by Stripe. Cards, Apple Pay and Google Pay are accepted. We never see your card details.</p>
+  <p class="donate-note">Tram Trains for Edinburgh is a volunteer campaign group, an unincorporated association rather than a registered charity, so donations are not eligible for Gift Aid. Questions about donating? <a href="/contact/">Contact us</a>.</p>
 </div>
 
 ### Another way to support us

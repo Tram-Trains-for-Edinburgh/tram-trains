@@ -21,7 +21,7 @@ The South Sub carried passengers until 1962. It can carry them again. Campaigns 
     <h3>Write to your reps</h3>
     <p>Use our ready-made letters to tell your councillors and MSPs that you back the South Sub.</p>
   </a>
-  {% if settings.donate.enabled %}<a href="/donate/" class="involve-card involve-card--donate">
+  {% if settings.donate.enabled and settings.donate.linked %}<a href="/donate/" class="involve-card involve-card--donate">
     <h3>Donate</h3>
     <p>Help cover the tools, venues and admin that keep the campaign running.</p>
   </a>

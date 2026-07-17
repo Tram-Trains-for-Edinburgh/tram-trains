@@ -1,6 +1,6 @@
 <footer class="site-footer">
   <div class="footer-inner">
-    {% if settings.donate.enabled %}<a href="/donate/" class="footer-cta footer-cta--donate">Donate</a>
+    {% if settings.donate.enabled and settings.donate.linked %}<a href="/donate/" class="footer-cta footer-cta--donate">Donate</a>
     {% endif %}<a href="/join/" class="footer-cta">Join Us</a>
     <a href="/contact/" class="footer-cta">Contact Us</a>
     <p class="footer-copyright">&copy; {{ "now" | date("yyyy") }} Tram Trains for Edinburgh. All rights reserved. | <a href="/privacy/" class="footer-link">Privacy Policy</a></p>
@@ -8,6 +8,6 @@
 </footer>
 
 <div class="sticky-ctas" aria-label="Quick actions">
-  {% if settings.donate.enabled %}<a href="/donate/" class="sticky-cta sticky-cta--donate" aria-label="Donate to the campaign">Donate</a>
+  {% if settings.donate.enabled and settings.donate.linked %}<a href="/donate/" class="sticky-cta sticky-cta--donate" aria-label="Donate to the campaign">Donate</a>
   {% endif %}<a href="/be-involved/" class="sticky-cta sticky-cta--involved" aria-label="Be involved with the campaign">Be Involved</a>
 </div>

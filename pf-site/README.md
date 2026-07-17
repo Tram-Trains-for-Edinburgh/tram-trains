@@ -215,15 +215,23 @@ To add, remove, or reorder navigation links, edit `pf-site/src/_data/site.json`.
 Some site features can be switched on and off in `pf-site/src/_data/settings.js`.
 
 **Donate** — when `donate.enabled` is `true`, the site builds a `/donate/` page
-and shows Donate buttons in the sticky side bar and the footer. The button links
-to the PayPal donation URL set in `donate.paypalUrl`. When `false`, the page and
-buttons disappear entirely from the built site.
+and shows Donate buttons in the sticky side bar, the footer, and the Be
+Involved page. The button links to the hosted checkout URL set in `donate.url`
+(currently a Stripe Payment Link). When `false`, the page and buttons disappear
+entirely from the built site.
+
+**Donate quiet-testing mode** — `donate.linked` is a secondary switch for
+testing the live page before announcing it. When `enabled` is `true` but
+`linked` is `false`, the `/donate/` page is built and reachable at its URL,
+but no links to it appear anywhere on the site, it is left out of the sitemap,
+and it carries a `noindex` tag so search engines won't list it. Set `linked`
+to `true` to publish the links everywhere.
 
 Each setting can also be overridden per environment without a code change, by
 setting an environment variable in the Cloudflare Pages dashboard and
-redeploying: `DONATE_ENABLED` (`true`/`false`) and `DONATE_PAYPAL_URL`. For
-example, set `DONATE_ENABLED=true` on the Preview environment to test the
-feature on pull request previews while it stays off in Production.
+redeploying: `DONATE_ENABLED`, `DONATE_LINKED` (`true`/`false`) and
+`DONATE_URL`. For example, set `DONATE_ENABLED=true` on the Preview environment
+to test the feature on pull request previews while it stays off in Production.
 
 ---
 
