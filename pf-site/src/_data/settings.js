@@ -16,7 +16,7 @@ module.exports = function () {
       // URL, but no links to it appear anywhere on the site, it is left
       // out of the sitemap, and it carries a noindex tag for search
       // engines. Set to true to announce the page across the site.
-      linked: false,
+      linked: true,
       // The hosted donation checkout link (currently a Stripe Payment
       // Link), e.g. https://buy.stripe.com/xxxxxxxxxxxx
       url: "https://buy.stripe.com/dRmcMZfi51zM5WE1Z3afS02",
