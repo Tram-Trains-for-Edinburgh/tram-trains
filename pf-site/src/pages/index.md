@@ -11,7 +11,7 @@ permalink: /
 
 <img src="/assets/images/home-cover.webp" alt="Tram Trains for Edinburgh" class="hero-image">
 
-Edinburgh's South Suburban Railway is one of the city's greatest untapped transport assets. Built in the Victorian era, the line curves through some of Edinburgh's most densely populated neighbourhoods — yet it carries no regular passenger services.
+Edinburgh's South Suburban Railway is one of the city's greatest untapped transport assets. Built in the Victorian era, the line curves through some of Edinburgh's most densely populated neighbourhoods, yet it carries no regular passenger services.
 
 Tram Trains for Edinburgh believes that a tram-train service on this route would transform travel across the south of the city, cutting car dependency and giving tens of thousands of residents a fast, reliable way to get around.
 

@@ -12,7 +12,7 @@ Tram Trains for Edinburgh was launched in October 2025 with a public meeting. In
 
 Our proposal is for a tram-train route from Portobello and Brunstane in the east, through Cameron Toll, Newington and Craiglockhart, to Gorgie and Murrayfield in the west, linking into the tram line from the Airport to the City Centre.
 
-We are a voluntary group of Edinburgh residents who believe that the south of the city deserves better public transport. We have no political affiliation and no commercial interest — just a shared conviction that tram-trains on the South Suburban Railway would be transformative.
+We are a voluntary group of Edinburgh residents who believe that the south of the city deserves better public transport. We have no political affiliation and no commercial interest, just a shared conviction that tram-trains on the South Suburban Railway would be transformative.
 
 Our campaign activities include:
 
@@ -21,7 +21,7 @@ Our campaign activities include:
 - Convincing Edinburgh businesses, educational institutions and other civic bodies to support the scheme
 - Publicising the scheme through traditional and social media
 
-**We believe that Edinburgh's South Suburban Railway should be brought back to life — and that tram-trains are the best way to do it.**
+**We believe that Edinburgh's South Suburban Railway should be brought back to life, and that tram-trains are the best way to do it.**
 
 <img src="/assets/images/proposal-map-2.webp" alt="Edinburgh Council transport map" class="page-image" loading="lazy">
 

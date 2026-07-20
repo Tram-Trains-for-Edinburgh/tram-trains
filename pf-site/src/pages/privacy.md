@@ -54,7 +54,7 @@ Depending on how you engage with us, we may collect the following categories of 
 - Whether you wish to be kept informed of campaign developments
 - Whether you wish to volunteer or become actively involved
 
-We do not collect sensitive personal data (known under UK GDPR as "special category data") such as health information, ethnicity, religion, or political opinions — unless you choose to share this voluntarily in a free-text field. If you do, it will be treated with the same care as all other personal data.
+We do not collect sensitive personal data (known under UK GDPR as "special category data") such as health information, ethnicity, religion, or political opinions, unless you choose to share this voluntarily in a free-text field. If you do, it will be treated with the same care as all other personal data.
 
 ### 4. How we collect your data
 

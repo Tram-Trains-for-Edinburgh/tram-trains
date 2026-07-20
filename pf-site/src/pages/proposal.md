@@ -6,11 +6,11 @@ permalink: /our-proposal/
 
 ## Our Proposal
 
-Tram-trains are hybrid vehicles that can run on both railway tracks and tram tracks. This flexibility means they can use existing railway infrastructure — like Edinburgh's South Suburban Railway — while also integrating with the city's tram network.
+Tram-trains are hybrid vehicles that can run on both railway tracks and tram tracks. This flexibility means they can use existing railway infrastructure, like Edinburgh's South Suburban Railway, while also integrating with the city's tram network.
 
 <img src="/assets/images/proposal-map-1.webp" alt="Proposed tram-train route overview" class="page-image">
 
-### What's the proposal — in practical terms?
+### What's the proposal in practical terms?
 
 The route would run from Murrayfield and Haymarket via Gorgie and Morningside to Niddrie and Brunstane, using the existing South Suburban Railway alignment. Tram-trains would run at a frequency of 4 or 6 per hour, providing a turn-up-and-go service for communities along the route.
 

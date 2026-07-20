@@ -21,7 +21,7 @@ Tram-train technology has been successfully deployed across Europe, particularly
 ### The Sheffield–Rotherham pilot (2018)
 
 - The UK's first tram-train pilot launched in October 2018, running between Sheffield city centre and Rotherham Parkgate
-- The route uses the existing Supertram network through Sheffield, then transitions to Network Rail tracks via the Tinsley Chord — a purpose-built connecting link
+- The route uses the existing Supertram network through Sheffield, then transitions to Network Rail tracks via the Tinsley Chord, a purpose-built connecting link
 - The pilot demonstrated that tram-trains can operate reliably on shared infrastructure in a UK context
 
 ### South Wales Metro
