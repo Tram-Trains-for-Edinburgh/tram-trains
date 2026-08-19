@@ -5,6 +5,7 @@
   --color-crimson: #860C2D;
   --color-crimson-dark: #6e0a25;
   --color-rose: #f2a9bb; /* crimson tint for use on navy backgrounds */
+  --color-gold: #ffb700;
   --color-white: #FFFFFF;
   --color-text: #2a2a2a;
   --color-text-muted: #566470;
@@ -448,6 +449,52 @@ a:hover {
 
 .cta-button:active {
   transform: translateY(0);
+}
+
+.cta-button--sm {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+/* === Home page news callout === */
+.news-callout {
+  background: var(--color-gold);
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.news-callout__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-crimson);
+  margin: 0 0 0.4rem;
+}
+
+.news-callout__headline {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.6rem;
+}
+
+.news-callout__headline a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.news-callout__headline a:hover {
+  text-decoration: underline;
+}
+
+.news-callout__summary {
+  font-size: 0.95rem;
+  color: var(--color-crimson-dark);
+  margin: 0 0 1rem;
+  line-height: 1.6;
 }
 
 /* === Donate page === */
