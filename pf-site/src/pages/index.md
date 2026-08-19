@@ -15,7 +15,7 @@ permalink: /
   <p class="news-callout__label">Celebrating a year campaigning for better transport</p>
   <p class="news-callout__headline"><a href="/news/2026-08-17-transport-scotland-and-network-rail-to-produce-south-sub-feasibility-study/">Transport Scotland and Network Rail to produce a feasibility study for the South Sub</a></p>
   <p class="news-callout__summary">Marking our first year of campaigning, Transport Scotland have announced a high-level feasibility study into reinstating passenger services on the South Suburban railway using tram-trains.</p>
-  <a href="/news/2026-08-17-transport-scotland-and-network-rail-to-produce-south-sub-feasibility-study/" class="cta-button cta-button--sm">Read more</a>
+  <a href="/news/transport-scotland-and-network-rail-to-produce-south-sub-feasibility-study/" class="cta-button cta-button--sm">Read more</a>
 </div>
 
 Edinburgh's South Suburban Railway is one of the city's greatest untapped transport assets. Built in the Victorian era, the line curves through some of Edinburgh's most densely populated neighbourhoods, yet it carries no regular passenger services.
