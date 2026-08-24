@@ -18,6 +18,7 @@
       --gold: #ffb700;
       --white: #ffffff;
       --cream: #f7f4ee;
+      --cream-rgb: 247, 244, 238;
       --text: #2a2a2a;
       --muted: #566470;
       --font-heading: "Fraunces", Georgia, "Times New Roman", serif;
@@ -76,15 +77,16 @@
       -webkit-print-color-adjust: exact;
     }
 
-    .masthead {
+    .hero-stage {
       position: relative;
       width: 100%;
-      height: 147mm;
-      min-height: 147mm;
-      flex: 0 0 147mm;
+      min-height: 164mm;
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
       overflow: hidden;
-      background:
-        #1a3348 url("assets/hero.png") 46% 52% / cover no-repeat;
+      background: #1a3348;
     }
 
     .masthead-photo {
@@ -94,14 +96,32 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: 46% 52%;
+      object-position: 46% 42%;
+    }
+
+    .hero-stage::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 147mm;
+      background: linear-gradient(
+        to bottom,
+        rgba(var(--cream-rgb), 0) 0%,
+        rgba(var(--cream-rgb), 0.35) 22%,
+        rgba(var(--cream-rgb), 0.82) 58%,
+        rgba(var(--cream-rgb), 1) 100%
+      );
+      pointer-events: none;
+      z-index: 1;
     }
 
     .org-badge {
       position: absolute;
       top: 5mm;
       left: 5mm;
-      z-index: 2;
+      z-index: 3;
       display: flex;
       align-items: center;
       gap: 3.5mm;
@@ -130,10 +150,8 @@
 
     .hero {
       position: relative;
-      z-index: 1;
-      margin-top: -42mm;
-      padding: 8mm 12mm 5mm;
-      background: rgba(247, 244, 238, 0.86);
+      z-index: 2;
+      padding: 22mm 12mm 5mm;
     }
 
     .kicker {
@@ -225,7 +243,7 @@
 
     .venue {
       margin: 3.5mm 12mm 0;
-      background: var(--white);
+      background: var(--cream);
       color: var(--navy);
       padding: 4mm 5mm;
       display: grid;
@@ -264,7 +282,6 @@
       margin: 3.5mm 12mm 0;
       background: var(--white);
       color: var(--navy);
-      border: 1px solid rgba(1, 36, 64, 0.12);
       display: grid;
       grid-template-columns: 52mm 1fr;
       gap: 5mm;
@@ -362,7 +379,7 @@
   </div>
 
   <article class="sheet" aria-label="Public meeting poster">
-    <header class="masthead">
+    <header class="hero-stage">
       <img
         class="masthead-photo"
         src="assets/hero.png"
@@ -374,14 +391,13 @@
         <img src="assets/logo-ttfe.png" alt="">
         <p>Tram Trains<br>for Edinburgh</p>
       </div>
+      <div class="hero">
+        <p class="kicker">Open to the public</p>
+        <h1>Tram-trains<br>for <em>Gorgie</em></h1>
+        <p class="hero-sub">Reopen the South Sub</p>
+        <p class="lede">Come and hear how reopening this Victorian railway could make travel across Edinburgh faster and easier — and why the scheme matters for Gorgie.</p>
+      </div>
     </header>
-
-    <div class="hero">
-      <p class="kicker">Open to the public</p>
-      <h1>Tram-trains<br>for <em>Gorgie</em></h1>
-      <p class="hero-sub">Reopen the South Sub</p>
-      <p class="lede">Come and hear how reopening this Victorian railway could make travel across Edinburgh faster and easier — and why the scheme matters for Gorgie.</p>
-    </div>
 
     <dl class="facts">
       <div class="fact">
@@ -414,8 +430,8 @@
         class="qr"
         src="assets/eventbrite-qr.png"
         alt="QR code linking to Eventbrite booking for the Gorgie public meeting"
-        width="1578"
-        height="1542">
+        width="1584"
+        height="1584">
       <div>
         <h2>Scan to book a free place</h2>
         <p>Places are free. Please reserve on Eventbrite so we know how many seats to set out.</p>
