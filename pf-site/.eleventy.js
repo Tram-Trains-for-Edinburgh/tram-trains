@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy({ "src/_headers": "_headers" });
+  eleventyConfig.addPassthroughCopy({ "../print": "print" });
 
   eleventyConfig.addGlobalData("cssHash", () => {
     const file = path.join(__dirname, "src/assets/css/style.css");
