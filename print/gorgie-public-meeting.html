@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Public meeting — Gorgie &amp; Dalry — Tram Trains for Edinburgh</title>
+  <meta name="description" content="Printable shop-window poster for the Tram Trains for Edinburgh public meeting at St Bride’s, Gorgie, Tuesday 1 September 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #012440;
+      --blue: #0E4973;
+      --crimson: #860C2D;
+      --crimson-dark: #6e0a25;
+      --rose: #f2a9bb;
+      --gold: #ffb700;
+      --white: #ffffff;
+      --cream: #f7f4ee;
+      --text: #2a2a2a;
+      --muted: #566470;
+      --font-heading: "Fraunces", Georgia, "Times New Roman", serif;
+      --font-body: "Inter", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      background: #d5dde4;
+      color: var(--text);
+      font-family: var(--font-body);
+    }
+
+    .toolbar {
+      width: 210mm;
+      max-width: calc(100% - 2rem);
+      margin: 1.25rem auto 0.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .toolbar p {
+      font-size: 0.85rem;
+      color: var(--navy);
+      line-height: 1.45;
+    }
+
+    .toolbar button {
+      appearance: none;
+      border: 0;
+      background: var(--crimson);
+      color: var(--white);
+      font: 600 0.95rem var(--font-body);
+      padding: 0.65rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .toolbar button:hover { background: var(--crimson-dark); }
+
+    .sheet {
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto 2rem;
+      background: var(--cream);
+      color: var(--navy);
+      box-shadow: 0 18px 40px rgba(1, 36, 64, 0.28);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .masthead {
+      position: relative;
+      width: 100%;
+      height: 147mm;
+      min-height: 147mm;
+      flex: 0 0 147mm;
+      overflow: hidden;
+      background:
+        #1a3348 url("assets/hero.png") 46% 52% / cover no-repeat;
+    }
+
+    .masthead-photo {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 46% 52%;
+    }
+
+    .org-badge {
+      position: absolute;
+      top: 5mm;
+      left: 5mm;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 3.5mm;
+      background: var(--white);
+      color: var(--navy);
+      padding: 2.5mm 4mm 2.5mm 2.5mm;
+      border-radius: 3mm;
+      box-shadow: 0 1.5mm 5mm rgba(1, 36, 64, 0.28);
+      max-width: 72mm;
+    }
+
+    .org-badge img {
+      width: 16mm;
+      height: 16mm;
+      object-fit: contain;
+      flex: 0 0 16mm;
+    }
+
+    .org-badge p {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 10pt;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+
+    .hero {
+      position: relative;
+      z-index: 1;
+      margin-top: -42mm;
+      padding: 8mm 12mm 5mm;
+      background: rgba(247, 244, 238, 0.86);
+    }
+
+    .kicker {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--crimson);
+      font-size: 8.5pt;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 1.6mm 4mm;
+      border-radius: 2px;
+      margin-bottom: 3.5mm;
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 34pt;
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+      margin-bottom: 3.5mm;
+      color: var(--navy);
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--crimson);
+    }
+
+    .hero-sub {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 16pt;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--blue);
+      margin: -1.5mm 0 3.5mm;
+    }
+
+    .lede {
+      font-size: 11.5pt;
+      line-height: 1.35;
+      font-weight: 500;
+      max-width: 168mm;
+      color: var(--blue);
+    }
+
+    .facts {
+      margin: 5mm 12mm 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5mm;
+    }
+
+    .fact {
+      background: var(--white);
+      border-top: 3px solid var(--crimson);
+      padding: 3.5mm 4.5mm 4mm;
+    }
+
+    .fact dt {
+      font-size: 7.5pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crimson);
+      margin-bottom: 1.4mm;
+    }
+
+    .fact dd {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 16pt;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+    }
+
+    .fact dd small {
+      display: block;
+      margin-top: 1.2mm;
+      font-family: var(--font-body);
+      font-size: 9pt;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0;
+    }
+
+    .venue {
+      margin: 3.5mm 12mm 0;
+      background: var(--white);
+      color: var(--navy);
+      padding: 4mm 5mm;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 4mm;
+      align-items: center;
+    }
+
+    .venue-mark {
+      width: 11mm;
+      height: 11mm;
+      background: var(--crimson);
+      color: var(--white);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+    }
+
+    .venue-mark svg { width: 6mm; height: 6mm; fill: currentColor; }
+
+    .venue p {
+      font-size: 12.5pt;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .venue span {
+      display: block;
+      margin-top: 1mm;
+      font-size: 10pt;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .signup {
+      margin: 3.5mm 12mm 0;
+      background: var(--white);
+      color: var(--navy);
+      border: 1px solid rgba(1, 36, 64, 0.12);
+      display: grid;
+      grid-template-columns: 52mm 1fr;
+      gap: 5mm;
+      align-items: center;
+      padding: 4.5mm;
+    }
+
+    .qr {
+      width: 52mm;
+      height: 52mm;
+      background: var(--white);
+      display: block;
+      image-rendering: pixelated;
+    }
+
+    .signup h2 {
+      font-family: var(--font-heading);
+      font-size: 16pt;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 2.5mm;
+    }
+
+    .signup p {
+      font-size: 10pt;
+      line-height: 1.35;
+      color: var(--text);
+    }
+
+    .free {
+      display: inline-block;
+      margin-top: 3mm;
+      background: var(--crimson);
+      color: var(--white);
+      font-size: 9.5pt;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 2mm 4mm;
+      border-radius: 4px;
+    }
+
+    .foot {
+      margin-top: auto;
+      padding: 4mm 12mm 7mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8mm;
+      font-size: 9.5pt;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--blue);
+    }
+
+    .foot strong { color: var(--navy); font-weight: 700; }
+
+    @media screen and (max-width: 900px) {
+      .sheet {
+        width: min(210mm, calc(100vw - 1.5rem));
+        height: auto;
+        min-height: calc(min(210mm, calc(100vw - 1.5rem)) * 1.414);
+        transform-origin: top center;
+      }
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    @media print {
+      html, body {
+        background: none;
+        margin: 0;
+      }
+
+      .toolbar { display: none !important; }
+
+      .sheet {
+        margin: 0;
+        box-shadow: none;
+        width: 210mm;
+        height: 297mm;
+        background: var(--cream);
+        color: var(--navy);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <p>A4 poster for shop windows. Print at <strong>100% / actual size</strong>, portrait, and turn on <strong>background graphics</strong>.</p>
+    <button type="button" onclick="window.print()">Print poster</button>
+  </div>
+
+  <article class="sheet" aria-label="Public meeting poster">
+    <header class="masthead">
+      <img
+        class="masthead-photo"
+        src="assets/hero.png"
+        alt="A tram at Edinburgh Gorgie, from February 2026"
+        width="1028"
+        height="900"
+        decoding="sync">
+      <div class="org-badge">
+        <img src="assets/logo-ttfe.png" alt="">
+        <p>Tram Trains<br>for Edinburgh</p>
+      </div>
+    </header>
+
+    <div class="hero">
+      <p class="kicker">Open to the public</p>
+      <h1>Tram-trains<br>for <em>Gorgie</em></h1>
+      <p class="hero-sub">Reopen the South Sub</p>
+      <p class="lede">Come and hear how reopening this Victorian railway could make travel across Edinburgh faster and easier — and why the scheme matters for Gorgie.</p>
+    </div>
+
+    <dl class="facts">
+      <div class="fact">
+        <dt>When</dt>
+        <dd>
+          Tuesday 1 September
+          <small>7.30pm–9pm · doors 7.15pm</small>
+        </dd>
+      </div>
+      <div class="fact">
+        <dt>Where</dt>
+        <dd>
+          St Bride’s, Gorgie
+          <small>Community Centre café</small>
+        </dd>
+      </div>
+    </dl>
+
+    <div class="venue">
+      <div class="venue-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/>
+        </svg>
+      </div>
+      <p>10 Orwell Terrace, Edinburgh EH11 2DZ<span>A short walk from Dalry and Gorgie Road</span></p>
+    </div>
+
+    <div class="signup">
+      <img
+        class="qr"
+        src="assets/eventbrite-qr.png"
+        alt="QR code linking to Eventbrite booking for the Gorgie public meeting"
+        width="1578"
+        height="1542">
+      <div>
+        <h2>Scan to book a free place</h2>
+        <p>Places are free. Please reserve on Eventbrite so we know how many seats to set out.</p>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <span><strong>ttfe.org.uk</strong></span>
+      <span>Tram Trains for Edinburgh</span>
+    </footer>
+  </article>
+</body>
+</html>
