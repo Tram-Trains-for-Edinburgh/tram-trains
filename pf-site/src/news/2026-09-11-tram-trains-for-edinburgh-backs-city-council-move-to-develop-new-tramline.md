@@ -4,9 +4,9 @@ date: 2026-09-11T09:00:00.000+01:00
 ---
 Tram Trains for Edinburgh sent a deputation to the City Council’s Transport committee to support the development of the North-South tram from Granton to the Bioquarter. The committee agreed to take forward the project by referring it to the regional mass transit study, SEStransit.
 
-TTfE fully support constructing the new tramline, which will integrate with a reopened South Sub. By backing both projects, the people of Edinburgh and the Lothians would start to benefit from a proper mass transit system (which of course many other cities of our size already have). It is a pity the committee did not back the whole route from Granton to the Bioquarter, as we believe the benefits the tram brings — faster and more sustainable transport, economic development, and support for poorer areas of the city — all apply equally to the North side as well as the South.
+TTfE fully support constructing the new tramline, which will integrate with a reopened South Sub. By backing both projects, the people of Edinburgh and the Lothians would start to benefit from a proper mass transit system (which of course many other cities of our size already have). It is a pity the committee did not back the whole route from Granton to the Bioquarter, as we believe the benefits the tram brings - faster and more sustainable transport, economic development, and support for poorer areas of the city - all apply equally to the North side as well as the South.
 
-Nevertheless, building the southern leg from Princes St via Cameron Toll to the hospital is more relevant to the South Sub and the two schemes will provide multiple new journey opportunities across the city and the wider region — providing a fast, efficient and 'green' alternative to the car.
+Nevertheless, building the southern leg from Princes St via Cameron Toll to the hospital is more relevant to the South Sub and the two schemes will provide multiple new journey opportunities across the city and the wider region - providing a fast, efficient and 'green' alternative to the car.
 
 Rob Falcon, Chair of TTfE said:
 
