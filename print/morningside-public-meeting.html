@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Public meeting — Morningside — Tram Trains for Edinburgh</title>
-  <meta name="description" content="Printable shop-window poster for the Tram Trains for Edinburgh public meeting at the Eric Liddell Community, Morningside, Monday 30 November 2026.">
+  <meta name="description"
+    content="Printable shop-window poster for the Tram Trains for Edinburgh public meeting at the Eric Liddell Community, Morningside, Monday 30 November 2026.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       --navy: #012440;
@@ -25,9 +29,14 @@
       --font-body: "Inter", system-ui, sans-serif;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html, body {
+    html,
+    body {
       background: #d5dde4;
       color: var(--text);
       font-family: var(--font-body);
@@ -61,7 +70,9 @@
       cursor: pointer;
     }
 
-    .toolbar button:hover { background: var(--crimson-dark); }
+    .toolbar button:hover {
+      background: var(--crimson-dark);
+    }
 
     .sheet {
       width: 210mm;
@@ -257,7 +268,11 @@
       place-items: center;
     }
 
-    .venue-mark svg { width: 6mm; height: 6mm; fill: currentColor; }
+    .venue-mark svg {
+      width: 6mm;
+      height: 6mm;
+      fill: currentColor;
+    }
 
     .venue p {
       font-size: 12.5pt;
@@ -287,8 +302,21 @@
     .qr {
       width: 52mm;
       height: 52mm;
-      background: var(--white);
+      padding: 2mm;
+      background: var(--cream);
+      color: var(--navy);
+    }
+
+    .qr svg {
       display: block;
+      color: var(--navy);
+      width: 100%;
+      height: 100%;
+    }
+
+    .qrline {
+      stroke: currentColor;
+      stroke-width: 1;
       image-rendering: pixelated;
     }
 
@@ -332,7 +360,10 @@
       color: var(--blue);
     }
 
-    .foot strong { color: var(--navy); font-weight: 700; }
+    .foot strong {
+      color: var(--navy);
+      font-weight: 700;
+    }
 
     @media screen and (max-width: 900px) {
       .sheet {
@@ -349,12 +380,16 @@
     }
 
     @media print {
-      html, body {
+
+      html,
+      body {
         background: none;
         margin: 0;
       }
 
-      .toolbar { display: none !important; }
+      .toolbar {
+        display: none !important;
+      }
 
       .sheet {
         margin: 0;
@@ -364,23 +399,23 @@
         background: var(--cream);
         color: var(--navy);
       }
+
+      
     }
   </style>
 </head>
+
 <body>
   <div class="toolbar">
-    <p>A4 poster for shop windows. Print at <strong>100% / actual size</strong>, portrait, and turn on <strong>background graphics</strong>.</p>
+    <p>A4 poster for shop windows. Print at <strong>100% / actual size</strong>, portrait, and turn on
+      <strong>background graphics</strong>.</p>
     <button type="button" onclick="window.print()">Print poster</button>
   </div>
 
   <article class="sheet" aria-label="Public meeting poster">
     <header class="hero-stage">
-      <img
-        class="masthead-photo"
-        src="assets/morningside.png"
-        alt="A visualisation of a tram-train at a reopened Morningside station"
-        width="1024"
-        height="768"
+      <img class="masthead-photo" src="assets/morningside.png"
+        alt="A visualisation of a tram-train at a reopened Morningside station" width="1024" height="768"
         decoding="sync">
       <div class="org-badge">
         <img src="assets/logo-ttfe.png" alt="">
@@ -390,7 +425,8 @@
         <p class="kicker">Open to the public</p>
         <h1>Tram-trains<br>for <em>Morningside</em></h1>
         <p class="hero-sub">Reopen the South Suburban Railway</p>
-        <p class="lede">100 years ago, you could take the train. Find out why and how we can bring passenger rail back to Morningside and the rest of Edinburgh's south side.</p>
+        <p class="lede">100 years ago, you could take the train. Find out why and how we can bring passenger rail back
+          to Morningside and the rest of Edinburgh's south side.</p>
       </div>
     </header>
 
@@ -414,19 +450,20 @@
     <div class="venue">
       <div class="venue-mark" aria-hidden="true">
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/>
+          <path
+            d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
         </svg>
       </div>
       <p>15 Morningside Road, Edinburgh EH10 4DP<span>On Morningside Road, [At Holy Corner]</span></p>
     </div>
 
     <div class="signup">
-      <img
-        class="qr"
-        src="assets/eventbrite-qr.png"
-        alt="QR code linking to Eventbrite booking for the Morningside public meeting"
-        width="1584"
-        height="1584">
+      <div class="qr" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="148" height="148" viewBox="0 0 148 148" class="segno">
+          <path transform="scale(4)" class="qrline" stroke="#000"
+            d="M4 4.5h7m1 0h1m1 0h2m1 0h3m3 0h1m2 0h7m-29 1h1m5 0h1m1 0h3m1 0h2m2 0h1m3 0h1m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m4 0h1m4 0h1m1 0h2m2 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m1 0h2m1 0h1m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h1m1 0h1m2 0h1m1 0h5m1 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m2 0h1m1 0h1m1 0h1m1 0h5m2 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-21 1h2m5 0h3m2 0h1m-21 1h1m1 0h2m1 0h3m2 0h4m1 0h3m1 0h2m1 0h1m2 0h1m1 0h2m-27 1h1m6 0h3m1 0h3m1 0h1m1 0h1m1 0h8m-29 1h2m1 0h1m2 0h1m1 0h3m1 0h2m3 0h1m2 0h3m1 0h1m2 0h1m-27 1h2m4 0h1m1 0h1m2 0h1m3 0h1m4 0h1m5 0h2m-27 1h3m1 0h1m1 0h3m3 0h2m1 0h2m1 0h2m3 0h2m-24 1h1m1 0h1m2 0h1m2 0h2m1 0h1m2 0h4m1 0h1m2 0h2m1 0h1m-28 1h1m1 0h2m1 0h2m1 0h1m1 0h3m3 0h5m2 0h2m1 0h2m-26 1h1m3 0h1m1 0h1m1 0h2m1 0h1m1 0h1m1 0h6m1 0h1m1 0h2m-28 1h3m2 0h3m1 0h1m3 0h2m3 0h3m1 0h2m2 0h1m-23 1h1m1 0h1m3 0h2m1 0h3m1 0h1m2 0h1m3 0h1m1 0h1m-28 1h1m1 0h3m1 0h1m2 0h2m1 0h4m4 0h1m2 0h2m1 0h1m-25 1h1m2 0h1m2 0h1m1 0h1m2 0h2m2 0h2m2 0h1m3 0h3m-27 1h1m4 0h4m1 0h1m1 0h2m2 0h1m1 0h6m1 0h3m-21 1h1m1 0h3m7 0h1m3 0h1m2 0h2m-29 1h7m1 0h4m2 0h1m3 0h3m1 0h1m1 0h1m2 0h1m-28 1h1m5 0h1m1 0h1m1 0h1m1 0h3m5 0h1m3 0h1m2 0h2m-29 1h1m1 0h3m1 0h1m2 0h3m3 0h4m1 0h5m1 0h2m-28 1h1m1 0h3m1 0h1m1 0h2m1 0h3m1 0h1m1 0h3m1 0h1m1 0h2m3 0h1m-29 1h1m1 0h3m1 0h1m1 0h2m1 0h2m1 0h1m1 0h1m3 0h1m2 0h1m4 0h1m-29 1h1m5 0h1m2 0h2m1 0h5m1 0h1m1 0h3m1 0h2m1 0h1m-28 1h7m1 0h2m6 0h1m3 0h3m2 0h1m1 0h1" />
+        </svg>
+      </div>
       <div>
         <h2>Scan to book a free place</h2>
         <p>Places are free. Please reserve on Eventbrite so we know how many seats to set out.</p>
@@ -439,4 +476,5 @@
     </footer>
   </article>
 </body>
+
 </html>
